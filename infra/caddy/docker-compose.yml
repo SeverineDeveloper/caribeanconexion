@@ -1,0 +1,29 @@
+# Proxy inverso compartido (TLS automático). Se levanta una vez por VPS:
+#   docker network create edge
+#   docker compose -f infra/caddy/docker-compose.yml --env-file /srv/cc/caddy.env up -d
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      DOMAIN: ${DOMAIN:?}
+      ACME_EMAIL: ${ACME_EMAIL:?}
+      STAGING_USER: ${STAGING_USER:?}
+      STAGING_PASSWORD_HASH: ${STAGING_PASSWORD_HASH:?}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    networks: [edge]
+
+volumes:
+  caddy-data:
+  caddy-config:
+
+networks:
+  edge:
+    external: true

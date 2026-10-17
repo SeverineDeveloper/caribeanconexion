@@ -1,0 +1,11 @@
+**/node_modules
+**/.next
+**/dist
+**/coverage
+packages/db/src/generated
+.git
+.env
+.env.*
+!.env.example
+*.md
+.claude

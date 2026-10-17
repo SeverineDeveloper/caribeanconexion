@@ -1,0 +1,184 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+/* Sistema de diseño: docs/DESIGN.md. Todo valor visual nuevo se documenta allí primero. */
+
+/* ── Tipografías (cargadas con next/font en src/lib/fonts.ts) ───────────────── */
+@theme inline {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+/* ── Paleta de marca ───────────────────────────────────────────────────────── */
+@theme {
+  --color-canvas: #fcfaf6;
+  --color-sand-100: #f5ecdd;
+  --color-sand-200: #f3e7d3;
+  --color-sand-300: #e6d5b8;
+  --color-line: #e8e0d2;
+
+  --color-ink-900: #0a2a4a;
+  --color-ink-700: #34506b;
+  --color-ink-500: #52677d;
+
+  --color-teal-50: #e6f7f6;
+  --color-teal-400: #0fb5b0;
+  --color-teal-600: #087571;
+  --color-teal-700: #065e5b;
+
+  --color-gold-400: #c9a227;
+  --color-gold-700: #7a5f0e;
+  --color-palm-600: #2f6b4f;
+  --color-danger-600: #b42318;
+  --color-whatsapp: #25d366;
+
+  --radius-field: 0.75rem;
+  --radius-card: 1.5rem;
+  --radius-panel: 2rem;
+
+  --shadow-card: 0 1px 2px rgb(10 42 74 / 0.06), 0 1px 1px rgb(10 42 74 / 0.04);
+  --shadow-raised: 0 24px 48px -24px rgb(10 42 74 / 0.35), 0 2px 6px rgb(10 42 74 / 0.06);
+}
+
+/* ── Tema de HeroUI mapeado a la marca (solo claro) ────────────────────────── */
+:root {
+  color-scheme: light;
+
+  --background: var(--color-canvas);
+  --foreground: var(--color-ink-900);
+  --surface: #ffffff;
+  --surface-foreground: var(--color-ink-900);
+  --surface-secondary: #faf5ec;
+  --surface-tertiary: var(--color-sand-100);
+  --overlay: #ffffff;
+  --muted: var(--color-ink-500);
+
+  --default: var(--color-sand-100);
+  --default-foreground: var(--color-ink-900);
+  --accent: var(--color-teal-600);
+  --accent-foreground: #ffffff;
+  --accent-hover: var(--color-teal-700);
+  --success: var(--color-palm-600);
+  --success-foreground: #ffffff;
+  --danger: var(--color-danger-600);
+  --danger-foreground: #ffffff;
+
+  --border: var(--color-line);
+  --separator: #efe8db;
+  --focus: var(--color-teal-400);
+  --link: var(--color-teal-600);
+
+  --radius: 0.75rem;
+  --field-radius: var(--radius-field);
+  --field-background: #ffffff;
+  --field-foreground: var(--color-ink-900);
+  --field-placeholder: var(--color-ink-500);
+  /* HeroUI expone este valor como la clase border-field-border */
+  --field-border: #85919e;
+  --field-border-width: 1px;
+  --field-shadow: 0 1px 2px rgb(10 42 74 / 0.05);
+
+  --surface-shadow: var(--shadow-card);
+  --overlay-shadow: var(--shadow-raised);
+}
+
+/* ── Ajustes de componentes HeroUI a las reglas de docs/DESIGN.md ──────────── */
+@layer components {
+  /* Botones: 44 px por defecto, 52 px en lg, siempre píldora */
+  .button {
+    @apply h-11 rounded-full px-5 text-[0.9375rem] font-semibold md:h-11;
+  }
+  .button--sm {
+    @apply h-9 px-4 text-sm md:h-9;
+  }
+  .button--lg {
+    @apply h-13 px-7 text-base md:h-13;
+  }
+
+  /* Campos: 48 px, texto 16 px, borde visible */
+  .input {
+    @apply h-12 px-4 text-base sm:text-base;
+  }
+  .input:focus,
+  .input[data-focused="true"] {
+    border-color: var(--color-teal-600);
+    box-shadow: 0 0 0 3px rgb(15 181 176 / 0.35);
+  }
+  .textfield {
+    @apply gap-2;
+  }
+  .label {
+    @apply text-sm font-medium text-ink-900;
+  }
+  .description,
+  .field-error {
+    @apply text-sm;
+  }
+
+  /* Cards: aire generoso, borde suave */
+  .card {
+    @apply gap-4 border border-line p-6 sm:p-8;
+    border-radius: var(--radius-card);
+  }
+  .card__title {
+    @apply text-lg leading-snug font-semibold text-ink-900;
+  }
+  .card__description {
+    @apply text-base leading-relaxed text-ink-500;
+  }
+}
+
+/* ── Base tipográfica ──────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/* ── Utilidades del sistema ────────────────────────────────────────────────── */
+@utility container-page {
+  @apply mx-auto w-full max-w-7xl px-5 lg:px-8;
+}
+@utility section-y {
+  @apply py-20 lg:py-28;
+}
+@utility text-display-xl {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 1.6rem + 3.6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+@utility text-display-lg {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+@utility text-display-md {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+@utility text-lead {
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+@utility text-eyebrow {
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}

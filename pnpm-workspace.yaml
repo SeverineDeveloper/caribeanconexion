@@ -1,0 +1,17 @@
+packages:
+  - apps/*
+  - packages/*
+
+onlyBuiltDependencies:
+  - "@biomejs/biome"
+  - "@prisma/engines"
+  - "@sentry/cli"
+  - esbuild
+  - prisma
+  - sharp
+  - unrs-resolver
+
+# Traen binarios precompilados; sus scripts de instalación no hacen falta.
+ignoredBuiltDependencies:
+  - "@parcel/watcher"
+  - "@swc/core"

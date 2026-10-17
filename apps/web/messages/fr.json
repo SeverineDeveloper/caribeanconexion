@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "Conexión Caribe · Votre voyage à Punta Cana organisé de A à Z",
+    "description": "Conciergerie locale à Punta Cana, Bávaro et Bayahíbe : hébergements, transferts aéroport, excursions et services. Vous réservez le vol, nous organisons tout le reste."
+  },
+  "Nav": {
+    "main": "Navigation principale",
+    "accommodation": "Hébergements",
+    "transfers": "Transferts",
+    "excursions": "Excursions",
+    "packages": "Forfaits",
+    "services": "Services",
+    "contact": "Contact",
+    "groups": "Groupes et entreprises",
+    "agencies": "Agences",
+    "owners": "Propriétaires",
+    "planTrip": "Organiser mon voyage",
+    "menu": "Menu",
+    "home": "Accueil Conexión Caribe"
+  },
+  "LocaleSwitcher": {
+    "label": "Langue"
+  },
+  "Hero": {
+    "eyebrow": "Punta Cana · Bávaro · Bayahíbe",
+    "title": "Vous réservez le vol. Nous organisons <em>tout le reste</em>.",
+    "subtitle": "Hébergements, transferts, excursions et services coordonnés par une équipe locale. Un seul contact, un seul itinéraire.",
+    "ctaPlan": "Organiser mon voyage",
+    "ctaWhatsapp": "Écrivez-nous sur WhatsApp",
+    "trust1": "Équipe locale à Punta Cana",
+    "trust2": "Service en français, anglais et espagnol",
+    "trust3": "Prix confirmé avant de payer",
+    "tripLabel": "Mon voyage",
+    "tripTitle": "Punta Cana · 5 nuits",
+    "day": "Jour {n}",
+    "day1Title": "Arrivée à PUJ",
+    "day1Text": "Transfert privé jusqu'à l'appartement",
+    "day2Title": "Journée détente",
+    "day2Text": "Massage à la villa",
+    "day3Title": "Île Saona",
+    "day3Text": "Catamaran et plage",
+    "confirmed": "Tout est confirmé"
+  },
+  "HowItWorks": {
+    "eyebrow": "Comment ça marche",
+    "title": "Votre voyage organisé en trois étapes",
+    "lead": "Fini les dix onglets ouverts et la coordination des prestataires par vous-même.",
+    "step1Title": "Parlez-nous de votre voyage",
+    "step1Text": "Dates, nombre de voyageurs et envies. Sur le site ou par WhatsApp.",
+    "step2Title": "Recevez votre proposition",
+    "step2Text": "Nous confirmons disponibilités et prix avec nos partenaires locaux.",
+    "step3Title": "Profitez l'esprit libre",
+    "step3Text": "Votre itinéraire au même endroit et une assistance locale pendant tout le séjour."
+  },
+  "Services": {
+    "eyebrow": "Ce que nous organisons",
+    "title": "Tout ce dont votre voyage a besoin",
+    "lead": "Choisissez ce que vous voulez : nous coordonnons tout avec des prestataires de confiance.",
+    "accommodationText": "Appartements, villas et hôtels à Bávaro, Cap Cana et alentours.",
+    "transfersText": "Transferts privés depuis l'aéroport de Punta Cana, de jour comme de nuit.",
+    "excursionsText": "Île Saona, buggies, catamarans, île Catalina et plus encore.",
+    "packagesText": "Des formules pensées pour les couples, les familles et les groupes d'amis.",
+    "extrasText": "Courses à l'arrivée, chef privé, massages, photographie et décoration.",
+    "groupsText": "Voyages incentive, événements et logistique pour les équipes.",
+    "more": "En savoir plus"
+  },
+  "CtaBand": {
+    "title": "Vous avez déjà vos dates ?",
+    "text": "Dites-nous quand vous arrivez et qui voyage. Nous vous répondons sur WhatsApp avec une proposition sur mesure.",
+    "primary": "Écrivez-nous sur WhatsApp",
+    "secondary": "Organiser mon voyage"
+  },
+  "WhatsApp": {
+    "float": "Parlez-nous",
+    "defaultMessage": "Bonjour Conexión Caribe. Je souhaite organiser mon voyage."
+  },
+  "Footer": {
+    "tagline": "Conciergerie de voyage en République dominicaine. Votre voyage, notre connexion.",
+    "explore": "Explorer",
+    "company": "Conexión Caribe",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "zones": "Punta Cana · Bávaro · Bayahíbe · La Romana",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "cancellation": "Annulation",
+    "rights": "Tous droits réservés.",
+    "priceNote": "Les prix sont indicatifs et peuvent varier selon la date, la disponibilité, la saison et le nombre de voyageurs."
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "text": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "back": "Retour à l'accueil"
+  }
+}

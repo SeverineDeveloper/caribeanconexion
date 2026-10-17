@@ -1,0 +1,32 @@
+node_modules/
+.pnpm-store/
+
+# Builds
+.next/
+dist/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Prisma generated client
+packages/db/src/generated/
+
+# Env (only .env.example is committed)
+.env
+.env.*
+!.env.example
+
+# Tests
+coverage/
+playwright-report/
+test-results/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Sentry
+.sentryclirc

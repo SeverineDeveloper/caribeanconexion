@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "Conexión Caribe · Your Punta Cana trip, organized from start to finish",
+    "description": "Local concierge in Punta Cana, Bávaro and Bayahíbe: vacation rentals, airport transfers, excursions and services. You book the flight, we take care of everything else."
+  },
+  "Nav": {
+    "main": "Main navigation",
+    "accommodation": "Stays",
+    "transfers": "Transfers",
+    "excursions": "Excursions",
+    "packages": "Packages",
+    "services": "Services",
+    "contact": "Contact",
+    "groups": "Groups & companies",
+    "agencies": "Agencies",
+    "owners": "Property owners",
+    "planTrip": "Plan my trip",
+    "menu": "Menu",
+    "home": "Conexión Caribe home"
+  },
+  "LocaleSwitcher": {
+    "label": "Language"
+  },
+  "Hero": {
+    "eyebrow": "Punta Cana · Bávaro · Bayahíbe",
+    "title": "You book the flight. We take care of <em>everything else</em>.",
+    "subtitle": "Stays, transfers, excursions and services coordinated by a local team. One contact, one itinerary.",
+    "ctaPlan": "Plan my trip",
+    "ctaWhatsapp": "Message us on WhatsApp",
+    "trust1": "Local team in Punta Cana",
+    "trust2": "Support in English, Spanish and French",
+    "trust3": "Price confirmed before you pay",
+    "tripLabel": "My trip",
+    "tripTitle": "Punta Cana · 5 nights",
+    "day": "Day {n}",
+    "day1Title": "Arrival at PUJ",
+    "day1Text": "Private transfer to your apartment",
+    "day2Title": "Rest day",
+    "day2Text": "Massage at the villa",
+    "day3Title": "Saona Island",
+    "day3Text": "Catamaran and beach",
+    "confirmed": "All confirmed"
+  },
+  "HowItWorks": {
+    "eyebrow": "How it works",
+    "title": "Your trip, planned in three steps",
+    "lead": "No more juggling ten websites or coordinating providers on your own.",
+    "step1Title": "Tell us about your trip",
+    "step1Text": "Dates, how many people and what you'd like to do. On the website or via WhatsApp.",
+    "step2Title": "Get your proposal",
+    "step2Text": "We confirm availability and prices with our local partners.",
+    "step3Title": "Enjoy, worry-free",
+    "step3Text": "Your itinerary in one place and local support throughout your stay."
+  },
+  "Services": {
+    "eyebrow": "What we organize",
+    "title": "Everything your trip needs",
+    "lead": "Pick what you want: we coordinate it all with trusted providers.",
+    "accommodationText": "Apartments, villas and hotels in Bávaro, Cap Cana and nearby.",
+    "transfersText": "Private transfers from Punta Cana airport, day or night.",
+    "excursionsText": "Saona Island, buggies, catamarans, Catalina Island and more.",
+    "packagesText": "Combinations designed for couples, families and groups of friends.",
+    "extrasText": "Groceries on arrival, private chef, massages, photography and decoration.",
+    "groupsText": "Incentive trips, events and logistics for teams.",
+    "more": "Learn more"
+  },
+  "CtaBand": {
+    "title": "Already have your dates?",
+    "text": "Tell us when you arrive and who's traveling. We'll reply on WhatsApp with a tailor-made proposal.",
+    "primary": "Message us on WhatsApp",
+    "secondary": "Plan my trip"
+  },
+  "WhatsApp": {
+    "float": "Talk to us",
+    "defaultMessage": "Hi Conexión Caribe. I'd like to plan my trip."
+  },
+  "Footer": {
+    "tagline": "Local travel concierge in the Dominican Republic. Your trip, our connection.",
+    "explore": "Explore",
+    "company": "Conexión Caribe",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "zones": "Punta Cana · Bávaro · Bayahíbe · La Romana",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cancellation": "Cancellation",
+    "rights": "All rights reserved.",
+    "priceNote": "Prices are for reference only and may vary by date, availability, season and number of travelers."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "text": "The page you're looking for doesn't exist or has moved.",
+    "back": "Back to home"
+  }
+}

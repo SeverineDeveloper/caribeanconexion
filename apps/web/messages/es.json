@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "Conexión Caribe · Tu viaje a Punta Cana organizado de principio a fin",
+    "description": "Concierge turístico en Punta Cana, Bávaro y Bayahíbe: alojamiento, traslados, excursiones y servicios. Tú compras el vuelo, nosotros organizamos todo lo demás."
+  },
+  "Nav": {
+    "main": "Navegación principal",
+    "accommodation": "Alojamiento",
+    "transfers": "Traslados",
+    "excursions": "Excursiones",
+    "packages": "Paquetes",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "groups": "Grupos y empresas",
+    "agencies": "Agencias",
+    "owners": "Propietarios",
+    "planTrip": "Arma mi viaje",
+    "menu": "Menú",
+    "home": "Inicio de Conexión Caribe"
+  },
+  "LocaleSwitcher": {
+    "label": "Idioma"
+  },
+  "Hero": {
+    "eyebrow": "Punta Cana · Bávaro · Bayahíbe",
+    "title": "Tú compras el vuelo. Nosotros organizamos <em>todo lo demás</em>.",
+    "subtitle": "Alojamiento, traslados, excursiones y servicios coordinados por un equipo local. Un solo contacto, un solo itinerario.",
+    "ctaPlan": "Arma mi viaje",
+    "ctaWhatsapp": "Escríbenos por WhatsApp",
+    "trust1": "Equipo local en Punta Cana",
+    "trust2": "Atención en español, inglés y francés",
+    "trust3": "Precio confirmado antes de pagar",
+    "tripLabel": "Mi viaje",
+    "tripTitle": "Punta Cana · 5 noches",
+    "day": "Día {n}",
+    "day1Title": "Llegada a PUJ",
+    "day1Text": "Traslado privado al apartamento",
+    "day2Title": "Día de descanso",
+    "day2Text": "Masaje en la villa",
+    "day3Title": "Isla Saona",
+    "day3Text": "Catamarán y playa",
+    "confirmed": "Todo confirmado"
+  },
+  "HowItWorks": {
+    "eyebrow": "Cómo funciona",
+    "title": "Tu viaje armado en tres pasos",
+    "lead": "Sin buscar en diez páginas ni coordinar proveedores por tu cuenta.",
+    "step1Title": "Cuéntanos tu viaje",
+    "step1Text": "Fechas, cuántos viajan y qué te gustaría hacer. Por la web o por WhatsApp.",
+    "step2Title": "Recibe tu propuesta",
+    "step2Text": "Confirmamos disponibilidad y precios con nuestros proveedores locales.",
+    "step3Title": "Disfruta sin pendientes",
+    "step3Text": "Tu itinerario en un solo lugar y atención local durante toda tu estadía."
+  },
+  "Services": {
+    "eyebrow": "Qué organizamos",
+    "title": "Todo lo que tu viaje necesita",
+    "lead": "Elige lo que quieras: lo coordinamos todo con proveedores de confianza.",
+    "accommodationText": "Apartamentos, villas y hoteles en Bávaro, Cap Cana y alrededores.",
+    "transfersText": "Traslados privados desde el aeropuerto de Punta Cana, de día o de noche.",
+    "excursionsText": "Isla Saona, buggies, catamaranes, Isla Catalina y más.",
+    "packagesText": "Combinaciones pensadas para parejas, familias y grupos de amigos.",
+    "extrasText": "Supermercado en tu llegada, chef privado, masajes, fotografía y decoración.",
+    "groupsText": "Viajes de incentivo, eventos y logística para equipos.",
+    "more": "Ver más"
+  },
+  "CtaBand": {
+    "title": "¿Ya tienes tus fechas?",
+    "text": "Cuéntanos cuándo llegas y quiénes viajan. Te respondemos por WhatsApp con una propuesta a tu medida.",
+    "primary": "Escríbenos por WhatsApp",
+    "secondary": "Arma mi viaje"
+  },
+  "WhatsApp": {
+    "float": "Habla con nosotros",
+    "defaultMessage": "Hola Conexión Caribe. Quiero organizar mi viaje."
+  },
+  "Footer": {
+    "tagline": "Concierge turístico en República Dominicana. Tu viaje, nuestra conexión.",
+    "explore": "Explora",
+    "company": "Conexión Caribe",
+    "contact": "Contacto",
+    "whatsapp": "WhatsApp",
+    "zones": "Punta Cana · Bávaro · Bayahíbe · La Romana",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cancellation": "Cancelación",
+    "rights": "Todos los derechos reservados.",
+    "priceNote": "Los precios son referenciales y pueden variar según fecha, disponibilidad, temporada y cantidad de pasajeros."
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "text": "La página que buscas no existe o se movió.",
+    "back": "Volver al inicio"
+  }
+}
