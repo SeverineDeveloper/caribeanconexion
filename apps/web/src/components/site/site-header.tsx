@@ -14,7 +14,7 @@ export async function SiteHeader() {
     <header className="sticky top-0 z-40 border-line border-b bg-white/90 backdrop-blur-md">
       <div className="container-page flex h-16 items-center gap-6 lg:h-20">
         <Link href="/" aria-label={t("home")} className="shrink-0 rounded-lg">
-          <Logo />
+          <Logo priority className="h-10 w-auto lg:h-13" />
         </Link>
 
         <nav aria-label={t("main")} className="hidden flex-1 justify-center lg:flex">

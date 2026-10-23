@@ -17,17 +17,17 @@
   --color-sand-300: #e6d5b8;
   --color-line: #e8e0d2;
 
-  --color-ink-900: #0a2a4a;
+  --color-ink-900: #01274b; /* navy del logo */
   --color-ink-700: #34506b;
   --color-ink-500: #52677d;
 
   --color-teal-50: #e6f7f6;
-  --color-teal-400: #0fb5b0;
+  --color-teal-400: #01aeb5; /* turquesa del logo */
   --color-teal-600: #087571;
   --color-teal-700: #065e5b;
 
-  --color-gold-400: #c9a227;
-  --color-gold-700: #7a5f0e;
+  --color-gold-400: #cb9e55; /* dorado champán del logo */
+  --color-gold-700: #7a5a22;
   --color-palm-600: #2f6b4f;
   --color-danger-600: #b42318;
   --color-whatsapp: #25d366;
@@ -36,8 +36,8 @@
   --radius-card: 1.5rem;
   --radius-panel: 2rem;
 
-  --shadow-card: 0 1px 2px rgb(10 42 74 / 0.06), 0 1px 1px rgb(10 42 74 / 0.04);
-  --shadow-raised: 0 24px 48px -24px rgb(10 42 74 / 0.35), 0 2px 6px rgb(10 42 74 / 0.06);
+  --shadow-card: 0 1px 2px rgb(1 39 75 / 0.06), 0 1px 1px rgb(1 39 75 / 0.04);
+  --shadow-raised: 0 24px 48px -24px rgb(1 39 75 / 0.35), 0 2px 6px rgb(1 39 75 / 0.06);
 }
 
 /* ── Tema de HeroUI mapeado a la marca (solo claro) ────────────────────────── */
@@ -76,7 +76,7 @@
   /* HeroUI expone este valor como la clase border-field-border */
   --field-border: #85919e;
   --field-border-width: 1px;
-  --field-shadow: 0 1px 2px rgb(10 42 74 / 0.05);
+  --field-shadow: 0 1px 2px rgb(1 39 75 / 0.05);
 
   --surface-shadow: var(--shadow-card);
   --overlay-shadow: var(--shadow-raised);
@@ -102,7 +102,7 @@
   .input:focus,
   .input[data-focused="true"] {
     border-color: var(--color-teal-600);
-    box-shadow: 0 0 0 3px rgb(15 181 176 / 0.35);
+    box-shadow: 0 0 0 3px rgb(1 174 181 / 0.35);
   }
   .textfield {
     @apply gap-2;

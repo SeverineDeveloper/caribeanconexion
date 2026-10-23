@@ -1,53 +1,59 @@
-/** Isotipo: ola turquesa y sol dorado (mismo dibujo que app/icon.svg). */
-export function LogoMark({
-  className = "size-9",
-  tone = "dark",
+import Image from "next/image";
+import horizontalOnDark from "@/assets/brand/logo-horizontal-dark.png";
+import horizontalOnLight from "@/assets/brand/logo-horizontal-light.png";
+import markOnLight from "@/assets/brand/logo-mark.png";
+import markOnDark from "@/assets/brand/logo-mark-dark.png";
+import stackedOnDark from "@/assets/brand/logo-stacked-dark.png";
+
+// Recursos generados desde docs/brand/originales (ver docs/DESIGN.md §7).
+// `on` indica el fondo sobre el que se muestra el logo.
+type On = "light" | "dark";
+
+/** Logotipo horizontal: símbolo + "CONEXIÓN CARIBE". Alto por defecto de 44 px. */
+export function Logo({
+  on = "light",
+  className = "h-11 w-auto",
+  priority,
 }: {
+  on?: On;
   className?: string;
-  tone?: "dark" | "light";
+  priority?: boolean;
 }) {
   return (
-    <svg viewBox="0 0 64 64" aria-hidden="true" className={className}>
-      {tone === "light" ? (
-        <rect
-          x="1"
-          y="1"
-          width="62"
-          height="62"
-          rx="15"
-          fill="#FFFFFF"
-          fillOpacity="0.08"
-          stroke="#FFFFFF"
-          strokeOpacity="0.18"
-          strokeWidth="2"
-        />
-      ) : (
-        <rect width="64" height="64" rx="16" fill="#0A2A4A" />
-      )}
-      <circle cx="42" cy="22" r="7" fill="#C9A227" />
-      <path
-        d="M12 40c6.7-6 13.3-6 20 0s13.3 6 20 0"
-        fill="none"
-        stroke="#0FB5B0"
-        strokeWidth="5"
-        strokeLinecap="round"
-      />
-    </svg>
+    <Image
+      src={on === "dark" ? horizontalOnDark : horizontalOnLight}
+      alt="Conexión Caribe"
+      className={className}
+      priority={priority}
+    />
   );
 }
 
-export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
+/** Solo el símbolo (infinito). */
+export function LogoMark({
+  on = "light",
+  className = "h-9 w-auto",
+}: {
+  on?: On;
+  className?: string;
+}) {
   return (
-    <span className="inline-flex items-center gap-2.5">
-      <LogoMark tone={tone} />
-      <span
-        className={`font-display font-semibold text-[1.3125rem] leading-none tracking-tight ${
-          tone === "light" ? "text-white" : "text-ink-900"
-        }`}
-      >
-        Conexión{" "}
-        <span className={tone === "light" ? "text-teal-400" : "text-teal-600"}>Caribe</span>
-      </span>
-    </span>
+    <Image
+      src={on === "dark" ? markOnDark : markOnLight}
+      alt=""
+      aria-hidden
+      className={className}
+    />
+  );
+}
+
+/** Logotipo vertical con el lema, para fondos oscuros amplios. */
+export function LogoStacked({ className = "h-40 w-auto" }: { className?: string }) {
+  return (
+    <Image
+      src={stackedOnDark}
+      alt="Conexión Caribe · Tu viaje, nuestra conexión."
+      className={className}
+    />
   );
 }

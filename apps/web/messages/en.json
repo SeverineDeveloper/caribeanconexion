@@ -30,6 +30,7 @@
     "trust1": "Local team in Punta Cana",
     "trust2": "Support in English, Spanish and French",
     "trust3": "Price confirmed before you pay",
+    "imageAlt": "White sand beach, palm trees and turquoise sea in the Dominican Caribbean",
     "tripLabel": "My trip",
     "tripTitle": "Punta Cana · 5 nights",
     "day": "Day {n}",
@@ -40,6 +41,95 @@
     "day3Title": "Saona Island",
     "day3Text": "Catamaran and beach",
     "confirmed": "All confirmed"
+  },
+  "Excursions": {
+    "eyebrow": "Featured excursions",
+    "title": "Experiences to live the Caribbean",
+    "lead": "A selection to get you started. Before you book, we confirm availability, schedules and price.",
+    "cta": "Ask on WhatsApp",
+    "waMessage": "Hi Conexión Caribe. I'm interested in this excursion: {name}.",
+    "note": "All experiences are subject to quote and availability.",
+    "categories": {
+      "sea": "Sea",
+      "adventure": "Adventure",
+      "culture": "Culture",
+      "nature": "Nature"
+    },
+    "items": {
+      "saonaClasica": {
+        "title": "Classic Saona Island",
+        "tagline": "Turquoise water, palm trees and an unforgettable getaway.",
+        "detail": "Shared excursion; itinerary subject to availability."
+      },
+      "saonaVip": {
+        "title": "Saona Island VIP · 4 beaches",
+        "tagline": "A more exclusive Caribbean, at your own pace.",
+        "detail": "Premium options and tours of several beaches."
+      },
+      "catalina": {
+        "title": "Catalina Island",
+        "tagline": "An invitation to discover the sea and its reefs.",
+        "detail": "Snorkeling option and beach visit."
+      },
+      "buggies": {
+        "title": "Buggy adventure",
+        "tagline": "Thrilling routes through tropical landscapes.",
+        "detail": "Guided activity, subject to age and safety rules."
+      },
+      "partyBoat": {
+        "title": "Party boat",
+        "tagline": "Music, Caribbean vibes and fun on the water.",
+        "detail": "Group experience for adults and families, depending on the option."
+      },
+      "santoDomingo": {
+        "title": "Cultural Santo Domingo",
+        "tagline": "Dominican history, architecture and tradition.",
+        "detail": "Tour of the Colonial Zone and its cultural landmarks."
+      },
+      "samana": {
+        "title": "Samaná & nature",
+        "tagline": "Forests, waterfalls and spectacular scenery.",
+        "detail": "Excursions to waterfalls and beaches."
+      },
+      "zipline": {
+        "title": "Zip line & adventure",
+        "tagline": "Adrenaline and nature in one experience.",
+        "detail": "Horseback riding, parasailing and Scape Park also on request."
+      }
+    }
+  },
+  "MoreExperiences": {
+    "title": "And much more, tailored to you",
+    "sea": {
+      "title": "Sea & adventure",
+      "items": [
+        "Parasailing",
+        "Speedboat",
+        "Sport fishing",
+        "Diving",
+        "Snorkeling",
+        "Private boat trips"
+      ]
+    },
+    "land": {
+      "title": "Land & nature",
+      "items": [
+        "Scape Park",
+        "Horseback riding",
+        "Zip line",
+        "Safari & nature",
+        "Custom private experiences"
+      ]
+    },
+    "occasions": {
+      "title": "Special occasions",
+      "items": [
+        "Bachelor & bachelorette parties",
+        "Birthdays & anniversaries",
+        "Professional photography",
+        "Intimate beachfront events"
+      ]
+    }
   },
   "HowItWorks": {
     "eyebrow": "How it works",
@@ -53,16 +143,35 @@
     "step3Text": "Your itinerary in one place and local support throughout your stay."
   },
   "Services": {
-    "eyebrow": "What we organize",
-    "title": "Everything your trip needs",
-    "lead": "Pick what you want: we coordinate it all with trusted providers.",
-    "accommodationText": "Apartments, villas and hotels in Bávaro, Cap Cana and nearby.",
-    "transfersText": "Private transfers from Punta Cana airport, day or night.",
-    "excursionsText": "Saona Island, buggies, catamarans, Catalina Island and more.",
-    "packagesText": "Combinations designed for couples, families and groups of friends.",
-    "extrasText": "Groceries on arrival, private chef, massages, photography and decoration.",
-    "groupsText": "Incentive trips, events and logistics for teams.",
-    "more": "Learn more"
+    "eyebrow": "Services that connect your trip",
+    "title": "More than excursions",
+    "lead": "One connection to organize everything, from your airport arrival to the special details of your stay.",
+    "arrival": {
+      "title": "Arrival & getting around",
+      "items": [
+        "Round-trip airport–hotel transfers",
+        "Car rental and private transportation",
+        "Driver on request"
+      ]
+    },
+    "stay": {
+      "title": "Stays & comfort",
+      "items": [
+        "Airbnb-style apartments and villas",
+        "Private chef and dining experiences",
+        "Massages and wellness"
+      ]
+    },
+    "care": {
+      "title": "Personal touch",
+      "items": [
+        "Grocery shopping before you arrive",
+        "Vacation photo and video",
+        "Restaurants and romantic dinners",
+        "Weddings, birthdays and celebrations"
+      ]
+    },
+    "cta": "Plan my trip"
   },
   "CtaBand": {
     "title": "Already have your dates?",

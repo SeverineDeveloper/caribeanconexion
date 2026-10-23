@@ -30,6 +30,7 @@
     "trust1": "Équipe locale à Punta Cana",
     "trust2": "Service en français, anglais et espagnol",
     "trust3": "Prix confirmé avant de payer",
+    "imageAlt": "Plage de sable blanc, palmiers et mer turquoise dans les Caraïbes dominicaines",
     "tripLabel": "Mon voyage",
     "tripTitle": "Punta Cana · 5 nuits",
     "day": "Jour {n}",
@@ -40,6 +41,95 @@
     "day3Title": "Île Saona",
     "day3Text": "Catamaran et plage",
     "confirmed": "Tout est confirmé"
+  },
+  "Excursions": {
+    "eyebrow": "Excursions sélectionnées",
+    "title": "Des expériences pour vivre les Caraïbes",
+    "lead": "Une sélection pour commencer. Avant de réserver, nous confirmons disponibilités, horaires et prix.",
+    "cta": "Demander sur WhatsApp",
+    "waMessage": "Bonjour Conexión Caribe. Je suis intéressé(e) par l'excursion : {name}.",
+    "note": "Toutes les expériences sont soumises à devis et à disponibilité.",
+    "categories": {
+      "sea": "Mer",
+      "adventure": "Aventure",
+      "culture": "Culture",
+      "nature": "Nature"
+    },
+    "items": {
+      "saonaClasica": {
+        "title": "Île Saona classique",
+        "tagline": "Mer turquoise, palmiers et une escapade inoubliable.",
+        "detail": "Excursion partagée, itinéraire selon disponibilité."
+      },
+      "saonaVip": {
+        "title": "Île Saona VIP · 4 plages",
+        "tagline": "Des Caraïbes plus exclusives, à votre rythme.",
+        "detail": "Options premium et circuits sur plusieurs plages."
+      },
+      "catalina": {
+        "title": "Île Catalina",
+        "tagline": "Une invitation à découvrir la mer et ses récifs.",
+        "detail": "Option snorkeling et visite de plage."
+      },
+      "buggies": {
+        "title": "Aventure en buggy",
+        "tagline": "Des parcours palpitants au cœur des paysages tropicaux.",
+        "detail": "Activité guidée, selon l'âge et les règles de sécurité."
+      },
+      "partyBoat": {
+        "title": "Party boat",
+        "tagline": "Musique, ambiance caribéenne et fête en mer.",
+        "detail": "Expérience en groupe pour adultes et familles, selon la formule."
+      },
+      "santoDomingo": {
+        "title": "Saint-Domingue culturel",
+        "tagline": "Histoire, architecture et traditions dominicaines.",
+        "detail": "Visite de la Zone coloniale et de ses lieux culturels."
+      },
+      "samana": {
+        "title": "Samaná et nature",
+        "tagline": "Forêts, cascades et paysages spectaculaires.",
+        "detail": "Excursions vers les cascades et les plages."
+      },
+      "zipline": {
+        "title": "Tyrolienne et aventure",
+        "tagline": "Adrénaline et nature en une seule expérience.",
+        "detail": "Balades à cheval, parachute ascensionnel et Scape Park sur demande."
+      }
+    }
+  },
+  "MoreExperiences": {
+    "title": "Et bien plus encore, sur mesure",
+    "sea": {
+      "title": "Mer et aventure",
+      "items": [
+        "Parachute ascensionnel",
+        "Bateau rapide",
+        "Pêche sportive",
+        "Plongée",
+        "Snorkeling",
+        "Sorties en bateau privé"
+      ]
+    },
+    "land": {
+      "title": "Terre et nature",
+      "items": [
+        "Scape Park",
+        "Balades à cheval",
+        "Tyrolienne",
+        "Safari et nature",
+        "Expériences privées sur mesure"
+      ]
+    },
+    "occasions": {
+      "title": "Occasions spéciales",
+      "items": [
+        "Enterrements de vie de garçon/fille",
+        "Anniversaires",
+        "Photographie professionnelle",
+        "Événements intimes en bord de mer"
+      ]
+    }
   },
   "HowItWorks": {
     "eyebrow": "Comment ça marche",
@@ -53,16 +143,35 @@
     "step3Text": "Votre itinéraire au même endroit et une assistance locale pendant tout le séjour."
   },
   "Services": {
-    "eyebrow": "Ce que nous organisons",
-    "title": "Tout ce dont votre voyage a besoin",
-    "lead": "Choisissez ce que vous voulez : nous coordonnons tout avec des prestataires de confiance.",
-    "accommodationText": "Appartements, villas et hôtels à Bávaro, Cap Cana et alentours.",
-    "transfersText": "Transferts privés depuis l'aéroport de Punta Cana, de jour comme de nuit.",
-    "excursionsText": "Île Saona, buggies, catamarans, île Catalina et plus encore.",
-    "packagesText": "Des formules pensées pour les couples, les familles et les groupes d'amis.",
-    "extrasText": "Courses à l'arrivée, chef privé, massages, photographie et décoration.",
-    "groupsText": "Voyages incentive, événements et logistique pour les équipes.",
-    "more": "En savoir plus"
+    "eyebrow": "Des services qui relient votre voyage",
+    "title": "Bien plus que des excursions",
+    "lead": "Un seul interlocuteur pour tout organiser, de l'arrivée à l'aéroport aux petits détails de votre séjour.",
+    "arrival": {
+      "title": "Arrivée et déplacements",
+      "items": [
+        "Transferts aéroport–hôtel aller-retour",
+        "Location de voiture et transport privé",
+        "Chauffeur sur demande"
+      ]
+    },
+    "stay": {
+      "title": "Hébergement et confort",
+      "items": [
+        "Appartements type Airbnb et villas",
+        "Chef privé et expériences gastronomiques",
+        "Massages et bien-être"
+      ]
+    },
+    "care": {
+      "title": "Service personnalisé",
+      "items": [
+        "Courses livrées avant votre arrivée",
+        "Photos et vidéos de vacances",
+        "Restaurants et dîners romantiques",
+        "Mariages, anniversaires et célébrations"
+      ]
+    },
+    "cta": "Organiser mon voyage"
   },
   "CtaBand": {
     "title": "Vous avez déjà vos dates ?",

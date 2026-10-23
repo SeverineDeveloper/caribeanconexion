@@ -3,30 +3,31 @@ import { buttonVariants } from "@heroui/styles";
 import {
   ArrowRight,
   BedDouble,
-  Briefcase,
   CarFront,
+  Check,
   CircleCheck,
   ClipboardCheck,
-  Gift,
+  HeartHandshake,
   type LucideIcon,
   MapPin,
   MessagesSquare,
+  PartyPopper,
   Sailboat,
-  ShoppingBasket,
   TreePalm,
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { WhatsAppIcon } from "@/components/brand/whatsapp-icon";
+import { ExcursionCard } from "@/components/site/excursion-card";
 import { HeroVisual } from "@/components/site/hero-visual";
 import { SectionHeader } from "@/components/site/section-header";
+import { EXCURSIONS, excursionOriginCode } from "@/content/excursions";
 import { Link } from "@/i18n/navigation";
 import { whatsappNumber } from "@/lib/site";
 
 export default async function HomePage() {
   const t = await getTranslations();
-  const tNav = await getTranslations("Nav");
-  const whatsappUrl = (origin: string) =>
-    buildWhatsAppUrl(whatsappNumber, t("WhatsApp.defaultMessage"), origin);
+  const whatsappUrl = (origin: string, message = t("WhatsApp.defaultMessage")) =>
+    buildWhatsAppUrl(whatsappNumber, message, origin);
 
   const trust = [t("Hero.trust1"), t("Hero.trust2"), t("Hero.trust3")];
 
@@ -36,33 +37,16 @@ export default async function HomePage() {
     { icon: TreePalm, title: t("HowItWorks.step3Title"), text: t("HowItWorks.step3Text") },
   ];
 
-  const services: { icon: LucideIcon; href: string; title: string; text: string }[] = [
-    {
-      icon: BedDouble,
-      href: "/alojamiento",
-      title: tNav("accommodation"),
-      text: t("Services.accommodationText"),
-    },
-    {
-      icon: CarFront,
-      href: "/traslados",
-      title: tNav("transfers"),
-      text: t("Services.transfersText"),
-    },
-    {
-      icon: Sailboat,
-      href: "/excursiones",
-      title: tNav("excursions"),
-      text: t("Services.excursionsText"),
-    },
-    { icon: Gift, href: "/paquetes", title: tNav("packages"), text: t("Services.packagesText") },
-    {
-      icon: ShoppingBasket,
-      href: "/servicios",
-      title: tNav("services"),
-      text: t("Services.extrasText"),
-    },
-    { icon: Briefcase, href: "/grupos", title: tNav("groups"), text: t("Services.groupsText") },
+  const experienceGroups: { icon: LucideIcon; key: "sea" | "land" | "occasions" }[] = [
+    { icon: Sailboat, key: "sea" },
+    { icon: TreePalm, key: "land" },
+    { icon: PartyPopper, key: "occasions" },
+  ];
+
+  const serviceGroups: { icon: LucideIcon; key: "arrival" | "stay" | "care" }[] = [
+    { icon: CarFront, key: "arrival" },
+    { icon: BedDouble, key: "stay" },
+    { icon: HeartHandshake, key: "care" },
   ];
 
   return (
@@ -117,6 +101,7 @@ export default async function HomePage() {
           </div>
 
           <HeroVisual
+            imageAlt={t("Hero.imageAlt")}
             tripLabel={t("Hero.tripLabel")}
             tripTitle={t("Hero.tripTitle")}
             confirmed={t("Hero.confirmed")}
@@ -129,8 +114,68 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── Excursiones ──────────────────────────────────────── */}
+      <section id="excursiones" className="section-y bg-sand-100">
+        <div className="container-page">
+          <SectionHeader
+            eyebrow={t("Excursions.eyebrow")}
+            title={t("Excursions.title")}
+            lead={t("Excursions.lead")}
+          />
+          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:gap-6 xl:grid-cols-4">
+            {EXCURSIONS.map((excursion) => {
+              const title = t(`Excursions.items.${excursion.key}.title`);
+              return (
+                <li key={excursion.slug}>
+                  <ExcursionCard
+                    image={excursion.image}
+                    category={t(`Excursions.categories.${excursion.category}`)}
+                    title={title}
+                    tagline={t(`Excursions.items.${excursion.key}.tagline`)}
+                    detail={t(`Excursions.items.${excursion.key}.detail`)}
+                    ctaLabel={t("Excursions.cta")}
+                    whatsappUrl={whatsappUrl(
+                      excursionOriginCode(excursion.slug),
+                      t("Excursions.waMessage", { name: title }),
+                    )}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+
+          {/* Más experiencias (catálogo, pág. 6) */}
+          <div className="mt-12 rounded-card border border-line bg-white p-6 shadow-card sm:p-8 lg:mt-16 lg:p-10">
+            <h3 className="text-display-md text-ink-900">{t("MoreExperiences.title")}</h3>
+            <div className="mt-8 grid gap-8 md:grid-cols-3 md:gap-10">
+              {experienceGroups.map((group) => (
+                <div key={group.key}>
+                  <p className="flex items-center gap-3 font-semibold text-ink-900">
+                    <span className="flex size-10 items-center justify-center rounded-full bg-teal-50 text-teal-600">
+                      <group.icon className="size-5" strokeWidth={1.75} aria-hidden="true" />
+                    </span>
+                    {t(`MoreExperiences.${group.key}.title`)}
+                  </p>
+                  <ul className="mt-4 flex flex-wrap gap-2">
+                    {(t.raw(`MoreExperiences.${group.key}.items`) as string[]).map((item) => (
+                      <li
+                        key={item}
+                        className="rounded-full border border-line bg-canvas px-3 py-1.5 text-ink-700 text-sm"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 text-ink-500 text-sm">{t("Excursions.note")}</p>
+          </div>
+        </div>
+      </section>
+
       {/* ── Cómo funciona ────────────────────────────────────── */}
-      <section className="section-y bg-sand-100">
+      <section className="section-y">
         <div className="container-page">
           <SectionHeader
             eyebrow={t("HowItWorks.eyebrow")}
@@ -159,45 +204,52 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── Qué organizamos ──────────────────────────────────── */}
-      <section className="section-y">
+      {/* ── Servicios (catálogo, pág. 7) ─────────────────────── */}
+      <section className="section-y bg-sand-100">
         <div className="container-page">
           <SectionHeader
             eyebrow={t("Services.eyebrow")}
             title={t("Services.title")}
             lead={t("Services.lead")}
           />
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-8">
-            {services.map((service) => (
-              <li key={service.href}>
-                <Link
-                  href={service.href}
-                  className="group flex h-full flex-col rounded-card border border-line bg-white p-6 shadow-card transition duration-150 hover:-translate-y-0.5 hover:border-teal-400/50 hover:shadow-raised sm:p-8"
-                >
-                  <span className="flex size-12 items-center justify-center rounded-full bg-teal-50 text-teal-600">
-                    <service.icon className="size-6" strokeWidth={1.75} aria-hidden="true" />
-                  </span>
-                  <h3 className="mt-6 font-sans font-semibold text-ink-900 text-lg">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 flex-1 text-ink-700">{service.text}</p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 font-semibold text-sm text-teal-600">
-                    {t("Services.more")}
-                    <ArrowRight
-                      className="size-4 transition-transform duration-150 group-hover:translate-x-1"
-                      strokeWidth={2}
-                      aria-hidden="true"
-                    />
-                  </span>
-                </Link>
+          <ul className="mt-10 grid gap-5 lg:mt-14 lg:grid-cols-3 lg:gap-8">
+            {serviceGroups.map((group) => (
+              <li
+                key={group.key}
+                className="flex flex-col rounded-card border border-line bg-white p-6 shadow-card sm:p-8"
+              >
+                <span className="flex size-12 items-center justify-center rounded-full bg-teal-50 text-teal-600">
+                  <group.icon className="size-6" strokeWidth={1.75} aria-hidden="true" />
+                </span>
+                <h3 className="mt-6 font-sans font-semibold text-ink-900 text-lg">
+                  {t(`Services.${group.key}.title`)}
+                </h3>
+                <ul className="mt-4 flex flex-col gap-3">
+                  {(t.raw(`Services.${group.key}.items`) as string[]).map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-ink-700">
+                      <Check
+                        className="mt-0.5 size-5 shrink-0 text-teal-600"
+                        strokeWidth={2}
+                        aria-hidden="true"
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ul>
+          <div className="mt-12 flex justify-center">
+            <Link href="/arma-tu-viaje" className={buttonVariants({ size: "lg" })}>
+              {t("Services.cta")}
+              <ArrowRight className="size-5" strokeWidth={2} aria-hidden="true" />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────── */}
-      <section className="pb-20 lg:pb-28">
+      <section className="section-y">
         <div className="container-page">
           <div className="relative overflow-hidden rounded-panel bg-ink-900 px-6 py-14 sm:px-12 lg:px-16 lg:py-20">
             <svg
@@ -205,11 +257,11 @@ export default async function HomePage() {
               viewBox="0 0 600 300"
               className="pointer-events-none absolute right-0 bottom-0 w-[38rem] max-w-none opacity-90"
             >
-              <circle cx="470" cy="90" r="52" fill="#C9A227" />
+              <circle cx="470" cy="90" r="52" fill="#CB9E55" />
               <path
                 d="M120 230c60-34 120-34 180 0s120 34 180 0 90-30 120-20"
                 fill="none"
-                stroke="#0FB5B0"
+                stroke="#01AEB5"
                 strokeOpacity="0.5"
                 strokeWidth="10"
                 strokeLinecap="round"
@@ -217,7 +269,7 @@ export default async function HomePage() {
               <path
                 d="M220 275c50-28 100-28 150 0s100 28 150 0 60-20 80-14"
                 fill="none"
-                stroke="#0FB5B0"
+                stroke="#01AEB5"
                 strokeOpacity="0.25"
                 strokeWidth="10"
                 strokeLinecap="round"
@@ -231,7 +283,7 @@ export default async function HomePage() {
                   href={whatsappUrl("CC-HOME-CTA")}
                   target="_blank"
                   rel="noopener"
-                  className={`${buttonVariants({ size: "lg" })} bg-teal-400 text-ink-900 hover:bg-[#3cc6c2]`}
+                  className={`${buttonVariants({ size: "lg" })} bg-teal-400 text-ink-900 hover:bg-[#2fc0c6]`}
                 >
                   <WhatsAppIcon />
                   {t("CtaBand.primary")}

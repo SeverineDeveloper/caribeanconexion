@@ -23,7 +23,7 @@ export async function SiteFooter() {
     <footer className="bg-ink-900 text-white/75">
       <div className="container-page grid gap-12 pt-16 pb-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:pt-20">
         <div className="sm:col-span-2 lg:col-span-1">
-          <Logo tone="light" />
+          <Logo on="dark" className="h-14 w-auto" />
           <p className="mt-5 max-w-xs">{t("tagline")}</p>
           <p className="mt-3 text-sm text-white/60">{t("zones")}</p>
         </div>

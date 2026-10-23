@@ -85,8 +85,9 @@ Resultados en PLAN.md, sección 1.
 **Del cliente:**
 - [ ] Nombre de dominio deseado.
 - [ ] Cantidades iniciales del catálogo: propiedades, excursiones, rutas de traslado, servicios extra, productos del supermercado y proveedores.
-- [ ] Logo, fotos, videos y lista de servicios y precios (dicen que están listos: hay que recibirlos).
-- [ ] Política de cancelación y reembolso, y textos legales.
+- [x] Logo y catálogo visual en PDF, recibidos el 2026-10-23 y guardados en `docs/brand/originales/`. Falta el logo en vector (SVG o PNG transparente).
+- [ ] Fotos y videos en alta resolución (las del PDF son ilustrativas y pequeñas), y la lista de servicios con precios.
+- [ ] Política de cancelación y reembolso, y textos legales. El PDF trae un **borrador con los porcentajes en blanco**, marcado "para revisión comercial y legal antes de publicar": no se publica hasta tener los valores y la revisión legal.
 - [ ] Horario de atención (para los mensajes del bot fuera de horario).
 - [ ] Reglas de los traslados con reserva inmediata: antelación mínima, recargo nocturno, equipaje, número de vuelo obligatorio y cómo se avisa al proveedor.
 - [ ] Reglas de los alojamientos con reserva inmediata: estancia mínima, limpieza, depósito, check-in y check-out.

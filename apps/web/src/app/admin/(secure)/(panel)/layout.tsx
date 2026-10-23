@@ -21,7 +21,7 @@ export default async function PanelLayout({ children }: LayoutProps<"/admin">) {
       <aside className="border-line border-b bg-white lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:border-r lg:border-b-0">
         <div className="flex h-16 items-center px-5 lg:px-6">
           <NextLink href="/admin" aria-label="Inicio del panel" className="rounded-lg">
-            <Logo />
+            <Logo className="h-9 w-auto" />
           </NextLink>
         </div>
         <div className="px-3 pb-3 lg:flex-1 lg:px-4 lg:pt-4">

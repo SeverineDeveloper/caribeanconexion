@@ -91,7 +91,7 @@ export function TwoFactorSetup({ enabled }: { enabled: boolean }) {
           <QRCodeSVG
             value={enrollment.totpURI}
             size={168}
-            fgColor="#0A2A4A"
+            fgColor="#01274B"
             title="Código QR para la verificación en dos pasos"
           />
         </div>

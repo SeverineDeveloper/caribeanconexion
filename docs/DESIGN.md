@@ -17,15 +17,15 @@ Estas son las reglas de UI para la web pública y el panel. Todo valor visual sa
 | `sand-300` | `#E6D5B8` | Detalles decorativos |
 | `line` | `#E8E0D2` | Bordes de cards y separadores (decorativos) |
 | `field-border` | `#85919E` | Borde de inputs en reposo (3.2:1, WCAG 1.4.11) |
-| `ink-900` | `#0A2A4A` | Texto principal, franjas oscuras, footer |
+| `ink-900` | `#01274B` | Navy del logo: texto principal, franjas oscuras, footer |
 | `ink-700` | `#34506B` | Texto secundario y párrafos largos |
 | `ink-500` | `#52677D` | Texto atenuado: ayudas, metadatos |
 | `teal-50` | `#E6F7F6` | Fondo de íconos y estados activos suaves |
-| `teal-400` | `#0FB5B0` | Turquesa de marca: acentos, ilustración, CTA sobre fondo oscuro |
+| `teal-400` | `#01AEB5` | Turquesa del logo: acentos, CTA sobre fondo oscuro |
 | `teal-600` | `#087571` | Acción principal (botones, enlaces) sobre fondo claro |
 | `teal-700` | `#065E5B` | Hover y pressed de la acción principal |
-| `gold-400` | `#C9A227` | Detalles: estrellas, sello "Premium". **No** para texto sobre claro |
-| `gold-700` | `#7A5F0E` | Texto dorado sobre claro |
+| `gold-400` | `#CB9E55` | Dorado champán del logo: detalles y sello "Premium". **No** para texto sobre claro |
+| `gold-700` | `#7A5A22` | Texto dorado sobre claro |
 | `palm-600` | `#2F6B4F` | Éxito y confirmado |
 | `danger-600` | `#B42318` | Error |
 
@@ -38,10 +38,10 @@ Estas son las reglas de UI para la web pública y el panel. Todo valor visual sa
 
   | Combinación | Contraste |
   |---|---|
-  | `ink-900` sobre `canvas` | 14:1 |
+  | `ink-900` sobre `canvas` | 14.5:1 |
   | `ink-500` sobre `sand-100` | 5.0:1 |
   | blanco sobre `teal-600` | 5.5:1 |
-  | `teal-400` sobre `ink-900` | 5.7:1 |
+  | `teal-400` sobre `ink-900` | 5.5:1 |
   | `gold-700` sobre blanco | 6.0:1 |
 
 ## 2. Tipografía
@@ -119,11 +119,28 @@ Escala base de 4 px (unidades de Tailwind): 1 · 2 · 3 · 4 · 5 · 6 · 8 · 1
 
 Tamaños: `sm` 36 px (solo en el panel), `md` 44 px (por defecto) y `lg` 52 px (hero y CTA). Los íconos van a 20 px y a 8 px del texto.
 
-## 7. Iconografía e imagen
+## 7. Logo, iconografía e imagen
 
+### Logo
+Los originales del cliente están en `docs/brand/originales/`: JPEG con fondo y el catálogo en PDF. Las versiones para la web, sin fondo, están en `apps/web/src/assets/brand/` y se usan **solo** a través de `components/brand/logo.tsx`:
+
+| Componente | Archivo | Uso |
+|---|---|---|
+| `<Logo on="light">` | `logo-horizontal-light.png` | Header, panel y menú móvil. Alto de 40 px en móvil y 52 px en escritorio |
+| `<Logo on="dark">` | `logo-horizontal-dark.png` | Footer y franjas `ink-900`. Alto mínimo de 48 px |
+| `<LogoStacked>` | `logo-stacked-dark.png` (con lema) | Paneles de marca grandes sobre `ink-900`, como el acceso al panel |
+| `<LogoMark>` | `logo-mark*.png` | Espacios pequeños donde no cabe el nombre |
+| Ícono | `app/icon.png`, `apple-icon.png`, `favicon.ico` | Generados del badge circular |
+| Al compartir | `app/opengraph-image.jpg` (1200×630) | Vista previa en WhatsApp y redes |
+
+- No se recolorea, deforma ni pone sombra al logo. Se deja un margen libre de al menos la altura de la "C" alrededor.
+- Lema oficial: **"Tu viaje, nuestra conexión."** (con coma, como en el logo).
+- Cuando llegue el logo en vector (SVG o PNG transparente de ≥ 2000 px), se reemplazan los archivos de `assets/brand/` con los mismos nombres.
+
+### Íconos y fotos
 - Íconos de [Lucide](https://lucide.dev) con trazo de 1.75 y tamaño 20–24 px. Dentro de un círculo `teal-50` de 48 px cuando acompañan a una card.
-- Las fotos son reales del cliente, sin bancos genéricos, con radio `radius-card` y proporciones 4:3 en móvil y 4:5 desde `sm` (hero), 4:3 (cards) y 16:9 (banners).
-- Mientras no lleguen las fotos se usan ilustraciones de marca (degradado mar y arena, sol dorado), nunca cajas grises.
+- Fotos con radio `radius-card` y proporciones 4:3 en móvil y 1:1 desde `sm` (hero), y 16:9 en las cards de excursión. Siempre con `next/image` y `placeholder="blur"`.
+- Las fotos actuales salen del catálogo PDF del cliente (`assets/images/`): son ilustrativas y de baja resolución. Se reemplazan por versiones de alta resolución con los mismos nombres de archivo. Nunca se usan cajas grises.
 
 ## 8. Movimiento
 

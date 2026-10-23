@@ -29,7 +29,7 @@ export function MobileNav({
             <Drawer.CloseTrigger />
             <Drawer.Header className="pb-6">
               <Drawer.Heading>
-                <Logo />
+                <Logo className="h-9 w-auto" />
               </Drawer.Heading>
             </Drawer.Header>
             <Drawer.Body className="flex flex-1 flex-col gap-8">
