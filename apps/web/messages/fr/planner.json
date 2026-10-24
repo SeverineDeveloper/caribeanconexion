@@ -1,0 +1,78 @@
+{
+  "Planner": {
+    "metaTitle": "Organiser mon voyage",
+    "metaDescription": "Dites-nous vos dates, qui voyage et ce que vous aimeriez faire. Nous vous envoyons une proposition sur mesure via WhatsApp.",
+    "eyebrow": "Organiser mon voyage",
+    "title": "Concevons votre voyage ensemble",
+    "lead": "Répondez à quatre étapes rapides et nous vous envoyons une proposition avec disponibilités et prix confirmés.",
+    "progress": "Étape {current} sur {total}",
+    "back": "Retour",
+    "next": "Continuer",
+    "edit": "Modifier",
+    "steps": {
+      "trip": "Votre voyage",
+      "interests": "Vos envies",
+      "contact": "Vos coordonnées",
+      "summary": "Récapitulatif"
+    },
+    "zone": "Zone",
+    "zonePlaceholder": "Choisissez une zone",
+    "dates": "Arrivée et départ",
+    "flexible": "Mes dates sont flexibles",
+    "adults": "Adultes",
+    "children": "Enfants",
+    "tripType": "Type de voyage",
+    "tripTypes": {
+      "couple": "Couple",
+      "family": "Famille",
+      "friends": "Amis",
+      "company": "Entreprise ou groupe",
+      "solo": "En solo"
+    },
+    "services": "Que souhaitez-vous que nous organisions ?",
+    "servicesHelp": "Choisissez autant d'options que vous voulez.",
+    "serviceOptions": {
+      "stay": "Hébergement",
+      "transfer": "Transfert aéroport",
+      "excursions": "Excursions",
+      "groceries": "Courses",
+      "chef": "Chef privé",
+      "wellness": "Massages",
+      "photo": "Photographie",
+      "celebration": "Célébration spéciale"
+    },
+    "budget": "Budget approximatif",
+    "budgetPlaceholder": "Choisissez une option",
+    "budgets": {
+      "economy": "Économique",
+      "mid": "Moyen",
+      "premium": "Premium",
+      "unsure": "Je ne sais pas encore"
+    },
+    "name": "Nom",
+    "nameRequired": "Indiquez votre nom pour que nous puissions vous saluer.",
+    "country": "Pays de résidence",
+    "email": "E-mail (facultatif)",
+    "comments": "Commentaires",
+    "commentsPlaceholder": "Célébrations, besoins particuliers, idées…",
+    "summaryTitle": "Vérifiez votre demande",
+    "summaryText": "En l'envoyant, WhatsApp s'ouvre avec votre demande prête. Nous vous répondons avec une proposition sur mesure.",
+    "send": "Envoyer via WhatsApp",
+    "notSet": "Non précisé",
+    "travelersValue": "{adults, plural, one {# adulte} other {# adultes}}{children, plural, =0 {} one {, # enfant} other {, # enfants}}",
+    "msg": {
+      "intro": "Bonjour Conexión Caribe. Je souhaite organiser mon voyage :",
+      "zone": "Zone",
+      "dates": "Dates",
+      "flexible": "flexibles",
+      "travelers": "Voyageurs",
+      "tripType": "Type de voyage",
+      "services": "Intéressé(e) par",
+      "budget": "Budget",
+      "name": "Nom",
+      "country": "Pays",
+      "email": "E-mail",
+      "comments": "Commentaires"
+    }
+  }
+}

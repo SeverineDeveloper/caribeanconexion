@@ -1,0 +1,124 @@
+{
+  "Hero": {
+    "eyebrow": "Punta Cana · Bávaro · Bayahíbe",
+    "title": "Vous réservez le vol. Nous organisons <em>tout le reste</em>.",
+    "subtitle": "Hébergements, transferts, excursions et services coordonnés par une équipe locale. Un seul contact, un seul itinéraire.",
+    "ctaPlan": "Organiser mon voyage",
+    "ctaWhatsapp": "Écrivez-nous sur WhatsApp",
+    "trust1": "Équipe locale à Punta Cana",
+    "trust2": "Service en français, anglais et espagnol",
+    "trust3": "Prix confirmé avant de payer",
+    "imageAlt": "Plage de sable blanc, palmiers et mer turquoise dans les Caraïbes dominicaines"
+  },
+  "QuickPlanner": {
+    "title": "Commencez à planifier",
+    "zone": "Destination",
+    "zonePlaceholder": "Choisissez une zone",
+    "dates": "Arrivée et départ",
+    "travelers": "Voyageurs",
+    "submit": "Organiser mon voyage"
+  },
+  "Marquee": {
+    "label": "Destinations et expériences",
+    "items": [
+      "Punta Cana",
+      "Bávaro",
+      "Cap Cana",
+      "Île Saona",
+      "Bayahíbe",
+      "Île Catalina",
+      "Samaná",
+      "Saint-Domingue",
+      "La Romana",
+      "Cabeza de Toro"
+    ]
+  },
+  "ExcursionsTeaser": {
+    "viewAll": "Voir toutes les excursions"
+  },
+  "HowItWorks": {
+    "eyebrow": "Comment ça marche",
+    "title": "Votre voyage organisé en trois étapes",
+    "lead": "Fini les dix onglets ouverts et la coordination des prestataires par vous-même.",
+    "step1Title": "Parlez-nous de votre voyage",
+    "step1Text": "Dates, nombre de voyageurs et envies. Sur le site ou par WhatsApp.",
+    "step2Title": "Recevez votre proposition",
+    "step2Text": "Nous confirmons disponibilités et prix avec nos partenaires locaux.",
+    "step3Title": "Profitez l'esprit libre",
+    "step3Text": "Votre itinéraire au même endroit et une assistance locale pendant tout le séjour.",
+    "tripLabel": "Mon voyage",
+    "tripTitle": "Punta Cana · 5 nuits",
+    "day": "Jour {n}",
+    "day1Title": "Arrivée à PUJ",
+    "day1Text": "Transfert privé jusqu'à l'appartement",
+    "day2Title": "Journée détente",
+    "day2Text": "Massage à la villa",
+    "day3Title": "Île Saona",
+    "day3Text": "Catamaran et plage",
+    "confirmed": "Tout est confirmé"
+  },
+  "Bento": {
+    "eyebrow": "Ce que nous organisons",
+    "title": "Tout votre voyage, une seule connexion",
+    "lead": "De l'aéroport au dernier dîner : choisissez ce dont vous avez besoin, nous coordonnons pour vous.",
+    "stays": "Hébergements",
+    "staysText": "Appartements, villas et hôtels dans les meilleurs quartiers de Punta Cana et des environs.",
+    "transfers": "Transferts",
+    "transfersText": "De l'aéroport à votre hébergement, de jour comme de nuit.",
+    "excursions": "Excursions",
+    "excursionsText": "Île Saona, buggies, Catalina, catamarans et plus encore.",
+    "services": "Services",
+    "servicesText": "Courses, chef privé, massages et photographie.",
+    "packages": "Forfaits",
+    "packagesText": "Des formules pensées pour chaque type de voyage.",
+    "more": "En savoir plus"
+  },
+  "PackagesTeaser": {
+    "eyebrow": "Forfaits",
+    "title": "Des idées de voyage pour commencer",
+    "lead": "Des formules pensées pour chaque voyageur. Toutes s'adaptent à vos dates et à votre budget.",
+    "viewAll": "Voir tous les forfaits"
+  },
+  "Why": {
+    "eyebrow": "Pourquoi Conexión Caribe",
+    "title": "La tranquillité fait partie du voyage",
+    "items": [
+      {
+        "title": "Équipe locale",
+        "text": "Nous sommes à Punta Cana et connaissons chaque prestataire avec qui nous travaillons."
+      },
+      {
+        "title": "Un seul contact",
+        "text": "Une seule conversation pour l'hébergement, les transferts, les excursions et les extras."
+      },
+      {
+        "title": "Prix confirmé",
+        "text": "Nous confirmons disponibilité et prix avant tout paiement."
+      },
+      {
+        "title": "Dans votre langue",
+        "text": "Nous vous accompagnons en français, anglais et espagnol, avant et pendant le voyage."
+      }
+    ]
+  },
+  "HomeFaq": {
+    "items": [
+      {
+        "q": "Comment réserver avec Conexión Caribe ?",
+        "a": "Écrivez-nous sur WhatsApp ou utilisez « Organiser mon voyage ». Nous préparons une proposition avec disponibilités et prix confirmés, et vous réservez quand elle vous convient."
+      },
+      {
+        "q": "Les prix du site sont-ils définitifs ?",
+        "a": "Ils sont indicatifs. Le prix final dépend des dates, de la saison, des disponibilités et du nombre de personnes, et nous le confirmons toujours avant le paiement."
+      },
+      {
+        "q": "Dans quelles zones travaillez-vous ?",
+        "a": "Principalement à Punta Cana, Bávaro, Cap Cana, Bayahíbe et La Romana. Nous organisons aussi des excursions à Samaná, Saint-Domingue et ailleurs dans le pays."
+      },
+      {
+        "q": "Organisez-vous des voyages de groupe et d'entreprise ?",
+        "a": "Oui. Nous coordonnons voyages incentive, célébrations et événements avec transport, activités et dîners pour des groupes de toute taille."
+      }
+    ]
+  }
+}

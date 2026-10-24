@@ -1,0 +1,78 @@
+{
+  "Planner": {
+    "metaTitle": "Plan your trip",
+    "metaDescription": "Tell us your dates, who's traveling and what you'd like to do. We'll send you a tailor-made proposal on WhatsApp.",
+    "eyebrow": "Plan your trip",
+    "title": "Let's design your trip together",
+    "lead": "Answer four quick steps and we'll send you a proposal with confirmed availability and prices.",
+    "progress": "Step {current} of {total}",
+    "back": "Back",
+    "next": "Continue",
+    "edit": "Edit",
+    "steps": {
+      "trip": "Your trip",
+      "interests": "Your interests",
+      "contact": "Your details",
+      "summary": "Summary"
+    },
+    "zone": "Area",
+    "zonePlaceholder": "Choose an area",
+    "dates": "Arrival and departure",
+    "flexible": "My dates are flexible",
+    "adults": "Adults",
+    "children": "Children",
+    "tripType": "Type of trip",
+    "tripTypes": {
+      "couple": "Couple",
+      "family": "Family",
+      "friends": "Friends",
+      "company": "Company or group",
+      "solo": "Solo"
+    },
+    "services": "What would you like us to organize?",
+    "servicesHelp": "Choose as many as you like.",
+    "serviceOptions": {
+      "stay": "Stay",
+      "transfer": "Airport transfer",
+      "excursions": "Excursions",
+      "groceries": "Groceries",
+      "chef": "Private chef",
+      "wellness": "Massages",
+      "photo": "Photography",
+      "celebration": "Special celebration"
+    },
+    "budget": "Approximate budget",
+    "budgetPlaceholder": "Choose an option",
+    "budgets": {
+      "economy": "Budget",
+      "mid": "Mid-range",
+      "premium": "Premium",
+      "unsure": "Not sure yet"
+    },
+    "name": "Name",
+    "nameRequired": "Tell us your name so we can greet you.",
+    "country": "Country of residence",
+    "email": "Email (optional)",
+    "comments": "Comments",
+    "commentsPlaceholder": "Celebrations, special needs, ideas…",
+    "summaryTitle": "Review your request",
+    "summaryText": "When you send it, WhatsApp opens with your request ready. We'll reply with a tailor-made proposal.",
+    "send": "Send via WhatsApp",
+    "notSet": "Not specified",
+    "travelersValue": "{adults, plural, one {# adult} other {# adults}}{children, plural, =0 {} one {, # child} other {, # children}}",
+    "msg": {
+      "intro": "Hi Conexión Caribe. I'd like to plan my trip:",
+      "zone": "Area",
+      "dates": "Dates",
+      "flexible": "flexible",
+      "travelers": "Travelers",
+      "tripType": "Type of trip",
+      "services": "Interested in",
+      "budget": "Budget",
+      "name": "Name",
+      "country": "Country",
+      "email": "Email",
+      "comments": "Comments"
+    }
+  }
+}

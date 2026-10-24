@@ -1,0 +1,67 @@
+{
+  "Metadata": {
+    "title": "Conexión Caribe · Your Punta Cana trip, organized from start to finish",
+    "description": "Local concierge in Punta Cana, Bávaro and Bayahíbe: vacation rentals, airport transfers, excursions and services. You book the flight, we take care of everything else."
+  },
+  "Nav": {
+    "main": "Main navigation",
+    "accommodation": "Stays",
+    "transfers": "Transfers",
+    "excursions": "Excursions",
+    "packages": "Packages",
+    "services": "Services",
+    "contact": "Contact",
+    "groups": "Groups & companies",
+    "agencies": "Agencies",
+    "owners": "Property owners",
+    "planTrip": "Plan my trip",
+    "menu": "Menu",
+    "home": "Conexión Caribe home"
+  },
+  "LocaleSwitcher": {
+    "label": "Language"
+  },
+  "Common": {
+    "home": "Home",
+    "breadcrumb": "Breadcrumb",
+    "prevSlide": "Previous",
+    "nextSlide": "Next",
+    "goToSlide": "Go to item {n}",
+    "slideOf": "{n} of {total}",
+    "carousel": "Carousel",
+    "pauseVideo": "Pause video",
+    "playVideo": "Play video",
+    "viewAll": "View all",
+    "askWhatsapp": "Ask on WhatsApp",
+    "faqTitle": "Frequently asked questions",
+    "referencePrices": "Prices are for reference: we confirm the final price based on dates, availability and group size."
+  },
+  "WhatsApp": {
+    "float": "Talk to us",
+    "defaultMessage": "Hi Conexión Caribe. I'd like to plan my trip."
+  },
+  "CtaBand": {
+    "title": "Already have your dates?",
+    "text": "Tell us when you arrive and who's traveling. We'll reply on WhatsApp with a tailor-made proposal.",
+    "primary": "Message us on WhatsApp",
+    "secondary": "Plan my trip"
+  },
+  "Footer": {
+    "tagline": "Local travel concierge in the Dominican Republic. Your trip, our connection.",
+    "explore": "Explore",
+    "company": "Conexión Caribe",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "zones": "Punta Cana · Bávaro · Bayahíbe · La Romana",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cancellation": "Cancellation",
+    "rights": "All rights reserved.",
+    "priceNote": "Prices are for reference only and may vary by date, availability, season and number of travelers."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "text": "The page you're looking for doesn't exist or has moved.",
+    "back": "Back to home"
+  }
+}

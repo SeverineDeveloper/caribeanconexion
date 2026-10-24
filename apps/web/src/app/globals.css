@@ -126,6 +126,21 @@
   .card__description {
     @apply text-base leading-relaxed text-ink-500;
   }
+
+  /* Resto de controles a 48 px y texto de 16 px, igual que .input */
+  .select__trigger {
+    @apply min-h-12 px-4 text-base sm:text-base;
+  }
+  .date-input-group,
+  .number-field__group {
+    @apply h-12 text-base sm:text-base;
+  }
+  .textarea {
+    @apply min-h-28 px-4 py-3 text-base sm:text-base;
+  }
+  .tabs__tab {
+    @apply h-10 px-5 text-[0.9375rem];
+  }
 }
 
 /* ── Base tipográfica ──────────────────────────────────────────────────────── */
@@ -181,4 +196,39 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+/* ── Movimiento (docs/DESIGN.md §8) ────────────────────────────────────────── */
+@theme {
+  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@utility text-display-hero {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 1.5rem + 4.6vw, 5.25rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+/* Superficie translúcida sobre foto o video */
+@utility glass {
+  background-color: rgb(255 255 255 / 0.12);
+  border: 1px solid rgb(255 255 255 / 0.22);
+  backdrop-filter: blur(14px) saturate(140%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
 }

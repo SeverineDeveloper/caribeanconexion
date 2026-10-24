@@ -11,7 +11,7 @@ export function LocaleSwitcher() {
 
   return (
     <nav aria-label={t("label")}>
-      <ul className="inline-flex items-center gap-0.5 rounded-full border border-line bg-white p-1">
+      <ul className="inline-flex items-center gap-0.5 rounded-full border border-line bg-white p-1 group-data-[transparent=true]/header:border-white/25 group-data-[transparent=true]/header:bg-white/10">
         {routing.locales.map((locale) => (
           <li key={locale}>
             <Link
@@ -19,7 +19,7 @@ export function LocaleSwitcher() {
               locale={locale}
               hrefLang={locale}
               aria-current={locale === current ? "true" : undefined}
-              className="flex h-8 min-w-10 items-center justify-center rounded-full px-2.5 font-semibold text-ink-700 text-xs uppercase tracking-wide transition-colors hover:text-ink-900 aria-[current=true]:bg-ink-900 aria-[current=true]:text-white"
+              className="flex h-8 min-w-10 items-center justify-center rounded-full px-2.5 font-semibold text-ink-700 text-xs uppercase tracking-wide transition-colors hover:text-ink-900 aria-[current=true]:bg-ink-900 aria-[current=true]:text-white group-data-[transparent=true]/header:text-white/85 group-data-[transparent=true]/header:hover:text-white group-data-[transparent=true]/header:aria-[current=true]:bg-white group-data-[transparent=true]/header:aria-[current=true]:text-ink-900"
             >
               {locale}
             </Link>

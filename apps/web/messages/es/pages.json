@@ -1,0 +1,253 @@
+{
+  "ExcursionsPage": {
+    "metaTitle": "Excursiones en Punta Cana",
+    "metaDescription": "Isla Saona, Isla Catalina, buggies, party boat, Samaná y Santo Domingo. Excursiones en Punta Cana con disponibilidad y precio confirmados.",
+    "eyebrow": "Excursiones",
+    "title": "Excursiones para vivir el Caribe dominicano",
+    "lead": "Islas, aventura, cultura y naturaleza. Elige lo que te emociona y nosotros coordinamos horarios, recogida y reservas.",
+    "filterLabel": "Filtrar por tipo",
+    "count": "{count, plural, one {# experiencia} other {# experiencias}}",
+    "faq": [
+      {
+        "q": "¿Las excursiones incluyen transporte?",
+        "a": "Depende de cada excursión. Al cotizar te indicamos si hay recogida en tu alojamiento o un punto de encuentro, y el horario."
+      },
+      {
+        "q": "¿Son compartidas o privadas?",
+        "a": "Hay opciones de ambos tipos. Las compartidas son más económicas; las privadas se adaptan a tu ritmo y a tu grupo."
+      },
+      {
+        "q": "¿Qué pasa si el clima no acompaña?",
+        "a": "Si el proveedor cancela por mal tiempo o por indicación de las autoridades, te ofrecemos otra fecha o la devolución de lo pagado por ese servicio."
+      },
+      {
+        "q": "¿Hay edad mínima?",
+        "a": "Algunas actividades, como los buggies o la tirolesa, tienen edad mínima y reglas de seguridad. Te lo confirmamos al reservar."
+      }
+    ]
+  },
+  "StaysPage": {
+    "metaTitle": "Alojamiento en Punta Cana: apartamentos, villas y hoteles",
+    "metaDescription": "Apartamentos tipo Airbnb, villas y hoteles en Bávaro, Cap Cana, Los Corales y Bayahíbe, con traslados y servicios coordinados.",
+    "eyebrow": "Alojamiento",
+    "title": "Tu lugar en el Caribe, elegido contigo",
+    "lead": "Apartamentos, villas y hoteles en las mejores zonas. Te ayudamos a elegir según tu grupo, tu presupuesto y el plan que tengas.",
+    "typesTitle": "Tipos de alojamiento",
+    "types": {
+      "apartment": {
+        "title": "Apartamentos",
+        "text": "Cocina equipada, piscina y la libertad de vivir como local. Ideales para parejas y familias."
+      },
+      "villa": {
+        "title": "Villas",
+        "text": "Privacidad, piscina propia y espacio para grupos. Perfectas para celebrar o para viajes en familia."
+      },
+      "hotel": {
+        "title": "Hoteles",
+        "text": "Todo incluido o solo alojamiento, con servicios de resort y atención 24 horas."
+      }
+    },
+    "zonesEyebrow": "Zonas",
+    "zonesTitle": "¿Dónde quedarte?",
+    "zonesLead": "Cada zona tiene su carácter. Cuéntanos qué buscas y te recomendamos la mejor para ti.",
+    "howTitle": "Cómo reservamos tu alojamiento",
+    "steps": [
+      {
+        "title": "Nos cuentas tus fechas",
+        "text": "Cuántos viajan, la zona que prefieres y tu presupuesto."
+      },
+      {
+        "title": "Te enviamos opciones",
+        "text": "Con fotos, ubicación aproximada y disponibilidad confirmada."
+      },
+      {
+        "title": "Confirmas y listo",
+        "text": "Reservamos y sumamos traslados y servicios si los quieres."
+      }
+    ],
+    "extrasTitle": "Para que llegues y solo disfrutes",
+    "extras": [
+      "Supermercado antes de tu llegada",
+      "Chef privado",
+      "Traslado privado",
+      "Decoración para celebraciones"
+    ],
+    "cta": "Solicitar disponibilidad",
+    "waMessage": "Hola Conexión Caribe. Busco alojamiento en Punta Cana."
+  },
+  "TransfersPage": {
+    "metaTitle": "Traslados aeropuerto de Punta Cana (PUJ)",
+    "metaDescription": "Traslados privados desde el aeropuerto de Punta Cana a Bávaro, Cap Cana, Bayahíbe, La Romana y Santo Domingo. Sedán, SUV, van y minibús.",
+    "eyebrow": "Traslados",
+    "title": "Del aeropuerto a tu alojamiento, sin esperas ni sorpresas",
+    "lead": "Traslados privados desde el aeropuerto de Punta Cana (PUJ), de ida y vuelta, en el vehículo que mejor se ajuste a tu grupo.",
+    "features": [
+      { "title": "Privados", "text": "Solo tú y tu grupo, sin paradas en otros hoteles." },
+      {
+        "title": "Ida y vuelta",
+        "text": "Coordinamos la llegada y la salida en una sola reserva."
+      },
+      { "title": "A cualquier hora", "text": "Vuelos de madrugada o de noche: te esperamos." },
+      {
+        "title": "Chofer bajo solicitud",
+        "text": "También para tus días de compras, playas o cenas."
+      }
+    ],
+    "routesTitle": "Rutas más pedidas desde PUJ",
+    "routesNote": "Tiempos aproximados en auto; varían según el tráfico y el punto exacto.",
+    "from": "Aeropuerto PUJ",
+    "vehiclesTitle": "Elige tu vehículo",
+    "vehiclesNote": "La capacidad final depende del equipaje. Te recomendamos el vehículo adecuado al cotizar.",
+    "cta": "Cotizar mi traslado",
+    "waMessage": "Hola Conexión Caribe. Quiero cotizar un traslado desde el aeropuerto.",
+    "faq": [
+      {
+        "q": "¿Qué datos necesitan para el traslado?",
+        "a": "Fecha, número de vuelo, cantidad de personas y maletas, y la dirección de tu alojamiento."
+      },
+      {
+        "q": "¿Qué pasa si mi vuelo se retrasa?",
+        "a": "Con tu número de vuelo coordinamos el horario de recogida. Si hay cambios, escríbenos por WhatsApp y lo ajustamos."
+      },
+      {
+        "q": "¿Tienen traslados desde Santo Domingo?",
+        "a": "Sí, también organizamos traslados desde y hacia Santo Domingo y otras zonas del país."
+      }
+    ]
+  },
+  "PackagesPage": {
+    "metaTitle": "Paquetes de viaje a Punta Cana",
+    "metaDescription": "Paquetes para parejas, familias, amigos, cumpleaños y viajes premium en Punta Cana, personalizados a tus fechas y presupuesto.",
+    "eyebrow": "Paquetes",
+    "title": "Ideas de viaje, listas para hacer tuyas",
+    "lead": "Combinaciones pensadas para cada tipo de viaje. Todas se ajustan a tus fechas, a tu grupo y a tu presupuesto.",
+    "customTitle": "¿Ninguno encaja del todo?",
+    "customText": "Armamos tu paquete desde cero: dinos qué te gustaría y lo convertimos en un itinerario.",
+    "customCta": "Armar un paquete a mi medida"
+  },
+  "ServicesPage": {
+    "metaTitle": "Servicios de concierge en Punta Cana",
+    "metaDescription": "Traslados, renta de autos, chofer, supermercado, chef privado, masajes, fotografía y celebraciones en Punta Cana.",
+    "eyebrow": "Servicios",
+    "title": "Los detalles que hacen la diferencia",
+    "lead": "Además de alojamiento y excursiones, nos ocupamos de todo lo que necesites durante tu estadía.",
+    "cta": "Pedir un servicio",
+    "waMessage": "Hola Conexión Caribe. Quiero información sobre el servicio: {name}."
+  },
+  "ContactPage": {
+    "metaTitle": "Contacto",
+    "metaDescription": "Escríbenos por WhatsApp y organiza tu viaje a Punta Cana con un equipo local. Atención en español, inglés y francés.",
+    "eyebrow": "Contacto",
+    "title": "Hablemos de tu viaje",
+    "lead": "La forma más rápida de llegar a nosotros es WhatsApp. También puedes dejarnos tu mensaje aquí y lo enviamos por ti.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappText": "Nuestro canal principal para cotizaciones y reservas.",
+    "zonesTitle": "Dónde estamos",
+    "zonesText": "Punta Cana, Bávaro, Cap Cana, Bayahíbe y La Romana, República Dominicana.",
+    "languagesTitle": "Idiomas",
+    "languagesText": "Español, inglés y francés.",
+    "formTitle": "Envíanos un mensaje",
+    "name": "Nombre",
+    "interest": "Me interesa",
+    "interestPlaceholder": "Elige una opción",
+    "interests": {
+      "trip": "Organizar un viaje completo",
+      "stay": "Alojamiento",
+      "transfer": "Traslado",
+      "excursion": "Excursiones",
+      "group": "Viaje de grupo o empresa",
+      "other": "Otra consulta"
+    },
+    "message": "Mensaje",
+    "messagePlaceholder": "Fechas, cuántas personas viajan, qué te gustaría hacer…",
+    "submit": "Enviar por WhatsApp",
+    "submitNote": "Se abrirá WhatsApp con tu mensaje listo para enviar."
+  },
+  "GroupsPage": {
+    "metaTitle": "Viajes de grupo y empresa en República Dominicana",
+    "metaDescription": "Viajes de incentivo, team building, eventos y logística para grupos en Punta Cana y República Dominicana.",
+    "eyebrow": "Grupos y empresas",
+    "title": "Viajes de grupo sin complicaciones",
+    "lead": "Viajes de incentivo, team building, celebraciones y eventos. Un solo equipo coordina transporte, actividades, alojamiento y cenas.",
+    "benefits": [
+      {
+        "title": "Un coordinador para todo",
+        "text": "Un único punto de contacto antes y durante el viaje."
+      },
+      {
+        "title": "Transporte para el grupo",
+        "text": "Minibuses y autobuses para traslados y excursiones."
+      },
+      {
+        "title": "Itinerarios de varios días",
+        "text": "Actividades, cenas y tiempo libre bien equilibrados."
+      },
+      {
+        "title": "Experiencias exclusivas",
+        "text": "Barcos privados, cenas frente al mar y actividades de equipo."
+      }
+    ],
+    "cta": "Pedir una propuesta para mi grupo",
+    "waMessage": "Hola Conexión Caribe. Quiero una propuesta para un viaje de grupo o empresa."
+  },
+  "AgenciesPage": {
+    "metaTitle": "Agencias de viaje aliadas",
+    "metaDescription": "Trabaja con Conexión Caribe como tu operador local en Punta Cana: alojamiento, traslados y excursiones para tus clientes.",
+    "eyebrow": "Agencias",
+    "title": "Tu operador local en Punta Cana",
+    "lead": "Si eres agencia de viajes, trabajamos contigo para que tus clientes vivan una experiencia organizada de principio a fin.",
+    "benefits": [
+      {
+        "title": "Condiciones para agencias",
+        "text": "Te compartimos nuestras condiciones comerciales al aprobar la alianza."
+      },
+      {
+        "title": "Atención dedicada",
+        "text": "Un contacto directo para tus cotizaciones y reservas."
+      },
+      {
+        "title": "Todo en un solo proveedor",
+        "text": "Alojamiento, traslados, excursiones y servicios para tus clientes."
+      },
+      {
+        "title": "Seguimiento en destino",
+        "text": "Acompañamos a tus clientes durante toda su estadía."
+      }
+    ],
+    "cta": "Quiero ser aliado",
+    "waMessage": "Hola Conexión Caribe. Soy de una agencia de viajes y quiero ser aliado."
+  },
+  "OwnersPage": {
+    "metaTitle": "Publica tu propiedad",
+    "metaDescription": "¿Tienes un apartamento o villa en Punta Cana? Publícalo con Conexión Caribe y recibe huéspedes con servicios coordinados.",
+    "eyebrow": "Propietarios",
+    "title": "Publica tu propiedad con nosotros",
+    "lead": "Si tienes un apartamento o una villa en Punta Cana y alrededores, podemos sumarlo a nuestras propuestas de viaje.",
+    "benefits": [
+      {
+        "title": "Más visibilidad",
+        "text": "Tu propiedad aparece en propuestas para viajeros de distintos países."
+      },
+      {
+        "title": "Huéspedes con todo resuelto",
+        "text": "Llegan con traslados y servicios ya coordinados."
+      },
+      { "title": "Tú decides", "text": "Publicamos tu propiedad solo con tu autorización." },
+      {
+        "title": "Calendario sincronizado",
+        "text": "Pronto: conexión con tu calendario de Airbnb o Booking."
+      }
+    ],
+    "cta": "Quiero publicar mi propiedad",
+    "waMessage": "Hola Conexión Caribe. Tengo una propiedad en Punta Cana y quiero publicarla."
+  },
+  "LegalPage": {
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
+    "cancellation": "Política de cancelación",
+    "pendingTitle": "Documento en preparación",
+    "pendingText": "Estamos terminando este documento junto con nuestros asesores. Mientras tanto, te compartimos las condiciones de cada servicio por escrito antes de cualquier pago.",
+    "contactCta": "Consultar condiciones por WhatsApp",
+    "waMessage": "Hola Conexión Caribe. Quiero consultar sus condiciones: {name}."
+  }
+}

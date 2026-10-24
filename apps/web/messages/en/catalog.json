@@ -1,0 +1,301 @@
+{
+  "Excursions": {
+    "eyebrow": "Featured excursions",
+    "title": "Experiences to live the Caribbean",
+    "lead": "A selection to get you started. Before you book, we confirm availability, schedules and price.",
+    "cta": "Ask on WhatsApp",
+    "waMessage": "Hi Conexión Caribe. I'm interested in this excursion: {name}.",
+    "note": "All experiences are subject to quote and availability.",
+    "all": "All",
+    "categories": {
+      "sea": "Sea",
+      "adventure": "Adventure",
+      "culture": "Culture",
+      "nature": "Nature"
+    },
+    "items": {
+      "saonaClasica": {
+        "title": "Classic Saona Island",
+        "tagline": "Turquoise water, palm trees and an unforgettable getaway.",
+        "detail": "Shared excursion; itinerary subject to availability."
+      },
+      "saonaVip": {
+        "title": "Saona Island VIP · 4 beaches",
+        "tagline": "A more exclusive Caribbean, at your own pace.",
+        "detail": "Premium options and tours of several beaches."
+      },
+      "catalina": {
+        "title": "Catalina Island",
+        "tagline": "An invitation to discover the sea and its reefs.",
+        "detail": "Snorkeling option and beach visit."
+      },
+      "buggies": {
+        "title": "Buggy adventure",
+        "tagline": "Thrilling routes through tropical landscapes.",
+        "detail": "Guided activity, subject to age and safety rules."
+      },
+      "partyBoat": {
+        "title": "Party boat",
+        "tagline": "Music, Caribbean vibes and fun on the water.",
+        "detail": "Group experience for adults and families, depending on the option."
+      },
+      "santoDomingo": {
+        "title": "Cultural Santo Domingo",
+        "tagline": "Dominican history, architecture and tradition.",
+        "detail": "Tour of the Colonial Zone and its cultural landmarks."
+      },
+      "samana": {
+        "title": "Samaná & nature",
+        "tagline": "Forests, waterfalls and spectacular scenery.",
+        "detail": "Excursions to waterfalls and beaches."
+      },
+      "zipline": {
+        "title": "Zip line & adventure",
+        "tagline": "Adrenaline and nature in one experience.",
+        "detail": "Horseback riding, parasailing and Scape Park also on request."
+      }
+    }
+  },
+  "MoreExperiences": {
+    "title": "And much more, tailored to you",
+    "sea": {
+      "title": "Sea & adventure",
+      "items": [
+        "Parasailing",
+        "Speedboat",
+        "Sport fishing",
+        "Diving",
+        "Snorkeling",
+        "Private boat trips"
+      ]
+    },
+    "land": {
+      "title": "Land & nature",
+      "items": [
+        "Scape Park",
+        "Horseback riding",
+        "Zip line",
+        "Safari & nature",
+        "Custom private experiences"
+      ]
+    },
+    "occasions": {
+      "title": "Special occasions",
+      "items": [
+        "Bachelor & bachelorette parties",
+        "Birthdays & anniversaries",
+        "Professional photography",
+        "Intimate beachfront events"
+      ]
+    }
+  },
+  "Services": {
+    "eyebrow": "Services that connect your trip",
+    "title": "More than excursions",
+    "lead": "One connection to organize everything, from your airport arrival to the special details of your stay.",
+    "arrival": {
+      "title": "Arrival & getting around",
+      "items": [
+        "Round-trip airport–hotel transfers",
+        "Car rental and private transportation",
+        "Driver on request"
+      ]
+    },
+    "stay": {
+      "title": "Stays & comfort",
+      "items": [
+        "Airbnb-style apartments and villas",
+        "Private chef and dining experiences",
+        "Massages and wellness"
+      ]
+    },
+    "care": {
+      "title": "Personal touch",
+      "items": [
+        "Grocery shopping before you arrive",
+        "Vacation photo and video",
+        "Restaurants and romantic dinners",
+        "Weddings, birthdays and celebrations"
+      ]
+    },
+    "cta": "Plan my trip",
+    "detail": {
+      "transfers": {
+        "title": "Transfers",
+        "text": "Private rides between the airport and your stay, round trip, at any hour."
+      },
+      "carRental": {
+        "title": "Car rental",
+        "text": "Economy, SUV or family cars, delivered at the airport or your stay."
+      },
+      "driver": {
+        "title": "Driver at your service",
+        "text": "A driver for shopping, beach or dinner days, by the hour or by the day."
+      },
+      "groceries": {
+        "title": "Groceries",
+        "text": "Arrive to a stocked fridge: send us your list and we do the shopping."
+      },
+      "chef": {
+        "title": "Private chef",
+        "text": "Breakfasts, dinners or barbecues at your villa, with a menu to your taste."
+      },
+      "wellness": {
+        "title": "Massages & wellness",
+        "text": "Relaxing or deep-tissue massages at your stay, for one or two."
+      },
+      "photo": {
+        "title": "Photo & video",
+        "text": "Beach shoots, marriage proposals and group memories."
+      },
+      "dining": {
+        "title": "Restaurants & dinners",
+        "text": "Bookings at the best spots and romantic beachfront dinners."
+      },
+      "events": {
+        "title": "Celebrations",
+        "text": "Birthdays, anniversaries and parties with decoration, cake and music."
+      }
+    }
+  },
+  "Packages": {
+    "idealFor": "Ideal for",
+    "includes": "Usually includes",
+    "custom": "Customizable",
+    "cta": "Request this package",
+    "waMessage": "Hi Conexión Caribe. I'm interested in the {name} package.",
+    "items": {
+      "couple": {
+        "title": "Caribbean Couple",
+        "idealFor": "Honeymoons, anniversaries and romantic getaways",
+        "text": "Beach days, a seaside dinner and time just for the two of you.",
+        "includes": [
+          "Charming stay",
+          "Private transfer",
+          "Saona Island excursion",
+          "Romantic dinner",
+          "Couples massage"
+        ]
+      },
+      "family": {
+        "title": "Punta Cana Family",
+        "idealFor": "Families with kids of all ages",
+        "text": "Room for everyone, calm beaches and activities for all ages.",
+        "includes": [
+          "Family apartment or villa",
+          "Family-size vehicle transfer",
+          "Catalina Island with snorkeling",
+          "Groceries on arrival"
+        ]
+      },
+      "friends": {
+        "title": "Friends & Adventure",
+        "idealFor": "Groups of friends who love to move",
+        "text": "Adrenaline by day and good vibes by night, all coordinated.",
+        "includes": [
+          "Spacious villa or apartment",
+          "Buggy adventure",
+          "Party boat",
+          "Group transfers",
+          "Restaurant bookings"
+        ]
+      },
+      "birthday": {
+        "title": "Caribbean Birthday",
+        "idealFor": "Birthdays, anniversaries and parties",
+        "text": "Celebrate by the sea with every detail taken care of.",
+        "includes": [
+          "Themed decoration",
+          "Special dinner or cake",
+          "Professional photography",
+          "Private boat or party boat"
+        ]
+      },
+      "budget": {
+        "title": "Budget Getaway",
+        "idealFor": "Short trips and tighter budgets",
+        "text": "The essentials, well chosen, to enjoy without overspending.",
+        "includes": ["Well-located apartment", "Airport transfer", "Shared excursion", "Local tips"]
+      },
+      "premium": {
+        "title": "Premium Experience",
+        "idealFor": "Travelers seeking exclusivity and tailored service",
+        "text": "Villa, chef and private experiences for a no-compromise trip.",
+        "includes": [
+          "Villa with pool",
+          "Private chef",
+          "Saona Island VIP",
+          "Private boat",
+          "Driver at your service"
+        ]
+      }
+    }
+  },
+  "TripZones": {
+    "puntaCana": "Punta Cana",
+    "bavaro": "Bávaro",
+    "capCana": "Cap Cana",
+    "bayahibe": "Bayahíbe",
+    "laRomana": "La Romana",
+    "samana": "Samaná",
+    "santoDomingo": "Santo Domingo",
+    "undecided": "Not sure yet"
+  },
+  "Zones": {
+    "items": {
+      "bavaro": {
+        "name": "Bávaro",
+        "text": "The liveliest area: long white-sand beaches, restaurants and nightlife."
+      },
+      "corales": {
+        "name": "Los Corales",
+        "text": "A walkable seaside neighborhood with cafés, shops and an international vibe."
+      },
+      "cortecito": {
+        "name": "El Cortecito",
+        "text": "Laid-back beachfront feel, with fishermen and seafood restaurants."
+      },
+      "capCana": {
+        "name": "Cap Cana",
+        "text": "Residential and exclusive, with a marina, golf courses and calm beaches."
+      },
+      "cabezaToro": {
+        "name": "Cabeza de Toro",
+        "text": "Quiet and family-friendly, with calm water, minutes from the airport."
+      },
+      "bayahibe": {
+        "name": "Bayahíbe",
+        "text": "A coastal village with crystal-clear water and the gateway to Saona Island."
+      }
+    }
+  },
+  "Transfers": {
+    "routes": {
+      "capCana": { "to": "Cap Cana", "time": "approx. 15 min" },
+      "puntaCana": { "to": "Punta Cana / Cabeza de Toro", "time": "approx. 20 min" },
+      "bavaro": { "to": "Bávaro / Los Corales", "time": "approx. 25–30 min" },
+      "uvero": { "to": "Uvero Alto", "time": "approx. 45 min" },
+      "bayahibe": { "to": "Bayahíbe / La Romana", "time": "approx. 1 h 15 min" },
+      "santoDomingo": { "to": "Santo Domingo", "time": "approx. 2 h 30 min" }
+    },
+    "vehicles": {
+      "sedan": {
+        "name": "Sedan",
+        "capacity": "Up to 3 people",
+        "idealFor": "Couples and solo travelers"
+      },
+      "suv": { "name": "SUV", "capacity": "Up to 4 people", "idealFor": "More room for luggage" },
+      "van": {
+        "name": "Van",
+        "capacity": "Up to 7 people",
+        "idealFor": "Families and small groups"
+      },
+      "minibus": {
+        "name": "Minibus",
+        "capacity": "Up to 15 people",
+        "idealFor": "Groups of friends and weddings"
+      },
+      "bus": { "name": "Coach", "capacity": "Large groups", "idealFor": "Companies and events" }
+    }
+  }
+}

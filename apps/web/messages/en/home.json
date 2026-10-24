@@ -1,0 +1,124 @@
+{
+  "Hero": {
+    "eyebrow": "Punta Cana · Bávaro · Bayahíbe",
+    "title": "You book the flight. We take care of <em>everything else</em>.",
+    "subtitle": "Stays, transfers, excursions and services coordinated by a local team. One contact, one itinerary.",
+    "ctaPlan": "Plan my trip",
+    "ctaWhatsapp": "Message us on WhatsApp",
+    "trust1": "Local team in Punta Cana",
+    "trust2": "Support in English, Spanish and French",
+    "trust3": "Price confirmed before you pay",
+    "imageAlt": "White sand beach, palm trees and turquoise sea in the Dominican Caribbean"
+  },
+  "QuickPlanner": {
+    "title": "Start planning",
+    "zone": "Destination",
+    "zonePlaceholder": "Choose an area",
+    "dates": "Arrival and departure",
+    "travelers": "Travelers",
+    "submit": "Plan my trip"
+  },
+  "Marquee": {
+    "label": "Destinations and experiences",
+    "items": [
+      "Punta Cana",
+      "Bávaro",
+      "Cap Cana",
+      "Saona Island",
+      "Bayahíbe",
+      "Catalina Island",
+      "Samaná",
+      "Santo Domingo",
+      "La Romana",
+      "Cabeza de Toro"
+    ]
+  },
+  "ExcursionsTeaser": {
+    "viewAll": "See all excursions"
+  },
+  "HowItWorks": {
+    "eyebrow": "How it works",
+    "title": "Your trip, planned in three steps",
+    "lead": "No more juggling ten websites or coordinating providers on your own.",
+    "step1Title": "Tell us about your trip",
+    "step1Text": "Dates, how many people and what you'd like to do. On the website or via WhatsApp.",
+    "step2Title": "Get your proposal",
+    "step2Text": "We confirm availability and prices with our local partners.",
+    "step3Title": "Enjoy, worry-free",
+    "step3Text": "Your itinerary in one place and local support throughout your stay.",
+    "tripLabel": "My trip",
+    "tripTitle": "Punta Cana · 5 nights",
+    "day": "Day {n}",
+    "day1Title": "Arrival at PUJ",
+    "day1Text": "Private transfer to your apartment",
+    "day2Title": "Rest day",
+    "day2Text": "Massage at the villa",
+    "day3Title": "Saona Island",
+    "day3Text": "Catamaran and beach",
+    "confirmed": "All confirmed"
+  },
+  "Bento": {
+    "eyebrow": "What we organize",
+    "title": "Your whole trip, one connection",
+    "lead": "From the airport to your last dinner: choose what you need and we coordinate it for you.",
+    "stays": "Stays",
+    "staysText": "Apartments, villas and hotels in the best areas of Punta Cana and nearby.",
+    "transfers": "Transfers",
+    "transfersText": "From the airport to your stay, day or night.",
+    "excursions": "Excursions",
+    "excursionsText": "Saona Island, buggies, Catalina, catamarans and more.",
+    "services": "Services",
+    "servicesText": "Groceries, private chef, massages and photography.",
+    "packages": "Packages",
+    "packagesText": "Combinations designed for every kind of trip.",
+    "more": "Learn more"
+  },
+  "PackagesTeaser": {
+    "eyebrow": "Packages",
+    "title": "Trip ideas to get you started",
+    "lead": "Combinations designed for every kind of traveler. All of them adapt to your dates and budget.",
+    "viewAll": "See all packages"
+  },
+  "Why": {
+    "eyebrow": "Why Conexión Caribe",
+    "title": "Peace of mind is part of the trip",
+    "items": [
+      {
+        "title": "Local team",
+        "text": "We're based in Punta Cana and know every provider we work with."
+      },
+      {
+        "title": "One contact",
+        "text": "One conversation for stays, transfers, excursions and extras."
+      },
+      {
+        "title": "Confirmed price",
+        "text": "We confirm availability and price before you pay anything."
+      },
+      {
+        "title": "In your language",
+        "text": "We assist you in English, Spanish and French, before and during your trip."
+      }
+    ]
+  },
+  "HomeFaq": {
+    "items": [
+      {
+        "q": "How do I book with Conexión Caribe?",
+        "a": "Message us on WhatsApp or use “Plan my trip”. We prepare a proposal with confirmed availability and prices, and you book once you're happy with it."
+      },
+      {
+        "q": "Are the prices on the website final?",
+        "a": "They're for reference. The final price depends on dates, season, availability and group size, and we always confirm it before you pay."
+      },
+      {
+        "q": "Which areas do you cover?",
+        "a": "Mainly Punta Cana, Bávaro, Cap Cana, Bayahíbe and La Romana. We also organize excursions to Samaná, Santo Domingo and other parts of the country."
+      },
+      {
+        "q": "Do you organize group and corporate trips?",
+        "a": "Yes. We coordinate incentive trips, celebrations and events with transportation, activities and dinners for groups of any size."
+      }
+    ]
+  }
+}

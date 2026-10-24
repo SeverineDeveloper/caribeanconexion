@@ -1,0 +1,67 @@
+{
+  "Metadata": {
+    "title": "Conexión Caribe · Votre voyage à Punta Cana organisé de A à Z",
+    "description": "Conciergerie locale à Punta Cana, Bávaro et Bayahíbe : hébergements, transferts aéroport, excursions et services. Vous réservez le vol, nous organisons tout le reste."
+  },
+  "Nav": {
+    "main": "Navigation principale",
+    "accommodation": "Hébergements",
+    "transfers": "Transferts",
+    "excursions": "Excursions",
+    "packages": "Forfaits",
+    "services": "Services",
+    "contact": "Contact",
+    "groups": "Groupes et entreprises",
+    "agencies": "Agences",
+    "owners": "Propriétaires",
+    "planTrip": "Organiser mon voyage",
+    "menu": "Menu",
+    "home": "Accueil Conexión Caribe"
+  },
+  "LocaleSwitcher": {
+    "label": "Langue"
+  },
+  "Common": {
+    "home": "Accueil",
+    "breadcrumb": "Fil d'Ariane",
+    "prevSlide": "Précédent",
+    "nextSlide": "Suivant",
+    "goToSlide": "Aller à l'élément {n}",
+    "slideOf": "{n} sur {total}",
+    "carousel": "Carrousel",
+    "pauseVideo": "Mettre la vidéo en pause",
+    "playVideo": "Lire la vidéo",
+    "viewAll": "Tout voir",
+    "askWhatsapp": "Demander sur WhatsApp",
+    "faqTitle": "Questions fréquentes",
+    "referencePrices": "Prix indicatifs : nous confirmons le prix final selon les dates, la disponibilité et le nombre de personnes."
+  },
+  "WhatsApp": {
+    "float": "Parlez-nous",
+    "defaultMessage": "Bonjour Conexión Caribe. Je souhaite organiser mon voyage."
+  },
+  "CtaBand": {
+    "title": "Vous avez déjà vos dates ?",
+    "text": "Dites-nous quand vous arrivez et qui voyage. Nous vous répondons sur WhatsApp avec une proposition sur mesure.",
+    "primary": "Écrivez-nous sur WhatsApp",
+    "secondary": "Organiser mon voyage"
+  },
+  "Footer": {
+    "tagline": "Conciergerie de voyage en République dominicaine. Votre voyage, notre connexion.",
+    "explore": "Explorer",
+    "company": "Conexión Caribe",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "zones": "Punta Cana · Bávaro · Bayahíbe · La Romana",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "cancellation": "Annulation",
+    "rights": "Tous droits réservés.",
+    "priceNote": "Les prix sont indicatifs et peuvent varier selon la date, la disponibilité, la saison et le nombre de voyageurs."
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "text": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "back": "Retour à l'accueil"
+  }
+}

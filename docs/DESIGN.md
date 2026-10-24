@@ -144,7 +144,17 @@ Los originales del cliente están en `docs/brand/originales/`: JPEG con fondo y 
 
 ## 8. Movimiento
 
-Hover a 150 ms, entradas a 250 ms, curva `ease-out`. Se respeta `prefers-reduced-motion`. Nada parpadea ni rebota.
+Hover a 150 ms, entradas a 250 ms, curva `ease-out` (`[0.22, 1, 0.36, 1]`). Se respeta `prefers-reduced-motion`. Nada parpadea ni rebota.
+
+| Patrón | Componente | Regla |
+|---|---|---|
+| Aparición al hacer scroll | `Reveal`, `RevealGroup` y `RevealItem` (`components/motion/reveal.tsx`) | Opacidad más 28 px hacia arriba, 0,7 s, una sola vez. En grupos, escalonado de 0,09 s. |
+| Carrusel | `Carousel` (`components/ui/carousel.tsx`, Embla) | Arrastre, flechas y puntos accesibles. Autoplay solo en franjas de inspiración (paquetes): se detiene al interactuar y nunca con movimiento reducido. |
+| Video del hero | `HeroVideo` | Primero la foto (LCP). El video se carga solo en pantallas de 768 px o más, sin ahorro de datos y sin movimiento reducido. Siempre tiene botón de pausa (WCAG 2.2.2). |
+| Franja de destinos | `Marquee` | Desplazamiento continuo que se pausa al pasar el mouse y queda quieto con movimiento reducido. |
+| Filtros | `ExcursionsExplorer` | Reordenamiento con `layout` y entrada o salida a escala 0,96. |
+| Pasos de formulario | `Planner` | Deslizamiento horizontal de 40 px según la dirección. |
+| Header | `HeaderShell` | Transparente sobre el video del inicio y blanco al hacer scroll de más de 24 px. |
 
 ## 9. Panel de gestión
 

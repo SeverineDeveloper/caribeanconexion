@@ -1,0 +1,67 @@
+{
+  "Metadata": {
+    "title": "Conexión Caribe · Tu viaje a Punta Cana organizado de principio a fin",
+    "description": "Concierge turístico en Punta Cana, Bávaro y Bayahíbe: alojamiento, traslados, excursiones y servicios. Tú compras el vuelo, nosotros organizamos todo lo demás."
+  },
+  "Nav": {
+    "main": "Navegación principal",
+    "accommodation": "Alojamiento",
+    "transfers": "Traslados",
+    "excursions": "Excursiones",
+    "packages": "Paquetes",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "groups": "Grupos y empresas",
+    "agencies": "Agencias",
+    "owners": "Propietarios",
+    "planTrip": "Arma mi viaje",
+    "menu": "Menú",
+    "home": "Inicio de Conexión Caribe"
+  },
+  "LocaleSwitcher": {
+    "label": "Idioma"
+  },
+  "Common": {
+    "home": "Inicio",
+    "breadcrumb": "Ruta de navegación",
+    "prevSlide": "Anterior",
+    "nextSlide": "Siguiente",
+    "goToSlide": "Ir al elemento {n}",
+    "slideOf": "{n} de {total}",
+    "carousel": "Carrusel",
+    "pauseVideo": "Pausar video",
+    "playVideo": "Reproducir video",
+    "viewAll": "Ver todo",
+    "askWhatsapp": "Consultar por WhatsApp",
+    "faqTitle": "Preguntas frecuentes",
+    "referencePrices": "Precios referenciales: te confirmamos el valor final según fechas, disponibilidad y cantidad de personas."
+  },
+  "WhatsApp": {
+    "float": "Habla con nosotros",
+    "defaultMessage": "Hola Conexión Caribe. Quiero organizar mi viaje."
+  },
+  "CtaBand": {
+    "title": "¿Ya tienes tus fechas?",
+    "text": "Cuéntanos cuándo llegas y quiénes viajan. Te respondemos por WhatsApp con una propuesta a tu medida.",
+    "primary": "Escríbenos por WhatsApp",
+    "secondary": "Arma mi viaje"
+  },
+  "Footer": {
+    "tagline": "Concierge turístico en República Dominicana. Tu viaje, nuestra conexión.",
+    "explore": "Explora",
+    "company": "Conexión Caribe",
+    "contact": "Contacto",
+    "whatsapp": "WhatsApp",
+    "zones": "Punta Cana · Bávaro · Bayahíbe · La Romana",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cancellation": "Cancelación",
+    "rights": "Todos los derechos reservados.",
+    "priceNote": "Los precios son referenciales y pueden variar según fecha, disponibilidad, temporada y cantidad de pasajeros."
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "text": "La página que buscas no existe o se movió.",
+    "back": "Volver al inicio"
+  }
+}

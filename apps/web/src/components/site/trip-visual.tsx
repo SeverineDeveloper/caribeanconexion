@@ -8,7 +8,7 @@ type Day = { label: string; title: string; text: string };
  * Composición del hero: foto del Caribe (catálogo del cliente, provisional hasta tener alta
  * resolución) y una tarjeta "Mi viaje" que muestra la promesa: todo en un itinerario.
  */
-export function HeroVisual({
+export function TripVisual({
   imageAlt,
   tripLabel,
   tripTitle,

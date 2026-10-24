@@ -20,7 +20,12 @@ export function MobileNav({
 }) {
   return (
     <Drawer>
-      <Button variant="ghost" isIconOnly aria-label={menuLabel} className="lg:hidden">
+      <Button
+        variant="ghost"
+        isIconOnly
+        aria-label={menuLabel}
+        className="lg:hidden group-data-[transparent=true]/header:text-white"
+      >
         <Menu className="size-6" strokeWidth={1.75} />
       </Button>
       <Drawer.Backdrop variant="blur">

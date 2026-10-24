@@ -1,0 +1,253 @@
+{
+  "ExcursionsPage": {
+    "metaTitle": "Excursions à Punta Cana",
+    "metaDescription": "Île Saona, île Catalina, buggies, party boat, Samaná et Saint-Domingue. Excursions à Punta Cana avec disponibilité et prix confirmés.",
+    "eyebrow": "Excursions",
+    "title": "Des excursions pour vivre les Caraïbes dominicaines",
+    "lead": "Îles, aventure, culture et nature. Choisissez ce qui vous fait rêver, nous coordonnons horaires, prises en charge et réservations.",
+    "filterLabel": "Filtrer par type",
+    "count": "{count, plural, one {# expérience} other {# expériences}}",
+    "faq": [
+      {
+        "q": "Le transport est-il inclus ?",
+        "a": "Cela dépend de l'excursion. Dans le devis, nous indiquons s'il y a une prise en charge à votre hébergement ou un point de rendez-vous, et l'horaire."
+      },
+      {
+        "q": "Sont-elles partagées ou privées ?",
+        "a": "Il existe les deux. Les partagées sont plus économiques ; les privées s'adaptent à votre rythme et à votre groupe."
+      },
+      {
+        "q": "Et si la météo ne suit pas ?",
+        "a": "Si le prestataire annule à cause de la météo ou sur instruction des autorités, nous proposons une autre date ou le remboursement de ce service."
+      },
+      {
+        "q": "Y a-t-il un âge minimum ?",
+        "a": "Certaines activités, comme les buggies ou la tyrolienne, ont un âge minimum et des règles de sécurité. Nous les confirmons à la réservation."
+      }
+    ]
+  },
+  "StaysPage": {
+    "metaTitle": "Hébergements à Punta Cana : appartements, villas et hôtels",
+    "metaDescription": "Appartements type Airbnb, villas et hôtels à Bávaro, Cap Cana, Los Corales et Bayahíbe, avec transferts et services coordonnés.",
+    "eyebrow": "Hébergements",
+    "title": "Votre coin des Caraïbes, choisi avec vous",
+    "lead": "Appartements, villas et hôtels dans les meilleurs quartiers. Nous vous aidons à choisir selon votre groupe, votre budget et vos envies.",
+    "typesTitle": "Types d'hébergement",
+    "types": {
+      "apartment": {
+        "title": "Appartements",
+        "text": "Cuisine équipée, piscine et la liberté de vivre comme un local. Parfaits pour couples et familles."
+      },
+      "villa": {
+        "title": "Villas",
+        "text": "Intimité, piscine privée et de l'espace pour les groupes. Idéales pour célébrer ou voyager en famille."
+      },
+      "hotel": {
+        "title": "Hôtels",
+        "text": "Tout compris ou logement seul, avec services de resort et assistance 24 h/24."
+      }
+    },
+    "zonesEyebrow": "Quartiers",
+    "zonesTitle": "Où séjourner ?",
+    "zonesLead": "Chaque quartier a son caractère. Dites-nous ce que vous cherchez, nous vous recommandons le meilleur pour vous.",
+    "howTitle": "Comment nous réservons votre hébergement",
+    "steps": [
+      {
+        "title": "Vous nous donnez vos dates",
+        "text": "Nombre de voyageurs, quartier préféré et budget."
+      },
+      {
+        "title": "Nous vous envoyons des options",
+        "text": "Avec photos, emplacement approximatif et disponibilité confirmée."
+      },
+      {
+        "title": "Vous confirmez, c'est tout",
+        "text": "Nous réservons et ajoutons transferts et services si vous le souhaitez."
+      }
+    ],
+    "extrasTitle": "Pour arriver et simplement profiter",
+    "extras": [
+      "Courses avant votre arrivée",
+      "Chef privé",
+      "Transfert privé",
+      "Décoration pour célébrations"
+    ],
+    "cta": "Demander les disponibilités",
+    "waMessage": "Bonjour Conexión Caribe. Je cherche un hébergement à Punta Cana."
+  },
+  "TransfersPage": {
+    "metaTitle": "Transferts aéroport de Punta Cana (PUJ)",
+    "metaDescription": "Transferts privés depuis l'aéroport de Punta Cana vers Bávaro, Cap Cana, Bayahíbe, La Romana et Saint-Domingue. Berline, SUV, van et minibus.",
+    "eyebrow": "Transferts",
+    "title": "De l'aéroport à votre hébergement, sans attente ni surprise",
+    "lead": "Transferts privés aller-retour depuis l'aéroport de Punta Cana (PUJ), dans le véhicule le mieux adapté à votre groupe.",
+    "features": [
+      { "title": "Privés", "text": "Vous et votre groupe, sans arrêt dans d'autres hôtels." },
+      { "title": "Aller-retour", "text": "Arrivée et départ coordonnés en une seule réservation." },
+      { "title": "À toute heure", "text": "Vols très tôt ou tard le soir : nous serons là." },
+      {
+        "title": "Chauffeur sur demande",
+        "text": "Aussi pour vos journées shopping, plage ou dîner."
+      }
+    ],
+    "routesTitle": "Trajets les plus demandés depuis PUJ",
+    "routesNote": "Temps de trajet approximatifs en voiture ; ils varient selon la circulation et l'adresse exacte.",
+    "from": "Aéroport PUJ",
+    "vehiclesTitle": "Choisissez votre véhicule",
+    "vehiclesNote": "La capacité finale dépend des bagages. Nous vous recommandons le bon véhicule lors du devis.",
+    "cta": "Demander un devis de transfert",
+    "waMessage": "Bonjour Conexión Caribe. Je souhaite un devis pour un transfert depuis l'aéroport.",
+    "faq": [
+      {
+        "q": "De quelles informations avez-vous besoin ?",
+        "a": "La date, le numéro de vol, le nombre de personnes et de bagages, et l'adresse de votre hébergement."
+      },
+      {
+        "q": "Et si mon vol est retardé ?",
+        "a": "Avec votre numéro de vol, nous coordonnons l'heure de prise en charge. En cas de changement, écrivez-nous sur WhatsApp et nous ajustons."
+      },
+      {
+        "q": "Faites-vous des transferts depuis Saint-Domingue ?",
+        "a": "Oui, nous organisons aussi des transferts depuis et vers Saint-Domingue et d'autres régions du pays."
+      }
+    ]
+  },
+  "PackagesPage": {
+    "metaTitle": "Forfaits de voyage à Punta Cana",
+    "metaDescription": "Forfaits pour couples, familles, amis, anniversaires et voyages premium à Punta Cana, adaptés à vos dates et à votre budget.",
+    "eyebrow": "Forfaits",
+    "title": "Des idées de voyage, prêtes à devenir les vôtres",
+    "lead": "Des formules pensées pour chaque type de voyage. Toutes s'adaptent à vos dates, à votre groupe et à votre budget.",
+    "customTitle": "Aucun ne vous convient tout à fait ?",
+    "customText": "Nous créons votre forfait de A à Z : dites-nous vos envies et nous en faisons un itinéraire.",
+    "customCta": "Créer un forfait sur mesure"
+  },
+  "ServicesPage": {
+    "metaTitle": "Services de conciergerie à Punta Cana",
+    "metaDescription": "Transferts, location de voiture, chauffeur, courses, chef privé, massages, photographie et célébrations à Punta Cana.",
+    "eyebrow": "Services",
+    "title": "Les détails qui font la différence",
+    "lead": "Au-delà des hébergements et des excursions, nous nous occupons de tout ce dont vous avez besoin pendant votre séjour.",
+    "cta": "Demander un service",
+    "waMessage": "Bonjour Conexión Caribe. Je souhaite des informations sur ce service : {name}."
+  },
+  "ContactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "Écrivez-nous sur WhatsApp et organisez votre voyage à Punta Cana avec une équipe locale. Service en français, anglais et espagnol.",
+    "eyebrow": "Contact",
+    "title": "Parlons de votre voyage",
+    "lead": "WhatsApp est le moyen le plus rapide de nous joindre. Vous pouvez aussi laisser votre message ici et nous l'envoyons pour vous.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappText": "Notre canal principal pour les devis et réservations.",
+    "zonesTitle": "Où nous sommes",
+    "zonesText": "Punta Cana, Bávaro, Cap Cana, Bayahíbe et La Romana, République dominicaine.",
+    "languagesTitle": "Langues",
+    "languagesText": "Français, anglais et espagnol.",
+    "formTitle": "Envoyez-nous un message",
+    "name": "Nom",
+    "interest": "Je suis intéressé(e) par",
+    "interestPlaceholder": "Choisissez une option",
+    "interests": {
+      "trip": "Organiser un voyage complet",
+      "stay": "Hébergement",
+      "transfer": "Transfert",
+      "excursion": "Excursions",
+      "group": "Voyage de groupe ou d'entreprise",
+      "other": "Autre demande"
+    },
+    "message": "Message",
+    "messagePlaceholder": "Dates, nombre de personnes, ce que vous aimeriez faire…",
+    "submit": "Envoyer via WhatsApp",
+    "submitNote": "WhatsApp s'ouvrira avec votre message prêt à envoyer."
+  },
+  "GroupsPage": {
+    "metaTitle": "Voyages de groupe et d'entreprise en République dominicaine",
+    "metaDescription": "Voyages incentive, team building, événements et logistique de groupe à Punta Cana et en République dominicaine.",
+    "eyebrow": "Groupes et entreprises",
+    "title": "Des voyages de groupe sans complications",
+    "lead": "Voyages incentive, team building, célébrations et événements. Une seule équipe coordonne transport, activités, hébergement et dîners.",
+    "benefits": [
+      {
+        "title": "Un coordinateur unique",
+        "text": "Un seul interlocuteur avant et pendant le voyage."
+      },
+      {
+        "title": "Transport de groupe",
+        "text": "Minibus et autocars pour les transferts et excursions."
+      },
+      {
+        "title": "Itinéraires sur plusieurs jours",
+        "text": "Activités, dîners et temps libre bien équilibrés."
+      },
+      {
+        "title": "Expériences exclusives",
+        "text": "Bateaux privés, dîners en bord de mer et activités d'équipe."
+      }
+    ],
+    "cta": "Demander une proposition pour mon groupe",
+    "waMessage": "Bonjour Conexión Caribe. Je souhaite une proposition pour un voyage de groupe ou d'entreprise."
+  },
+  "AgenciesPage": {
+    "metaTitle": "Agences de voyages partenaires",
+    "metaDescription": "Travaillez avec Conexión Caribe comme opérateur local à Punta Cana : hébergements, transferts et excursions pour vos clients.",
+    "eyebrow": "Agences",
+    "title": "Votre opérateur local à Punta Cana",
+    "lead": "Si vous êtes une agence de voyages, nous travaillons avec vous pour que vos clients vivent un voyage organisé de A à Z.",
+    "benefits": [
+      {
+        "title": "Conditions agences",
+        "text": "Nous partageons nos conditions commerciales une fois le partenariat validé."
+      },
+      {
+        "title": "Interlocuteur dédié",
+        "text": "Un contact direct pour vos devis et réservations."
+      },
+      {
+        "title": "Un seul prestataire",
+        "text": "Hébergements, transferts, excursions et services pour vos clients."
+      },
+      {
+        "title": "Suivi sur place",
+        "text": "Nous accompagnons vos clients pendant tout leur séjour."
+      }
+    ],
+    "cta": "Devenir partenaire",
+    "waMessage": "Bonjour Conexión Caribe. Je travaille dans une agence de voyages et souhaite devenir partenaire."
+  },
+  "OwnersPage": {
+    "metaTitle": "Publiez votre propriété",
+    "metaDescription": "Vous avez un appartement ou une villa à Punta Cana ? Publiez-le avec Conexión Caribe et accueillez des voyageurs avec services coordonnés.",
+    "eyebrow": "Propriétaires",
+    "title": "Publiez votre propriété avec nous",
+    "lead": "Si vous possédez un appartement ou une villa à Punta Cana et alentours, nous pouvons l'inclure dans nos propositions de voyage.",
+    "benefits": [
+      {
+        "title": "Plus de visibilité",
+        "text": "Votre propriété apparaît dans des propositions pour des voyageurs de nombreux pays."
+      },
+      {
+        "title": "Des voyageurs bien préparés",
+        "text": "Ils arrivent avec transferts et services déjà coordonnés."
+      },
+      {
+        "title": "Vous décidez",
+        "text": "Nous publions votre propriété uniquement avec votre autorisation."
+      },
+      {
+        "title": "Calendrier synchronisé",
+        "text": "Bientôt : connexion avec votre calendrier Airbnb ou Booking."
+      }
+    ],
+    "cta": "Je veux publier ma propriété",
+    "waMessage": "Bonjour Conexión Caribe. J'ai une propriété à Punta Cana et je souhaite la publier."
+  },
+  "LegalPage": {
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales",
+    "cancellation": "Politique d'annulation",
+    "pendingTitle": "Document en préparation",
+    "pendingText": "Nous finalisons ce document avec nos conseillers. En attendant, nous vous communiquons par écrit les conditions de chaque service avant tout paiement.",
+    "contactCta": "Demander nos conditions sur WhatsApp",
+    "waMessage": "Bonjour Conexión Caribe. Je souhaite connaître vos conditions : {name}."
+  }
+}
