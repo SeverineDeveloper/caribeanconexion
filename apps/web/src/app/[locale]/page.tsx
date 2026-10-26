@@ -49,7 +49,11 @@ export default async function HomePage() {
     <>
       {/* ── Hero con video ───────────────────────────────────── */}
       <section className="relative isolate -mt-16 flex min-h-[46rem] items-end overflow-hidden text-white lg:-mt-20 lg:min-h-[100svh]">
-        <HeroVideo src="/videos/hero-costa.mp4" poster={heroPhoto} alt={t("Hero.imageAlt")} />
+        <HeroVideo
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/videos/hero-costa.mp4`}
+          poster={heroPhoto}
+          alt={t("Hero.imageAlt")}
+        />
         <div
           aria-hidden="true"
           className="absolute inset-0 -z-10 bg-gradient-to-r from-ink-900/85 via-ink-900/45 to-ink-900/5"

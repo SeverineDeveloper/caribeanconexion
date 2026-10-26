@@ -7,8 +7,15 @@ import createNextIntlPlugin from "next-intl/plugin";
 // también a los procesos hijos de Next. En producción las variables vienen del contenedor.
 const monorepoRoot = path.join(import.meta.dirname, "../..");
 
+// STATIC_EXPORT=1 genera solo la web pública como sitio estático (vista previa en GitHub
+// Pages). Se compila una copia sin panel, API ni proxy (ver scripts/export-static.mjs).
+const staticExport = process.env.STATIC_EXPORT === "1";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || undefined;
+
 const nextConfig: NextConfig = {
-  output: "standalone",
+  ...(staticExport
+    ? { output: "export", trailingSlash: true, basePath, images: { unoptimized: true } }
+    : { output: "standalone" }),
   outputFileTracingRoot: monorepoRoot,
   transpilePackages: ["@cc/core", "@cc/db"],
   poweredByHeader: false,
