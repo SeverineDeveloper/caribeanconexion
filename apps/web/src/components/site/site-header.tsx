@@ -14,25 +14,29 @@ export async function SiteHeader() {
 
   return (
     <HeaderShell>
-      <div className="container-page flex h-16 items-center gap-6 lg:h-20">
+      <div className="container-page flex h-16 items-center gap-4 lg:h-20 2xl:gap-6">
         <Link href="/" aria-label={t("home")} className="shrink-0 rounded-lg">
           <span className="group-data-[transparent=true]/header:hidden">
-            <Logo priority className="h-10 w-auto lg:h-13" />
+            <Logo priority className="h-10 w-auto lg:h-12 2xl:h-13" />
           </span>
           <span className="hidden group-data-[transparent=true]/header:inline">
-            <Logo on="dark" priority className="h-10 w-auto lg:h-13" />
+            <Logo on="dark" priority className="h-10 w-auto lg:h-12 2xl:h-13" />
           </span>
         </Link>
 
-        <nav aria-label={t("main")} className="hidden flex-1 justify-center lg:flex">
+        {/* La barra completa necesita ~1160 px: por debajo de xl se usa el menú lateral */}
+        <nav aria-label={t("main")} className="hidden flex-1 justify-center xl:flex">
           <NavLinks items={items} />
         </nav>
 
-        <div className="ml-auto flex items-center gap-3 lg:ml-0">
+        <div className="ml-auto flex items-center gap-3 xl:ml-0">
           <div className="hidden sm:block">
             <LocaleSwitcher />
           </div>
-          <Link href="/arma-tu-viaje" className={`${buttonVariants()} hidden sm:inline-flex`}>
+          <Link
+            href="/arma-tu-viaje"
+            className={`${buttonVariants()} hidden whitespace-nowrap sm:inline-flex`}
+          >
             {t("planTrip")}
           </Link>
           <MobileNav items={items} menuLabel={t("menu")} ctaLabel={t("planTrip")} />

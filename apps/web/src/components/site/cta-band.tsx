@@ -12,11 +12,12 @@ export async function CtaBand({ originCode }: { originCode: string }) {
     <section className="section-y">
       <div className="container-page">
         <Reveal>
-          <div className="relative overflow-hidden rounded-panel bg-ink-900 px-6 py-14 sm:px-12 lg:px-16 lg:py-20">
+          {/* pb-44 en móvil: el sol y las olas quedan debajo de los botones, no sobre el texto */}
+          <div className="relative overflow-hidden rounded-panel bg-ink-900 px-6 pt-12 pb-44 sm:px-12 sm:py-14 lg:px-16 lg:py-20">
             <svg
               aria-hidden="true"
               viewBox="0 0 600 300"
-              className="pointer-events-none absolute right-0 bottom-0 w-[38rem] max-w-none opacity-90"
+              className="pointer-events-none absolute right-0 bottom-0 w-[24rem] max-w-none opacity-90 sm:w-[38rem]"
             >
               <circle cx="470" cy="90" r="52" fill="#CB9E55" />
               <path
@@ -39,7 +40,7 @@ export async function CtaBand({ originCode }: { originCode: string }) {
             <div className="relative max-w-2xl">
               <h2 className="text-display-lg text-white">{t("CtaBand.title")}</h2>
               <p className="mt-4 text-lead text-white/80">{t("CtaBand.text")}</p>
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row">
                 <WhatsAppButton
                   onDark
                   message={t("WhatsApp.defaultMessage")}

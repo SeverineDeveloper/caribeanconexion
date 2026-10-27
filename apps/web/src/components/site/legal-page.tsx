@@ -28,7 +28,7 @@ export async function LegalPage({
       <section className="section-y">
         <div className="container-page max-w-3xl">
           <Reveal>
-            <div className="rounded-panel border border-line bg-white p-8 shadow-card sm:p-12">
+            <div className="rounded-panel border border-line bg-white p-6 shadow-card sm:p-12">
               <span className="flex size-14 items-center justify-center rounded-2xl bg-sand-100 text-ink-900">
                 <FileText className="size-7" strokeWidth={1.5} aria-hidden="true" />
               </span>
@@ -37,7 +37,7 @@ export async function LegalPage({
               <WhatsAppButton
                 message={t("waMessage", { name: title })}
                 originCode={`CC-LEGAL-${doc.toUpperCase()}`}
-                className="mt-8"
+                className="mt-8 w-full sm:w-auto"
               >
                 {t("contactCta")}
               </WhatsAppButton>

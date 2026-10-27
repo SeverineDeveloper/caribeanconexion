@@ -43,7 +43,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
       <section className="section-y">
         <div className="container-page grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           <Reveal className="flex flex-col gap-5">
-            <div className="rounded-panel bg-ink-900 p-8 text-white sm:p-10">
+            <div className="rounded-panel bg-ink-900 p-6 text-white sm:p-10">
               <span className="flex size-14 items-center justify-center rounded-2xl bg-whatsapp text-ink-900">
                 <WhatsAppIcon className="size-7" />
               </span>

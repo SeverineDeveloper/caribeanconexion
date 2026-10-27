@@ -30,7 +30,7 @@ export function QuickPlanner() {
     <Form
       onSubmit={onSubmit}
       aria-label={t("title")}
-      className="grid w-full gap-4 rounded-panel bg-white p-5 text-ink-900 shadow-raised sm:p-6 lg:grid-cols-[1fr_1.5fr_0.75fr_auto] lg:items-end lg:gap-3 lg:p-4"
+      className="grid w-full grid-cols-1 gap-4 rounded-panel bg-white p-5 text-ink-900 shadow-raised sm:p-6 md:grid-cols-2 md:items-end lg:grid-cols-[1fr_1.5fr_0.75fr_auto] lg:gap-3 lg:p-4"
     >
       <ZoneSelect
         label={t("zone")}

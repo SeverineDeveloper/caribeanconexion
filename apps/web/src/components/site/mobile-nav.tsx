@@ -3,6 +3,8 @@
 import { Button, Drawer } from "@heroui/react";
 import { buttonVariants } from "@heroui/styles";
 import { Menu } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { Logo } from "@/components/brand/logo";
 import { Link } from "@/i18n/navigation";
 import { LocaleSwitcher } from "./locale-switcher";
@@ -18,13 +20,18 @@ export function MobileNav({
   menuLabel: string;
   ctaLabel: string;
 }) {
+  // El menú queda abierto solo en la ruta donde se abrió: al navegar (o cambiar de idioma)
+  // se cierra solo, aunque el header no se desmonte.
+  const pathname = usePathname();
+  const [openOn, setOpenOn] = useState<string | null>(null);
+
   return (
-    <Drawer>
+    <Drawer isOpen={openOn === pathname} onOpenChange={(open) => setOpenOn(open ? pathname : null)}>
       <Button
         variant="ghost"
         isIconOnly
         aria-label={menuLabel}
-        className="lg:hidden group-data-[transparent=true]/header:text-white"
+        className="xl:hidden group-data-[transparent=true]/header:text-white"
       >
         <Menu className="size-6" strokeWidth={1.75} />
       </Button>
@@ -44,6 +51,7 @@ export function MobileNav({
                     <li key={item.href} className="border-line border-b">
                       <Link
                         href={item.href}
+                        onClick={() => setOpenOn(null)}
                         className="block py-4 font-display font-semibold text-ink-900 text-xl"
                       >
                         {item.label}
@@ -55,7 +63,11 @@ export function MobileNav({
               <LocaleSwitcher />
             </Drawer.Body>
             <Drawer.Footer className="pt-6">
-              <Link href="/arma-tu-viaje" className={`${buttonVariants({ size: "lg" })} w-full`}>
+              <Link
+                href="/arma-tu-viaje"
+                onClick={() => setOpenOn(null)}
+                className={`${buttonVariants({ size: "lg" })} w-full`}
+              >
                 {ctaLabel}
               </Link>
             </Drawer.Footer>

@@ -62,7 +62,8 @@ export async function PageHero({
           viewBox="0 0 600 260"
           className="absolute right-0 bottom-0 -z-10 w-[42rem] max-w-none opacity-80"
         >
-          <circle cx="480" cy="80" r="46" fill="#CB9E55" />
+          {/* En móvil el sol quedaría sobre el título: solo se muestra desde sm */}
+          <circle cx="480" cy="80" r="46" fill="#CB9E55" className="hidden sm:inline" />
           <path
             d="M60 220c60-34 120-34 180 0s120 34 180 0 100-30 180-14"
             fill="none"

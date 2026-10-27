@@ -49,7 +49,7 @@ export async function B2BPage({
               return (
                 <RevealItem
                   key={benefit.title}
-                  className="flex gap-5 rounded-card border border-line bg-white p-6 shadow-card sm:p-8"
+                  className="flex gap-4 rounded-card border border-line bg-white p-5 shadow-card sm:gap-5 sm:p-8"
                 >
                   {Icon && (
                     <span className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-teal-50 text-teal-600">
@@ -68,13 +68,13 @@ export async function B2BPage({
           </RevealGroup>
 
           <Reveal className="mt-12 lg:mt-16">
-            <div className="flex flex-col items-start gap-6 rounded-panel bg-ink-900 p-8 text-white sm:p-10 lg:flex-row lg:items-center lg:justify-between lg:p-12">
+            <div className="flex flex-col items-start gap-6 rounded-panel bg-ink-900 p-6 text-white sm:p-10 lg:flex-row lg:items-center lg:justify-between lg:p-12">
               <h2 className="max-w-xl text-display-md">{t("title")}</h2>
               <WhatsAppButton
                 onDark
                 message={t("waMessage")}
                 originCode={`${originCode}-CTA`}
-                className="shrink-0"
+                className="w-full shrink-0 sm:w-auto"
               >
                 {t("cta")}
               </WhatsAppButton>

@@ -62,15 +62,19 @@ export default async function StaysPage({ params }: PageProps<"/[locale]/alojami
             {TYPES.map((type) => (
               <RevealItem
                 key={type.key}
-                className="group rounded-card border border-line bg-white p-6 shadow-card transition duration-150 hover:-translate-y-0.5 hover:shadow-raised sm:p-8"
+                className="group flex gap-4 rounded-card border border-line bg-white p-5 shadow-card transition duration-150 hover:-translate-y-0.5 hover:shadow-raised sm:gap-5 md:block md:p-8"
               >
-                <span className="flex size-14 items-center justify-center rounded-2xl bg-teal-50 text-teal-600 transition-colors group-hover:bg-teal-600 group-hover:text-white">
-                  <type.icon className="size-7" strokeWidth={1.5} aria-hidden="true" />
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-teal-50 text-teal-600 transition-colors group-hover:bg-teal-600 group-hover:text-white md:size-14">
+                  <type.icon className="size-6 md:size-7" strokeWidth={1.5} aria-hidden="true" />
                 </span>
-                <h3 className="mt-6 font-display font-semibold text-2xl text-ink-900">
-                  {t(`StaysPage.types.${type.key}.title`)}
-                </h3>
-                <p className="mt-3 text-ink-700">{t(`StaysPage.types.${type.key}.text`)}</p>
+                <div className="min-w-0">
+                  <h3 className="pt-1.5 font-display font-semibold text-ink-900 text-xl md:mt-6 md:pt-0 md:text-2xl">
+                    {t(`StaysPage.types.${type.key}.title`)}
+                  </h3>
+                  <p className="mt-1 text-ink-700 md:mt-3">
+                    {t(`StaysPage.types.${type.key}.text`)}
+                  </p>
+                </div>
               </RevealItem>
             ))}
           </RevealGroup>

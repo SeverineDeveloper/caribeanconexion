@@ -219,7 +219,7 @@ export function Planner({
   return (
     <div
       id="planner"
-      className="rounded-panel border border-line bg-white p-6 shadow-raised sm:p-10"
+      className="rounded-panel border border-line bg-white p-5 shadow-raised sm:p-10"
     >
       {/* Progreso */}
       <div>
@@ -261,7 +261,7 @@ export function Planner({
 
             {step === 0 && (
               <>
-                <div className="grid gap-5 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <ZoneSelect
                     label={t("zone")}
                     placeholder={t("zonePlaceholder")}
@@ -278,7 +278,7 @@ export function Planner({
                     {t("flexible")}
                   </Checkbox.Content>
                 </Checkbox>
-                <div className="grid gap-5 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <CountField label={t("adults")} value={adults} onChange={setAdults} min={1} />
                   <CountField
                     label={t("children")}
@@ -367,7 +367,7 @@ export function Planner({
 
             {step === 2 && (
               <>
-                <div className="grid gap-5 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <TextField
                     isRequired
                     fullWidth

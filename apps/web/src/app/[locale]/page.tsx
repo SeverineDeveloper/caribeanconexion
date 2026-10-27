@@ -199,7 +199,7 @@ export default async function HomePage() {
               lead={t("Bento.lead")}
             />
           </Reveal>
-          <RevealGroup className="mt-10 grid auto-rows-[15rem] gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-6">
+          <RevealGroup className="mt-10 grid auto-rows-[13rem] gap-4 sm:auto-rows-[15rem] sm:gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-6">
             <BentoTile
               href="/alojamiento"
               title={t("Bento.stays")}
@@ -299,15 +299,17 @@ export default async function HomePage() {
               return (
                 <RevealItem
                   key={item.title}
-                  className="rounded-card border border-line bg-white p-6 shadow-card sm:p-8"
+                  className="flex gap-4 rounded-card border border-line bg-white p-5 shadow-card sm:block sm:p-8"
                 >
-                  <span className="flex size-12 items-center justify-center rounded-full bg-teal-50 text-teal-600">
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-teal-50 text-teal-600">
                     <Icon className="size-6" strokeWidth={1.75} aria-hidden="true" />
                   </span>
-                  <h3 className="mt-6 font-sans font-semibold text-ink-900 text-lg">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-ink-700">{item.text}</p>
+                  <div className="min-w-0">
+                    <h3 className="pt-2.5 font-sans font-semibold text-ink-900 text-lg sm:mt-6 sm:pt-0">
+                      {item.title}
+                    </h3>
+                    <p className="mt-1 text-ink-700 sm:mt-2">{item.text}</p>
+                  </div>
                 </RevealItem>
               );
             })}

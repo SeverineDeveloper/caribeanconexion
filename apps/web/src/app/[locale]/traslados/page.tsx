@@ -74,15 +74,17 @@ export default async function TransfersPage({ params }: PageProps<"/[locale]/tra
               return (
                 <RevealItem
                   key={feature.title}
-                  className="rounded-card border border-line bg-white p-6 shadow-card sm:p-8"
+                  className="flex gap-4 rounded-card border border-line bg-white p-5 shadow-card sm:block sm:p-8"
                 >
-                  <span className="flex size-12 items-center justify-center rounded-full bg-teal-50 text-teal-600">
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-teal-50 text-teal-600">
                     <Icon className="size-6" strokeWidth={1.75} aria-hidden="true" />
                   </span>
-                  <h3 className="mt-6 font-sans font-semibold text-ink-900 text-lg">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-2 text-ink-700">{feature.text}</p>
+                  <div className="min-w-0">
+                    <h3 className="pt-2.5 font-sans font-semibold text-ink-900 text-lg sm:mt-6 sm:pt-0">
+                      {feature.title}
+                    </h3>
+                    <p className="mt-1 text-ink-700 sm:mt-2">{feature.text}</p>
+                  </div>
                 </RevealItem>
               );
             })}
@@ -116,11 +118,14 @@ export default async function TransfersPage({ params }: PageProps<"/[locale]/tra
                   aria-hidden="true"
                   className="hidden h-px flex-1 border-teal-400/60 border-t-2 border-dashed sm:block"
                 />
-                <span className="flex-1 font-semibold text-ink-900 sm:flex-none">
-                  {t(`Transfers.routes.${route}.to`)}
-                </span>
-                <span className="shrink-0 rounded-full bg-teal-50 px-3 py-1 font-semibold text-sm text-teal-700">
-                  {t(`Transfers.routes.${route}.time`)}
+                {/* En móvil el tiempo va debajo del destino para no apretar la fila */}
+                <span className="flex min-w-0 flex-1 flex-col items-start gap-1.5 sm:flex-none sm:flex-row sm:items-center sm:gap-6">
+                  <span className="font-semibold text-ink-900">
+                    {t(`Transfers.routes.${route}.to`)}
+                  </span>
+                  <span className="whitespace-nowrap rounded-full bg-teal-50 px-3 py-1 font-semibold text-sm text-teal-700">
+                    {t(`Transfers.routes.${route}.time`)}
+                  </span>
                 </span>
               </RevealItem>
             ))}

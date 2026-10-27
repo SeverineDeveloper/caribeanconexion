@@ -22,9 +22,9 @@ export function Faq({ title, items }: { title: string; items: FaqItem[] }) {
         {items.map((item, i) => (
           <Accordion.Item key={item.q} id={`faq-${i}`}>
             <Accordion.Heading className="font-sans">
-              <Accordion.Trigger className="py-5 text-left font-semibold text-base text-ink-900">
-                {item.q}
-                <Accordion.Indicator />
+              <Accordion.Trigger className="gap-4 py-5 text-left font-semibold text-base text-ink-900">
+                <span className="min-w-0 flex-1">{item.q}</span>
+                <Accordion.Indicator className="shrink-0" />
               </Accordion.Trigger>
             </Accordion.Heading>
             <Accordion.Panel>

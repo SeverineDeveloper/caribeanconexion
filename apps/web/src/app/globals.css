@@ -84,15 +84,19 @@
 
 /* ── Ajustes de componentes HeroUI a las reglas de docs/DESIGN.md ──────────── */
 @layer components {
-  /* Botones: 44 px por defecto, 52 px en lg, siempre píldora */
+  /* Botones: 44 px por defecto, 52 px en lg, siempre píldora. La altura es mínima y el
+     texto puede partirse: en móvil y en francés las etiquetas largas no desbordan. */
   .button {
-    @apply h-11 rounded-full px-5 text-[0.9375rem] font-semibold md:h-11;
+    @apply h-auto min-h-11 max-w-full rounded-full px-5 py-2 text-center text-[0.9375rem] leading-snug font-semibold whitespace-normal text-balance md:h-auto;
   }
   .button--sm {
-    @apply h-9 px-4 text-sm md:h-9;
+    @apply min-h-9 px-4 py-1.5 text-sm;
   }
   .button--lg {
-    @apply h-13 px-7 text-base md:h-13;
+    @apply min-h-13 px-6 py-3 text-base sm:px-7;
+  }
+  .button svg {
+    @apply shrink-0;
   }
 
   /* Campos: 48 px, texto 16 px, borde visible */
@@ -135,6 +139,22 @@
   .number-field__group {
     @apply h-12 text-base sm:text-base;
   }
+  /* El rango "dd/mm/aaaa – dd/mm/aaaa" no cabe a 16 px en teléfonos: baja a 14 px y,
+     por debajo de 360 px, las dos fechas pasan a dos líneas. */
+  @media (max-width: 400px) {
+    .date-input-group,
+    .date-input-group__input {
+      font-size: 0.875rem;
+    }
+  }
+  @media (max-width: 359px) {
+    .date-input-group {
+      @apply h-auto min-h-12 py-1.5;
+    }
+    .date-input-group__input-container {
+      flex-wrap: wrap;
+    }
+  }
   .textarea {
     @apply min-h-28 px-4 py-3 text-base sm:text-base;
   }
@@ -161,10 +181,10 @@
 
 /* ── Utilidades del sistema ────────────────────────────────────────────────── */
 @utility container-page {
-  @apply mx-auto w-full max-w-7xl px-5 lg:px-8;
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
 }
 @utility section-y {
-  @apply py-20 lg:py-28;
+  @apply py-16 sm:py-20 lg:py-28;
 }
 @utility text-display-xl {
   font-family: var(--font-display);

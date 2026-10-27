@@ -50,13 +50,22 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
               return (
                 <RevealItem
                   key={service.key}
-                  className="group flex flex-col rounded-card border border-line bg-white p-6 shadow-card transition duration-150 hover:-translate-y-0.5 hover:shadow-raised sm:p-8"
+                  className="group flex flex-col rounded-card border border-line bg-white p-5 shadow-card transition duration-150 hover:-translate-y-0.5 hover:shadow-raised sm:p-8"
                 >
-                  <span className="flex size-14 items-center justify-center rounded-2xl bg-teal-50 text-teal-600 transition-colors group-hover:bg-teal-600 group-hover:text-white">
-                    <service.icon className="size-7" strokeWidth={1.5} aria-hidden="true" />
-                  </span>
-                  <h2 className="mt-6 font-sans font-semibold text-ink-900 text-xl">{title}</h2>
-                  <p className="mt-2 flex-1 text-ink-700">
+                  {/* En móvil el icono va junto al título para que la tarjeta no sea tan alta */}
+                  <div className="flex items-center gap-4 sm:block">
+                    <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-teal-50 text-teal-600 transition-colors group-hover:bg-teal-600 group-hover:text-white sm:size-14">
+                      <service.icon
+                        className="size-6 sm:size-7"
+                        strokeWidth={1.5}
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <h2 className="font-sans font-semibold text-ink-900 text-xl sm:mt-6">
+                      {title}
+                    </h2>
+                  </div>
+                  <p className="mt-3 flex-1 text-ink-700 sm:mt-2">
                     {t(`Services.detail.${service.key}.text`)}
                   </p>
                   <a
@@ -66,7 +75,7 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
                     )}
                     target="_blank"
                     rel="noopener"
-                    className="mt-6 inline-flex items-center gap-2 font-semibold text-sm text-teal-600 hover:text-teal-700"
+                    className="mt-4 inline-flex min-h-11 items-center gap-2 font-semibold text-sm text-teal-600 hover:text-teal-700 sm:mt-6"
                   >
                     <WhatsAppIcon className="size-4" />
                     {t("Common.askWhatsapp")}
