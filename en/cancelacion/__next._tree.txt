@@ -1,0 +1,8 @@
+:HL["/caribeanconexion/_next/static/chunks/2csw6r-ve3fi_.css","style"]
+:HL["/caribeanconexion/_next/static/chunks/0-8naftpgdtuv.css","style"]
+:HL["/caribeanconexion/_next/static/media/03bda585a99c6450-s.p.32sris142tqlb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/caribeanconexion/_next/static/media/5c285b27cdda1fe8-s.p.2_mbdogr7ni8i.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":"cancelacion","h":64,"c":"$Q3"}]]
+1:[["children",{"s":{"n":"locale","t":"d","k":"en","s":[]},"h":48,"c":"$Q2"}]]
+0:{"b":"3DnzJcJbIZKc18YBvF4vS","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
