@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import saonaClasica from "@/assets/images/excursiones/saona-clasica.jpg";
 import { Reveal } from "@/components/motion/reveal";
 import { CtaBand } from "@/components/site/cta-band";
 import { ExcursionsExplorer } from "@/components/site/excursions-explorer";
 import { Faq, type FaqItem } from "@/components/site/faq";
 import { MoreExperiences } from "@/components/site/more-experiences";
 import { PageHero } from "@/components/site/page-hero";
-import { WhatsAppButton, whatsappHref } from "@/components/site/whatsapp-button";
-import { EXCURSION_CATEGORIES, EXCURSIONS, excursionOriginCode } from "@/content/excursions";
+import { WhatsAppButton } from "@/components/site/whatsapp-button";
+import { EXCURSION_CATEGORIES, EXCURSIONS } from "@/content/excursions";
 import type { Locale } from "@/i18n/routing";
+import { excursionCards } from "@/lib/excursion-cards";
 import { pageMetadata } from "@/lib/metadata";
 
 const PATH = "/excursiones";
@@ -31,22 +31,7 @@ export default async function ExcursionsPage({ params }: PageProps<"/[locale]/ex
   const locale = (await params).locale as Locale;
   const t = await getTranslations();
 
-  const items = EXCURSIONS.map((excursion) => {
-    const title = t(`Excursions.items.${excursion.key}.title`);
-    return {
-      slug: excursion.slug,
-      category: excursion.category,
-      categoryLabel: t(`Excursions.categories.${excursion.category}`),
-      image: excursion.image,
-      title,
-      tagline: t(`Excursions.items.${excursion.key}.tagline`),
-      detail: t(`Excursions.items.${excursion.key}.detail`),
-      whatsappUrl: whatsappHref(
-        t("Excursions.waMessage", { name: title }),
-        excursionOriginCode(excursion.slug),
-      ),
-    };
-  });
+  const items = await excursionCards(locale);
   const countLabel = Object.fromEntries(
     Array.from({ length: items.length + 1 }, (_, n) => [
       n,
@@ -59,7 +44,7 @@ export default async function ExcursionsPage({ params }: PageProps<"/[locale]/ex
       <PageHero
         locale={locale}
         path={PATH}
-        image={saonaClasica}
+        image={EXCURSIONS.find((e) => e.slug === "yate-de-lujo")?.cover}
         eyebrow={t("ExcursionsPage.eyebrow")}
         title={t("ExcursionsPage.title")}
         lead={t("ExcursionsPage.lead")}
@@ -80,7 +65,6 @@ export default async function ExcursionsPage({ params }: PageProps<"/[locale]/ex
               }))}
               allLabel={t("Excursions.all")}
               filterLabel={t("ExcursionsPage.filterLabel")}
-              ctaLabel={t("Excursions.cta")}
               countLabel={countLabel}
             />
           </Reveal>

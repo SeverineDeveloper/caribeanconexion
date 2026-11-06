@@ -2,7 +2,7 @@ import { buttonVariants } from "@heroui/styles";
 import { ArrowRight, Sparkles } from "lucide-react";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import partyBoat from "@/assets/images/excursiones/party-boat.jpg";
+import partyBoat from "@/assets/images/excursiones/party-boat/portada.jpg";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { CtaBand } from "@/components/site/cta-band";
 import { PackageCard } from "@/components/site/package-card";

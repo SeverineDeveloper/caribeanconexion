@@ -1,10 +1,10 @@
 import { Cake, Crown, Heart, type LucideIcon, PiggyBank, Sailboat, Users } from "lucide-react";
 import type { StaticImageData } from "next/image";
-import buggies from "@/assets/images/excursiones/buggies.jpg";
-import catalina from "@/assets/images/excursiones/isla-catalina.jpg";
-import partyBoat from "@/assets/images/excursiones/party-boat.jpg";
-import saonaClasica from "@/assets/images/excursiones/saona-clasica.jpg";
-import saonaVip from "@/assets/images/excursiones/saona-vip.jpg";
+import buggies from "@/assets/images/excursiones/buggies/portada.jpg";
+import catalina from "@/assets/images/excursiones/isla-catalina/portada.jpg";
+import partyBoat from "@/assets/images/excursiones/party-boat/portada.jpg";
+import saonaClasica from "@/assets/images/excursiones/saona-clasica/portada.jpg";
+import saonaVip from "@/assets/images/excursiones/saona-vip/portada.jpg";
 import heroPlaya from "@/assets/images/hero-playa.jpg";
 
 /**

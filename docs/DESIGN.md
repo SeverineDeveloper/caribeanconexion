@@ -140,7 +140,9 @@ Los originales del cliente están en `docs/brand/originales/`: JPEG con fondo y 
 ### Íconos y fotos
 - Íconos de [Lucide](https://lucide.dev) con trazo de 1.75 y tamaño 20–24 px. Dentro de un círculo `teal-50` de 48 px cuando acompañan a una card.
 - Fotos con radio `radius-card` y proporciones 4:3 en móvil y 1:1 desde `sm` (hero), y 16:9 en las cards de excursión. Siempre con `next/image` y `placeholder="blur"`.
-- Las fotos actuales salen del catálogo PDF del cliente (`assets/images/`): son ilustrativas y de baja resolución. Se reemplazan por versiones de alta resolución con los mismos nombres de archivo. Nunca se usan cajas grises.
+- Las fotos de excursiones viven en `assets/images/excursiones/<slug>/`: `portada.jpg` (16:9, 1920×1080) y la galería `01.jpg`, `02.jpg`… (lado mayor 1600 px). No se editan a mano: se generan con `tools/media/procesar_catalogo.py` desde los originales del cliente (selección y ajustes en `tools/media/catalogo.json`), que también escribe `content/excursion-media.generated.ts`. Los clips van a `public/videos/excursiones/<slug>.mp4`.
+- Saona, Catalina, party boat, Samaná y Santo Domingo aún usan las ilustraciones del catálogo PDF (ampliadas con IA). Se reemplazan por fotos reales cuando el cliente las envíe. Nunca se usan cajas grises.
+- No se publican fotos con marca de agua ni fotos cuyos derechos no confirmó el cliente.
 
 ## 8. Movimiento
 
@@ -153,6 +155,8 @@ Hover a 150 ms, entradas a 250 ms, curva `ease-out` (`[0.22, 1, 0.36, 1]`). Se r
 | Video del hero | `HeroVideo` | Primero la foto (LCP). El video se carga solo en pantallas de 768 px o más, sin ahorro de datos y sin movimiento reducido. Siempre tiene botón de pausa (WCAG 2.2.2). |
 | Franja de destinos | `Marquee` | Desplazamiento continuo que se pausa al pasar el mouse y queda quieto con movimiento reducido. |
 | Filtros | `ExcursionsExplorer` | Reordenamiento con `layout` y entrada o salida a escala 0,96. |
+| Galería de excursión | `ExcursionGallery` | Mosaico de hasta 5 fotos (1 grande y 4 pequeñas desde `sm`). El visor es un `<dialog>` modal a pantalla completa sobre `ink-900`, con flechas, teclado, contador y pie de foto; Escape cierra. |
+| Clip de excursión | `ExcursionVideo` | Póster con botón de reproducir; el video (sin audio, en bucle) solo se descarga al pulsarlo y siempre se puede pausar. |
 | Pasos de formulario | `Planner` | Deslizamiento horizontal de 40 px según la dirección. |
 | Header | `HeaderShell` | Transparente sobre el video del inicio y blanco al hacer scroll de más de 24 px. |
 

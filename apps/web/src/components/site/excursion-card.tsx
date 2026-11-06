@@ -1,6 +1,24 @@
+import { ArrowRight } from "lucide-react";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import { WhatsAppIcon } from "@/components/brand/whatsapp-icon";
+import { Link } from "@/i18n/navigation";
+
+export type ExcursionCardProps = {
+  image: StaticImageData;
+  category: string;
+  title: string;
+  tagline: string;
+  detail: string;
+  /** Precio ya formateado ("Desde US$37") o "Precio a cotizar". */
+  price: string;
+  /** "por persona", solo si hay precio. */
+  priceUnit?: string;
+  ctaLabel: string;
+  /** Con página propia, toda la card enlaza a ella; si no, el CTA abre WhatsApp. */
+  href?: `/excursiones/${string}`;
+  whatsappUrl: string;
+};
 
 export function ExcursionCard({
   image,
@@ -8,19 +26,14 @@ export function ExcursionCard({
   title,
   tagline,
   detail,
+  price,
+  priceUnit,
   ctaLabel,
+  href,
   whatsappUrl,
-}: {
-  image: StaticImageData;
-  category: string;
-  title: string;
-  tagline: string;
-  detail: string;
-  ctaLabel: string;
-  whatsappUrl: string;
-}) {
+}: ExcursionCardProps) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-150 hover:-translate-y-0.5 hover:shadow-raised">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-150 hover:-translate-y-0.5 hover:shadow-raised has-[a:focus-visible]:ring-3 has-[a:focus-visible]:ring-teal-400">
       <div className="relative aspect-[16/9] overflow-hidden">
         <Image
           src={image}
@@ -35,19 +48,42 @@ export function ExcursionCard({
         </span>
       </div>
       <div className="flex flex-1 flex-col p-5 sm:p-6">
-        <h3 className="font-sans font-semibold text-ink-900 text-lg leading-snug">{title}</h3>
-        <p className="mt-2 text-ink-700">{tagline}</p>
+        <h3 className="text-balance font-sans font-semibold text-ink-900 text-lg leading-snug">
+          {href ? (
+            // El ::after cubre toda la card: un solo enlace por card, con el título como nombre.
+            <Link href={href} className="outline-none after:absolute after:inset-0 after:z-10">
+              {title}
+            </Link>
+          ) : (
+            title
+          )}
+        </h3>
+        <p className="mt-2 text-pretty text-ink-700">{tagline}</p>
         <p className="mt-2 flex-1 text-ink-500 text-sm">{detail}</p>
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener"
-          className="mt-5 inline-flex items-center gap-2 font-semibold text-sm text-teal-600 hover:text-teal-700"
-        >
-          <WhatsAppIcon className="size-4" />
-          {ctaLabel}
-          <span className="sr-only">: {title}</span>
-        </a>
+        <p className="mt-5 border-line border-t pt-4">
+          <span className="font-semibold text-ink-900">{price}</span>
+          {priceUnit && <span className="text-ink-500 text-sm"> · {priceUnit}</span>}
+        </p>
+        {href ? (
+          <span
+            aria-hidden="true"
+            className="mt-3 inline-flex items-center gap-1.5 font-semibold text-sm text-teal-600 group-hover:text-teal-700"
+          >
+            {ctaLabel}
+            <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
+          </span>
+        ) : (
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener"
+            className="mt-3 inline-flex items-center gap-2 font-semibold text-sm text-teal-600 hover:text-teal-700"
+          >
+            <WhatsAppIcon className="size-4" />
+            {ctaLabel}
+            <span className="sr-only">: {title}</span>
+          </a>
+        )}
       </div>
     </article>
   );

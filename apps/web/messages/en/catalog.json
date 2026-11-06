@@ -19,65 +19,271 @@
         "tagline": "Turquoise water, palm trees and an unforgettable getaway.",
         "detail": "Shared excursion; itinerary subject to availability."
       },
+      "yacht": {
+        "title": "Luxury yacht",
+        "tagline": "Premium open bar, snorkeling and a natural pool for your group.",
+        "detail": "1 to 22 guests. Punta Cana, Saona Island or Catalina Island."
+      },
+      "buggies": {
+        "title": "Buggy adventure",
+        "tagline": "Dirt roads, a cenote and Macao Beach in a single ride.",
+        "detail": "4 hours, with transport and guide included."
+      },
+      "snorkeling": {
+        "title": "Snorkeling",
+        "tagline": "Swim among colorful fish in crystal-clear water.",
+        "detail": "Transport, guide, gear and snack included."
+      },
+      "parasailing": {
+        "title": "Parasailing",
+        "tagline": "Fly over the turquoise sea and see the coast from above.",
+        "detail": "Every day, with departures from all hotels."
+      },
       "saonaVip": {
         "title": "Saona Island VIP · 4 beaches",
         "tagline": "A more exclusive Caribbean, at your own pace.",
         "detail": "Premium options and tours of several beaches."
+      },
+      "speedboat": {
+        "title": "Speedboat tour",
+        "tagline": "Snorkeling, a natural pool and the whole Bávaro and Punta Cana coast.",
+        "detail": "3 h 30 min, with a sunset departure too."
       },
       "catalina": {
         "title": "Catalina Island",
         "tagline": "An invitation to discover the sea and its reefs.",
         "detail": "Snorkeling option and beach visit."
       },
-      "buggies": {
-        "title": "Buggy adventure",
-        "tagline": "Thrilling routes through tropical landscapes.",
-        "detail": "Guided activity, subject to age and safety rules."
+      "diving": {
+        "title": "Scuba diving",
+        "tagline": "Caribbean reefs, sponges and marine life, with a guide.",
+        "detail": "Transport, gear, snack and lunch included."
+      },
+      "horseback": {
+        "title": "Horseback riding",
+        "tagline": "From the countryside and cocoa plantations to Macao Beach.",
+        "detail": "2 hours, with round-trip transport."
+      },
+      "zipline": {
+        "title": "Zip line",
+        "tagline": "Ten zip lines through tropical greenery.",
+        "detail": "Round-trip transport included."
+      },
+      "fishing": {
+        "title": "Recreational and pro fishing",
+        "tagline": "Go fishing with a captain, a guide and all the gear on board.",
+        "detail": "Every day, morning or afternoon."
       },
       "partyBoat": {
         "title": "Party boat",
         "tagline": "Music, Caribbean vibes and fun on the water.",
         "detail": "Group experience for adults and families, depending on the option."
       },
-      "santoDomingo": {
-        "title": "Cultural Santo Domingo",
-        "tagline": "Dominican history, architecture and tradition.",
-        "detail": "Tour of the Colonial Zone and its cultural landmarks."
-      },
       "samana": {
         "title": "Samaná & nature",
         "tagline": "Forests, waterfalls and spectacular scenery.",
         "detail": "Excursions to waterfalls and beaches."
       },
-      "zipline": {
-        "title": "Zip line & adventure",
-        "tagline": "Adrenaline and nature in one experience.",
-        "detail": "Horseback riding, parasailing and Scape Park also on request."
+      "santoDomingo": {
+        "title": "Cultural Santo Domingo",
+        "tagline": "Dominican history, architecture and tradition.",
+        "detail": "Tour of the Colonial Zone and its cultural landmarks."
       }
+    }
+  },
+  "ExcursionDetail": {
+    "priceFrom": "From {price}",
+    "perPerson": "per person",
+    "onRequest": "Price on request",
+    "duration": "Duration",
+    "schedules": "Schedule",
+    "daily": "Every day",
+    "scheduleLabels": {
+      "sunset": "sunset",
+      "exclusive": "exclusive slot"
+    },
+    "about": "The experience",
+    "includes": "What's included",
+    "goodToKnow": "Good to know",
+    "photos": "{name} photos",
+    "openPhoto": "Enlarge photo {n} of {total}",
+    "viewAll": "View all {count} photos",
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "photoOf": "{n} of {total}",
+    "video": "On video",
+    "cta": "Book on WhatsApp",
+    "waMessage": "Hi Conexión Caribe. I'm interested in the excursion: {name}. Is it available?",
+    "planTrip": "Plan your trip",
+    "more": "More experiences",
+    "seeDetails": "See the experience"
+  },
+  "ExcursionPages": {
+    "yacht": {
+      "metaDescription": "Luxury yacht in Punta Cana for groups of 1 to 22: premium open bar, snorkeling, natural pool and VIP transfer. Saona or Catalina on request.",
+      "description": "A day on a yacht for your group of 1 to 22 guests, with a premium open bar. Choose Punta Cana, Saona Island or Catalina Island, go snorkeling, swim in a natural pool and cruise along the beaches of Bávaro and Punta Cana. The transfer is VIP, with a drink included.",
+      "includes": [
+        "VIP transfer with a drink",
+        "Premium open bar",
+        "Snorkeling",
+        "Natural pool",
+        "Cruise along the Bávaro and Punta Cana beaches"
+      ],
+      "notes": [
+        "Capacity for 1 to 22 guests.",
+        "Destinations: Punta Cana, Saona Island or Catalina Island.",
+        "Lunch is optional and quoted separately."
+      ],
+      "gallery": [
+        "Yacht anchored in turquoise water off a palm-lined beach",
+        "White yacht near the shore in crystal-clear water",
+        "Couple raising a toast in the water with the yacht behind",
+        "Friends chatting on the yacht deck",
+        "Couple swimming with life vests in turquoise water",
+        "Couple relaxing on the yacht's bow",
+        "Captain at the yacht's helm",
+        "Deck seating with a sea view",
+        "Flybridge yacht cruising in clear water",
+        "Indoor lounge with sofas and a sea view",
+        "Indoor lounge with wood finishes",
+        "Cabin with a double bed",
+        "Cabin interior with a table"
+      ]
+    },
+    "buggies": {
+      "metaDescription": "4-hour buggy tour through coffee and cocoa plantations, a cenote and Macao Beach, with transport and guide included.",
+      "description": "A guided buggy ride through the Dominican countryside. You'll see coffee and cocoa plantations and their chocolate, take a dip in a blue-water cenote and finish by the sea at Macao Beach, one of the most famous beaches in the Caribbean.",
+      "includes": [
+        "Round-trip transport",
+        "Guide",
+        "Coffee, cocoa and chocolate plantations",
+        "Swim in a blue-water cenote",
+        "Stop at Macao Beach"
+      ],
+      "notes": [],
+      "gallery": [
+        "Orange off-road vehicle splashing mud on a country road",
+        "Buggies crossing a puddle among the greenery",
+        "Family in a yellow buggy on a tropical trail",
+        "Driver in a blue buggy giving a thumbs up",
+        "Couple on an ATV waving at the camera",
+        "Two friends on an ATV on a dirt road",
+        "Off-road vehicle splashing on a wet road",
+        "Red off-road vehicles on a muddy road",
+        "Line of buggies on a road among palm trees"
+      ]
+    },
+    "snorkeling": {
+      "metaDescription": "Snorkeling in Punta Cana with round-trip transport, guide, gear and snack. Six departures a day.",
+      "description": "Put on your mask and swim among colorful fish in crystal-clear water. Round-trip transport, a guide, snorkeling gear and a snack are included, with several departures throughout the day.",
+      "includes": ["Round-trip transport", "Guide", "Snorkeling gear", "Snack"],
+      "notes": [],
+      "gallery": [
+        "Snorkeler holding a conch shell underwater",
+        "Person with a mask sitting on the sandy bottom",
+        "Swimmer passing through an underwater rock arch"
+      ]
+    },
+    "parasailing": {
+      "metaDescription": "Parasailing in Punta Cana every day, with departures from all hotels. Fly over the turquoise sea and see the coast from above.",
+      "description": "Take off from the boat and rise above the turquoise sea to see the Punta Cana coast from the air. There are departures every day, from all hotels.",
+      "includes": [],
+      "notes": ["Departures from all hotels."],
+      "gallery": [
+        "Three people in life vests ready to take off from the boat",
+        "Two people parasailing over the beach, seen from a drone",
+        "Boat towing a colorful parachute",
+        "Two people flying under the parachute",
+        "Person flying under a yellow parachute",
+        "View of the turquoise sea from the parachute"
+      ]
+    },
+    "speedboat": {
+      "metaDescription": "3 h 30 min speedboat tour along the Bávaro and Punta Cana coast, with snorkeling and a natural pool. Sunset departure available.",
+      "description": "Speed along the Bávaro and Punta Cana coast, stop to snorkel and swim in a natural pool. The afternoon departure ends with the sunset.",
+      "includes": [
+        "Transport",
+        "Guide",
+        "Snorkeling",
+        "Natural pool",
+        "Tour of the Bávaro and Punta Cana coast"
+      ],
+      "notes": [],
+      "gallery": [
+        "Group in life vests waving from the speedboat",
+        "Man at the wheel of the speedboat",
+        "Person jumping from the boat into turquoise water",
+        "Couple with a macaw in the natural pool",
+        "Group smiling on board the speedboat"
+      ]
+    },
+    "diving": {
+      "metaDescription": "Scuba diving in Punta Cana with guide, gear, transport, snack and lunch. Full day or exclusive morning schedule.",
+      "description": "Guided dives on the reefs of the Dominican Caribbean, among sea fans, sponges and fish. Gear, transport, a snack and lunch are included.",
+      "includes": ["Transport", "Guide", "Diving gear", "Snack", "Lunch"],
+      "notes": [],
+      "gallery": [
+        "Two divers over a white sandy bottom",
+        "Divers giving the OK sign underwater",
+        "Diver next to a stingray",
+        "Diver over a sea fan",
+        "Diver over corals and sponges",
+        "Diver next to green tube sponges",
+        "Diver swimming over sea fans",
+        "Divers in the water next to the boat's bow"
+      ]
+    },
+    "horseback": {
+      "metaDescription": "2-hour horseback ride through the countryside, coffee and cocoa plantations and Macao Beach, with round-trip transport.",
+      "description": "A horseback ride along country trails, past coffee and cocoa plantations, ending on the sand at Macao Beach.",
+      "includes": [
+        "Round-trip transport",
+        "Countryside trail",
+        "Coffee, cocoa and chocolate plantations",
+        "Ride along Macao Beach"
+      ],
+      "notes": [],
+      "gallery": [
+        "Riders on horseback at the water's edge",
+        "Woman on horseback on the beach",
+        "Two riders waving on a palm-lined beach",
+        "Family on horseback at the ranch",
+        "Woman on horseback on a tropical trail",
+        "Group in helmets riding through the greenery",
+        "Two riders in a meadow with palm trees"
+      ]
+    },
+    "zipline": {
+      "metaDescription": "Zip line in Punta Cana with 10 lines and round-trip transport. Morning and midday departures.",
+      "description": "Ten zip lines to glide over the tropical greenery, with round-trip transport included.",
+      "includes": ["Round-trip transport", "10 zip lines"],
+      "notes": [],
+      "gallery": ["Man in a helmet riding the zip line over the forest"]
+    },
+    "fishing": {
+      "metaDescription": "Recreational or pro fishing in Punta Cana, with captain, guide, gear and transport. Departures every day, morning or afternoon.",
+      "description": "Go fishing in the waters of Punta Cana, recreational or pro style. The boat goes out with a captain and a guide, with rods, gear and a snack on board.",
+      "includes": ["Transport", "Fishing rods and gear", "Captain and guide", "Snack"],
+      "notes": ["Recreational or pro fishing."],
+      "gallery": [
+        "Couple with a marlin on board, with the turquoise sea and beach behind",
+        "Group with a large marlin on the boat deck",
+        "Two men holding mahi-mahi at the stern",
+        "Man showing two freshly caught fish",
+        "Man holding a mahi-mahi on board",
+        "Fishing boat anchored at sea",
+        "Fishing boat under a blue sky",
+        "Sport fishing boat in calm water",
+        "Fishing boat moored at the marina"
+      ]
     }
   },
   "MoreExperiences": {
     "title": "And much more, tailored to you",
-    "sea": {
-      "title": "Sea & adventure",
-      "items": [
-        "Parasailing",
-        "Speedboat",
-        "Sport fishing",
-        "Diving",
-        "Snorkeling",
-        "Private boat trips"
-      ]
-    },
     "land": {
       "title": "Land & nature",
-      "items": [
-        "Scape Park",
-        "Horseback riding",
-        "Zip line",
-        "Safari & nature",
-        "Custom private experiences"
-      ]
+      "items": ["Scape Park", "Safari & nature", "Custom private experiences"]
     },
     "occasions": {
       "title": "Special occasions",

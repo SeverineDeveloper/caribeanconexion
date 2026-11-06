@@ -1,0 +1,198 @@
+{
+  "$comentario": "Selección y ajustes por foto para procesar_catalogo.py. 'carpeta' es relativa a --origen, o a la raíz del repo si 'raiz' es 'repo'. Por foto: foto o video+segundo (+ventana), modo (exterior | agua | ninguno), fuerza (0-1), saturacion (factor), rotar (grados), recorte [x0,y0,x1,y1] relativo, pendiente (no se publica). Portada: foco [x,y] relativo del recorte 16:9 y tamano [ancho, alto]. Clip: ver procesar_video().",
+  "realesrgan": "C:/Users/deleg/tools/realesrgan/realesrgan-ncnn-vulkan.exe",
+  "actividades": {
+    "buggies": {
+      "carpeta": "buggies",
+      "modo": "ninguno",
+      "portada": { "foto": "10.jpeg", "foco": [0.5, 0.55] },
+      "fotos": [
+        { "foto": "10.jpeg" },
+        { "foto": "1.jpeg" },
+        { "foto": "5.jpeg" },
+        { "foto": "2.jpeg" },
+        { "foto": "4.jpeg" },
+        { "foto": "9.jpeg" },
+        { "foto": "3.jpeg" },
+        { "foto": "8.jpeg" },
+        { "foto": "6.jpeg", "saturacion": 0.85 }
+      ],
+      "clip": {
+        "archivo": "video.mp4",
+        "desde": 17.5,
+        "hasta": 32,
+        "poster": 24,
+        "recorte": "676:1200:22:0"
+      }
+    },
+    "pesca": {
+      "carpeta": "fishing",
+      "modo": "exterior",
+      "portada": { "foto": "6.jpeg", "foco": [0.5, 0.5] },
+      "fotos": [
+        { "foto": "6.jpeg" },
+        { "foto": "10.jpeg" },
+        { "foto": "3.jpeg" },
+        { "foto": "4.jpeg" },
+        { "foto": "5.jpeg", "fuerza": 1 },
+        { "foto": "1.jpeg" },
+        { "foto": "9.jpeg" },
+        { "foto": "8.jpeg" },
+        { "foto": "11.jpeg" }
+      ]
+    },
+    "cabalgata": {
+      "carpeta": "horseback ride",
+      "modo": "ninguno",
+      "portada": { "foto": "5.jpeg", "foco": [0.5, 0.55] },
+      "fotos": [
+        { "foto": "5.jpeg" },
+        { "foto": "2.jpeg" },
+        { "foto": "1.jpeg" },
+        { "foto": "6.jpeg" },
+        { "foto": "3.jpeg" },
+        { "foto": "4.jpeg" },
+        { "foto": "7.jpeg" }
+      ]
+    },
+    "yate-de-lujo": {
+      "carpeta": "luxury yatch service",
+      "modo": "ninguno",
+      "portada": { "foto": "13.jpeg", "foco": [0.5, 0.5] },
+      "fotos": [
+        { "foto": "13.jpeg" },
+        { "foto": "1.jpeg" },
+        { "foto": "10.jpeg" },
+        { "foto": "6.jpeg" },
+        { "foto": "5.jpeg" },
+        { "foto": "8.jpeg" },
+        { "foto": "9.jpeg" },
+        { "foto": "3.jpeg", "modo": "exterior" },
+        { "foto": "11.jpeg" },
+        { "foto": "15.jpeg" },
+        { "foto": "18.jpeg" },
+        { "foto": "12.jpeg", "modo": "exterior" },
+        { "foto": "2.jpeg", "modo": "exterior" }
+      ]
+    },
+    "parasailing": {
+      "carpeta": "parasailing",
+      "modo": "exterior",
+      "portada": { "video": "video 1.mp4", "segundo": 18.0, "foco": [0.5, 0.5] },
+      "fotos": [
+        { "foto": "2.jpeg" },
+        { "video": "video 1.mp4", "segundo": 18.0 },
+        { "foto": "3.jpeg" },
+        { "foto": "1.jpeg", "fuerza": 1 },
+        { "foto": "4.jpeg" },
+        { "foto": "5.jpeg" },
+        { "foto": "6.jpeg", "pendiente": "derechos" },
+        { "foto": "7.jpeg", "pendiente": "derechos" }
+      ],
+      "clip": { "archivo": "video 1.mp4", "poster": 17.5, "alto": 720 }
+    },
+    "buceo": {
+      "carpeta": "professional diving",
+      "modo": "ninguno",
+      "portada": { "foto": "2.jpeg", "foco": [0.5, 0.45] },
+      "fotos": [
+        { "foto": "2.jpeg" },
+        { "foto": "12.jpeg" },
+        { "foto": "11.jpeg" },
+        { "foto": "3.jpeg" },
+        { "foto": "4.jpeg" },
+        { "foto": "5.jpeg" },
+        { "foto": "6.jpeg" },
+        { "foto": "1.jpeg", "modo": "exterior" },
+        { "foto": "7.jpeg", "pendiente": "derechos" },
+        { "foto": "8.jpeg", "pendiente": "derechos" },
+        { "foto": "9.jpeg", "pendiente": "derechos" },
+        { "foto": "10.jpeg", "pendiente": "derechos" },
+        { "foto": "13.jpeg", "pendiente": "derechos" },
+        { "foto": "14.jpeg", "pendiente": "derechos" },
+        { "foto": "15.jpeg", "pendiente": "derechos" },
+        { "foto": "16.jpeg", "pendiente": "derechos" },
+        { "foto": "17.jpeg", "pendiente": "derechos" },
+        { "foto": "18.jpeg", "pendiente": "derechos" },
+        { "foto": "19.jpeg", "pendiente": "derechos" },
+        { "foto": "20.jpeg", "pendiente": "derechos" },
+        { "foto": "21.jpeg", "pendiente": "derechos" }
+      ]
+    },
+    "snorkeling": {
+      "carpeta": "snorkeling",
+      "modo": "agua",
+      "fuerza": 0.85,
+      "portada": { "foto": "7.jpeg", "foco": [0.5, 0.4] },
+      "fotos": [
+        { "foto": "7.jpeg" },
+        { "foto": "4.jpeg" },
+        { "foto": "5.jpeg" },
+        { "foto": "1.jpeg", "pendiente": "derechos" },
+        { "foto": "3.jpeg", "pendiente": "derechos" },
+        { "foto": "6.jpeg", "pendiente": "derechos" }
+      ]
+    },
+    "lancha-rapida": {
+      "carpeta": "speed-boat",
+      "modo": "exterior",
+      "portada": {
+        "video": "video.mp4",
+        "segundo": 32.0,
+        "ventana": 0,
+        "recorte": [0, 0.04, 0.77, 0.97],
+        "foco": [0.5, 0.5]
+      },
+      "fotos": [
+        { "video": "video.mp4", "segundo": 32.0, "ventana": 0, "recorte": [0, 0.04, 0.77, 0.97] },
+        { "video": "video.mp4", "segundo": 13.25, "ventana": 0 },
+        { "video": "video.mp4", "segundo": 27.0, "ventana": 0, "recorte": [0, 0.04, 0.79, 0.97] },
+        { "video": "video.mp4", "segundo": 35.5, "ventana": 0 },
+        { "video": "video.mp4", "segundo": 4.25, "ventana": 0 }
+      ]
+    },
+    "tirolesa": {
+      "carpeta": "zip line",
+      "modo": "exterior",
+      "fuerza": 0.6,
+      "portada": { "foto": "1.jpeg", "foco": [0.5, 0.45] },
+      "fotos": [{ "foto": "1.jpeg" }]
+    },
+    "saona-clasica": {
+      "raiz": "repo",
+      "carpeta": "docs/brand/originales/excursiones-pdf",
+      "modo": "ninguno",
+      "portada": { "foto": "saona-clasica.jpg", "foco": [0.5, 0.5], "tamano": [1280, 720] }
+    },
+    "saona-vip": {
+      "raiz": "repo",
+      "carpeta": "docs/brand/originales/excursiones-pdf",
+      "modo": "ninguno",
+      "portada": { "foto": "saona-vip.jpg", "foco": [0.45, 0.5], "tamano": [1280, 720] }
+    },
+    "isla-catalina": {
+      "raiz": "repo",
+      "carpeta": "docs/brand/originales/excursiones-pdf",
+      "modo": "ninguno",
+      "portada": { "foto": "isla-catalina.jpg", "foco": [0.5, 0.5], "tamano": [1280, 720] }
+    },
+    "party-boat": {
+      "raiz": "repo",
+      "carpeta": "docs/brand/originales/excursiones-pdf",
+      "modo": "ninguno",
+      "portada": { "foto": "party-boat.jpg", "foco": [0.5, 0.5], "tamano": [1280, 720] }
+    },
+    "samana": {
+      "raiz": "repo",
+      "carpeta": "docs/brand/originales/excursiones-pdf",
+      "modo": "ninguno",
+      "portada": { "foto": "samana.jpg", "foco": [0.6, 0.5], "tamano": [1280, 720] }
+    },
+    "santo-domingo": {
+      "raiz": "repo",
+      "carpeta": "docs/brand/originales/excursiones-pdf",
+      "modo": "ninguno",
+      "portada": { "foto": "santo-domingo.jpg", "foco": [0.6, 0.5], "tamano": [1280, 720] }
+    }
+  }
+}

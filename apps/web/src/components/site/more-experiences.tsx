@@ -1,9 +1,10 @@
-import { type LucideIcon, PartyPopper, Sailboat, TreePalm } from "lucide-react";
+import { type LucideIcon, PartyPopper, TreePalm } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 
-const GROUPS: { icon: LucideIcon; key: "sea" | "land" | "occasions" }[] = [
-  { icon: Sailboat, key: "sea" },
+// Las actividades de mar (parasailing, lancha, pesca, buceo, snorkeling y yate) ya tienen
+// ficha propia en el catálogo; aquí quedan solo las que se organizan bajo pedido.
+const GROUPS: { icon: LucideIcon; key: "land" | "occasions" }[] = [
   { icon: TreePalm, key: "land" },
   { icon: PartyPopper, key: "occasions" },
 ];
@@ -15,7 +16,7 @@ export async function MoreExperiences() {
   return (
     <div className="rounded-card border border-line bg-white p-6 shadow-card sm:p-8 lg:p-10">
       <h2 className="text-display-md text-ink-900">{t("MoreExperiences.title")}</h2>
-      <RevealGroup as="div" className="mt-8 grid gap-8 md:grid-cols-3 md:gap-10">
+      <RevealGroup as="div" className="mt-8 grid gap-8 md:grid-cols-2 md:gap-10">
         {GROUPS.map((group) => (
           <RevealItem key={group.key} as="div">
             <p className="flex items-center gap-3 font-semibold text-ink-900">

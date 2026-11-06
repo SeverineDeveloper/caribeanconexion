@@ -14,9 +14,9 @@ import {
 } from "lucide-react";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
-import partyBoat from "@/assets/images/excursiones/party-boat.jpg";
-import saonaVip from "@/assets/images/excursiones/saona-vip.jpg";
+import { getLocale, getTranslations } from "next-intl/server";
+import partyBoat from "@/assets/images/excursiones/party-boat/portada.jpg";
+import saonaVip from "@/assets/images/excursiones/saona-vip/portada.jpg";
 import heroPhoto from "@/assets/images/hero-playa.jpg";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { CtaBand } from "@/components/site/cta-band";
@@ -30,12 +30,14 @@ import { SectionHeader } from "@/components/site/section-header";
 import { TripVisual } from "@/components/site/trip-visual";
 import { whatsappHref } from "@/components/site/whatsapp-button";
 import { Carousel } from "@/components/ui/carousel";
-import { EXCURSIONS, excursionOriginCode } from "@/content/excursions";
 import { PACKAGES, packageOriginCode } from "@/content/packages";
 import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { excursionCards } from "@/lib/excursion-cards";
 
 export default async function HomePage() {
   const t = await getTranslations();
+  const excursions = await excursionCards((await getLocale()) as Locale);
 
   const steps: { icon: LucideIcon; title: string; text: string }[] = [
     { icon: MessagesSquare, title: t("HowItWorks.step1Title"), text: t("HowItWorks.step1Text") },
@@ -120,24 +122,9 @@ export default async function HomePage() {
               label={t("Excursions.title")}
               slideClassName="basis-[85%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
             >
-              {EXCURSIONS.map((excursion) => {
-                const title = t(`Excursions.items.${excursion.key}.title`);
-                return (
-                  <ExcursionCard
-                    key={excursion.slug}
-                    image={excursion.image}
-                    category={t(`Excursions.categories.${excursion.category}`)}
-                    title={title}
-                    tagline={t(`Excursions.items.${excursion.key}.tagline`)}
-                    detail={t(`Excursions.items.${excursion.key}.detail`)}
-                    ctaLabel={t("Excursions.cta")}
-                    whatsappUrl={whatsappHref(
-                      t("Excursions.waMessage", { name: title }),
-                      excursionOriginCode(excursion.slug),
-                    )}
-                  />
-                );
-              })}
+              {excursions.map(({ slug, categoryId: _, ...card }) => (
+                <ExcursionCard key={slug} {...card} />
+              ))}
             </Carousel>
           </Reveal>
         </div>
