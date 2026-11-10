@@ -2,7 +2,7 @@
 
 Estas son las reglas de UI para la web pública y el panel. Todo valor visual sale de aquí: si hace falta uno nuevo, primero se agrega a este documento y a `apps/web/src/app/globals.css`, y después se usa.
 
-**Concepto: "agua clara y arena".** La base es clara y cálida (arena, blanco roto). El azul profundo ancla el texto y las franjas oscuras. El turquesa es la firma de marca y el dorado solo aparece en detalles. Debe sentirse **organizado, confiable y de vacaciones**, nunca corporativo ni recargado.
+**Concepto: "agua clara".** La base es clara y fresca: blanco agua y lagunas turquesa con degradados suaves. El mar profundo (navy) ancla el texto y las franjas oscuras. El turquesa es la firma de marca y el dorado solo aparece en detalles. Debe sentirse **organizado, confiable y de vacaciones**, nunca corporativo ni recargado.
 
 ## 1. Color
 
@@ -10,17 +10,17 @@ Estas son las reglas de UI para la web pública y el panel. Todo valor visual sa
 
 | Token | Hex | Uso |
 |---|---|---|
-| `canvas` | `#FCFAF6` | Fondo de página (web y panel) |
+| `canvas` | `#F7FBFB` | Blanco agua: fondo de página (web y panel) |
 | `white` | `#FFFFFF` | Superficies: cards, inputs, header |
-| `sand-100` | `#F5ECDD` | Secciones alternas, bloques suaves |
-| `sand-200` | `#F3E7D3` | Arena de marca: destacados, fondos de ilustración |
-| `sand-300` | `#E6D5B8` | Detalles decorativos |
-| `line` | `#E8E0D2` | Bordes de cards y separadores (decorativos) |
+| `line` | `#D8E7E8` | Bordes de cards y separadores (decorativos) |
 | `field-border` | `#85919E` | Borde de inputs en reposo (3.2:1, WCAG 1.4.11) |
 | `ink-900` | `#01274B` | Navy del logo: texto principal, franjas oscuras, footer |
 | `ink-700` | `#34506B` | Texto secundario y párrafos largos |
 | `ink-500` | `#52677D` | Texto atenuado: ayudas, metadatos |
-| `teal-50` | `#E6F7F6` | Fondo de íconos y estados activos suaves |
+| `teal-50` | `#E6F7F6` | Fondo de íconos, chips y estados activos suaves |
+| `teal-100` | `#D2F0EF` | Barras inactivas, números decorativos |
+| `teal-200` | `#A6E2E0` | Detalles decorativos |
+| `teal-300` | `#3CCBCB` | Laguna: solo en degradados con `teal-400` y siempre con texto `ink-900` (botón de la barra del hero) |
 | `teal-400` | `#01AEB5` | Turquesa del logo: acentos, CTA sobre fondo oscuro |
 | `teal-600` | `#087571` | Acción principal (botones, enlaces) sobre fondo claro |
 | `teal-700` | `#065E5B` | Hover y pressed de la acción principal |
@@ -30,16 +30,29 @@ Estas son las reglas de UI para la web pública y el panel. Todo valor visual sa
 | `danger-600` | `#B42318` | Error |
 
 ### Reglas
-- **60/30/10:** 60 % fondos claros (canvas, blanco, arena), 30 % azul (`ink-900` en texto y franjas oscuras), 10 % turquesa (acciones y acentos). El dorado ocupa menos del 2 %.
+- **60/30/10:** 60 % fondos claros (canvas, blanco, laguna), 30 % azul (`ink-900` en texto y franjas de mar profundo), 10 % turquesa (acciones y acentos). El dorado ocupa menos del 2 %.
 - **Una sola acción principal (`teal-600`) por bloque.** Sobre fondo `ink-900`, el CTA principal es `teal-400` con texto `ink-900`.
-- Las secciones alternan `canvas` y `sand-100`. Nunca dos franjas oscuras seguidas.
+- Las secciones alternan `canvas` y `bg-lagoon`. Nunca dos franjas oscuras seguidas.
+- No hay colores arena ni beige: los fondos claros son siempre blancos o turquesa muy claro.
+
+### Fondos de agua (utilidades en `globals.css`)
+| Utilidad | Qué es | Uso |
+|---|---|---|
+| `bg-lagoon` | Degradado vertical `#EFFAFA` → `#E1F4F4` con dos reflejos turquesa (arriba a la izquierda y abajo a la derecha) | Secciones alternas claras |
+| `bg-shallows` | Degradado diagonal de `#C8EEED` a `#F1FBFB`, con un brillo blanco arriba a la derecha | Bloques y tarjetas destacadas sobre `canvas` (p. ej. "¿Ninguno encaja?", la tarjeta de servicios del bento) |
+| `bg-deep-sea` | Degradado navy `#01274B` → `#033F5D` con un reflejo turquesa abajo a la derecha | Franjas oscuras, footer, CTA band y paneles navy. El reflejo va abajo para que el texto `teal-400` de arriba siga sobre navy |
+| `mask-wave-y` / `mask-wave-top` | Recorta la franja con forma de ola arriba y abajo (o solo arriba) | Franjas `bg-deep-sea` de ancho completo, siempre con `WaveFoam` |
+
+`WaveFoam` (`components/site/wave-foam.tsx`) dibuja la espuma: una franja turquesa al 22 % justo bajo el borde de la ola, del mismo alto que la máscara (32 / 48 / 72 px en móvil / `sm` / `lg`). La máscara es la que da la forma, así no hay dos capas superpuestas ni línea de costura. Los medios a pantalla completa (visor de fotos, video) siguen en `ink-900` liso.
 - El texto siempre en `ink-900`, `ink-700` o `ink-500`. No se usa gris neutro de Tailwind ni negro puro.
 - Contrastes verificados (AA):
 
   | Combinación | Contraste |
   |---|---|
   | `ink-900` sobre `canvas` | 14.5:1 |
-  | `ink-500` sobre `sand-100` | 5.0:1 |
+  | `ink-500` sobre `bg-lagoon` (punto más oscuro) | 4.7:1 |
+  | `teal-600` sobre `bg-lagoon` (punto más oscuro) | 4.6:1 |
+  | blanco sobre `bg-deep-sea` | 10.5:1 o más |
   | blanco sobre `teal-600` | 5.5:1 |
   | `teal-400` sobre `ink-900` | 5.5:1 |
   | `gold-700` sobre blanco | 6.0:1 |
@@ -94,6 +107,17 @@ Escala base de 4 px (unidades de Tailwind): 1 · 2 · 3 · 4 · 5 · 6 · 8 · 1
 - Labels siempre visibles encima del campo. El placeholder no reemplaza al label.
 - Los mensajes de error y éxito del formulario van en un `Alert` arriba del primer campo.
 
+### Barra de búsqueda del hero (`QuickPlanner`)
+Es la excepción a los campos con borde. Sigue el patrón de los buscadores de viajes: una barra blanca con **segmentos** separados por líneas finas y un botón de color vivo al final. Cada segmento hace de campo; los controles de HeroUI van sin borde.
+- Marco de vidrio (`glass`, `p-1.5`, `shadow-raised`) alrededor de una barra blanca con `p-1.5`. Desde `lg`, marco, barra y segmentos son píldoras (`rounded-full`); por debajo, `rounded-panel` y segmentos `rounded-card`.
+- Segmento: `px-4 py-3` (`lg:px-5 lg:py-2`), label con la escala `eyebrow` en `teal-700`, valor a 16 px en `ink-900`. Ícono de 20 px en un círculo `teal-50` de 40 px, solo en `sm` y desde `xl` (en móvil y en `md`–`lg` las fechas no cabrían).
+- Separadores de 1 px en `ink-900` al 12 %: horizontales en móvil y verticales desde `md`. Se ocultan junto al segmento resaltado.
+- Hover: fondo `teal-50`. Foco o menú abierto: fondo `teal-50` con borde interior `teal-600` de 2 px, y el círculo del ícono pasa a `teal-600`. Los menús salen 16 px por debajo, alineados con el texto.
+- Viajeros: − y + en círculos de 32 px con borde `field-border` (hover `teal-600`).
+- Enviar: degradado de laguna `teal-400` → `teal-300` con texto `ink-900` (5.6:1 y 7.7:1) y sombra turquesa. Es el único botón con texto navy sobre fondo claro. Foco: anillo `ink-900` de 2 px separado por 2 px de blanco.
+- Disposición: una columna en móvil; desde `md`, los tres segmentos en fila y el botón debajo a todo el ancho; desde `lg`, una sola fila (unos 80 px de alto).
+- Los estilos viven en `globals.css` bajo `.trip-bar`, en la capa `utilities` para ganar a los estados de foco de HeroUI sin `!important`.
+
 ## 5. Forma y elevación
 
 | Token | Valor | Uso |
@@ -140,7 +164,7 @@ Los originales del cliente están en `docs/brand/originales/`: JPEG con fondo y 
 ### Íconos y fotos
 - Íconos de [Lucide](https://lucide.dev) con trazo de 1.75 y tamaño 20–24 px. Dentro de un círculo `teal-50` de 48 px cuando acompañan a una card.
 - Fotos con radio `radius-card` y proporciones 4:3 en móvil y 1:1 desde `sm` (hero), y 16:9 en las cards de excursión. Siempre con `next/image` y `placeholder="blur"`.
-- Las fotos de excursiones viven en `assets/images/excursiones/<slug>/`: `portada.jpg` (16:9, 1920×1080) y la galería `01.jpg`, `02.jpg`… (lado mayor 1600 px). No se editan a mano: se generan con `tools/media/procesar_catalogo.py` desde los originales del cliente (selección y ajustes en `tools/media/catalogo.json`), que también escribe `content/excursion-media.generated.ts`. Los clips van a `public/videos/excursiones/<slug>.mp4`.
+- Las fotos de excursiones viven en `assets/images/excursiones/<slug>/`: `portada.jpg` (16:9, 1920×1080) y la galería `01.jpg`, `02.jpg`… (lado mayor 1600 px). No se editan a mano: se generan con `tools/media/procesar_catalogo.py` desde los originales del cliente (selección y ajustes en `tools/media/catalogo.json`), que también escribe `content/generated/excursion-media.ts`. Los clips van a `public/videos/excursiones/<slug>.mp4`.
 - Saona, Catalina, party boat, Samaná y Santo Domingo aún usan las ilustraciones del catálogo PDF (ampliadas con IA). Se reemplazan por fotos reales cuando el cliente las envíe. Nunca se usan cajas grises.
 - No se publican fotos con marca de agua ni fotos cuyos derechos no confirmó el cliente.
 
@@ -166,4 +190,4 @@ Hover a 150 ms, entradas a 250 ms, curva `ease-out` (`[0.22, 1, 0.36, 1]`). Se r
 - Ítem de navegación: 40 px de alto, ícono de 20 px, radio 12 px. El activo va en `teal-50` con texto `teal-700`. Los módulos futuros aparecen atenuados con la etiqueta "Pronto".
 - Contenido con `p-6` y `lg:p-10`, ancho máximo `max-w-6xl`.
 - Encabezado de página: título `display-md`, descripción `ink-500` y acciones a la derecha, con 32 px antes del contenido.
-- Pantallas de acceso: en `lg` se divide la pantalla, con un panel de marca `ink-900` a la izquierda y el formulario sobre `canvas` a la derecha. En móvil, solo el formulario con el logo.
+- Pantallas de acceso: en `lg` se divide la pantalla, con un panel de marca `bg-deep-sea` a la izquierda y el formulario sobre `canvas` a la derecha. En móvil, solo el formulario con el logo.

@@ -272,7 +272,7 @@ export default async function ExcursionPage({ params }: PageProps<"/[locale]/exc
         </div>
       </section>
 
-      <section className="section-y bg-sand-100">
+      <section className="section-y bg-lagoon">
         <div className="container-page">
           <Reveal>
             <h2 className="text-display-lg text-ink-900">{t("ExcursionDetail.more")}</h2>

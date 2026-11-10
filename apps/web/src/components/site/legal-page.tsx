@@ -29,7 +29,7 @@ export async function LegalPage({
         <div className="container-page max-w-3xl">
           <Reveal>
             <div className="rounded-panel border border-line bg-white p-6 shadow-card sm:p-12">
-              <span className="flex size-14 items-center justify-center rounded-2xl bg-sand-100 text-ink-900">
+              <span className="flex size-14 items-center justify-center rounded-2xl bg-teal-50 text-teal-700">
                 <FileText className="size-7" strokeWidth={1.5} aria-hidden="true" />
               </span>
               <h2 className="mt-6 text-display-md text-ink-900">{t("pendingTitle")}</h2>

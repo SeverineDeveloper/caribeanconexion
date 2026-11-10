@@ -231,7 +231,7 @@ export function Planner({
             <li key={id}>
               <span
                 className={`block h-1.5 rounded-full transition-colors duration-300 ${
-                  i <= step ? "bg-teal-600" : "bg-sand-200"
+                  i <= step ? "bg-teal-600" : "bg-teal-100"
                 }`}
               />
               <span

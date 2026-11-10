@@ -5,6 +5,7 @@ import { WhatsAppIcon } from "@/components/brand/whatsapp-icon";
 import { Link } from "@/i18n/navigation";
 import { whatsappNumber } from "@/lib/site";
 import { COMPANY_NAV, MAIN_NAV } from "./nav-items";
+import { WaveFoam } from "./wave-foam";
 
 const LEGAL = [
   { href: "/privacidad", key: "privacy" },
@@ -22,8 +23,9 @@ export async function SiteFooter() {
   const navLinkClass = `inline-block py-1.5 ${linkClass}`;
 
   return (
-    <footer className="bg-ink-900 text-white/75">
-      <div className="container-page grid grid-cols-2 gap-x-6 gap-y-10 pt-14 pb-10 sm:gap-12 md:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:pt-20">
+    <footer className="mask-wave-top relative bg-deep-sea text-white/75">
+      <WaveFoam position="top" />
+      <div className="container-page relative grid grid-cols-2 gap-x-6 gap-y-10 pt-20 pb-10 sm:gap-12 sm:pt-24 md:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:pt-32">
         <div className="col-span-2 md:col-span-3 lg:col-span-1">
           <Logo on="dark" className="h-14 w-auto" />
           <p className="mt-5 max-w-xs">{t("tagline")}</p>

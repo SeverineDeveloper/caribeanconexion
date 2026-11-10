@@ -82,7 +82,7 @@ export default async function StaysPage({ params }: PageProps<"/[locale]/alojami
       </section>
 
       {/* Zonas (carrusel) */}
-      <section className="section-y overflow-hidden bg-sand-100">
+      <section className="section-y overflow-hidden bg-lagoon">
         <div className="container-page">
           <Reveal>
             <SectionHeader
@@ -104,7 +104,7 @@ export default async function StaysPage({ params }: PageProps<"/[locale]/alojami
                 >
                   <span
                     aria-hidden="true"
-                    className="absolute -top-4 -right-2 font-display font-semibold text-[7rem] text-sand-200 leading-none"
+                    className="absolute -top-4 -right-2 font-display font-semibold text-[7rem] text-teal-100 leading-none"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -148,7 +148,7 @@ export default async function StaysPage({ params }: PageProps<"/[locale]/alojami
             </RevealGroup>
           </div>
           <Reveal delay={0.1}>
-            <div className="h-full rounded-panel bg-ink-900 p-8 text-white sm:p-10">
+            <div className="h-full rounded-panel bg-deep-sea p-8 text-white sm:p-10">
               <h2 className="text-display-md">{t("StaysPage.extrasTitle")}</h2>
               <ul className="mt-8 flex flex-col gap-4">
                 {(t.raw("StaysPage.extras") as string[]).map((extra) => (

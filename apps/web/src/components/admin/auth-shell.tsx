@@ -16,7 +16,7 @@ export function AuthShell({
 }) {
   return (
     <div className="grid min-h-dvh lg:grid-cols-2">
-      <aside className="hidden flex-col items-center justify-between bg-ink-900 p-12 text-center text-white lg:flex xl:p-16">
+      <aside className="hidden flex-col items-center justify-between bg-deep-sea p-12 text-center text-white lg:flex xl:p-16">
         <p className="text-eyebrow text-teal-400">Panel de gestión</p>
         <LogoStacked className="h-auto w-[min(26rem,85%)]" />
         <p className="max-w-sm text-white/70">

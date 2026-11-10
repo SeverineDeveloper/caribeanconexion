@@ -12,7 +12,7 @@ import {
 } from "@heroui/react";
 import { type CalendarDate, getLocalTimeZone, today } from "@internationalized/date";
 import { useLocale, useTranslations } from "next-intl";
-import type { ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
 
 export const TRIP_ZONES = [
   "puntaCana",
@@ -28,17 +28,28 @@ export type TripZone = (typeof TRIP_ZONES)[number];
 
 export type DateRange = { start: CalendarDate; end: CalendarDate };
 
+/**
+ * Ajustes del menú desplegable. En la barra del hero el campo va dentro de una casilla
+ * con relleno: el menú se separa más (`offset`) para no tapar su borde.
+ */
+export type FieldPopover = Pick<
+  ComponentProps<typeof Select.Popover>,
+  "className" | "offset" | "placement"
+>;
+
 /** Selector de zona compartido por el planificador rápido y "Arma tu viaje". */
 export function ZoneSelect({
   label,
   placeholder,
   value,
   onChange,
+  popover,
 }: {
   label: string;
   placeholder: string;
   value: Key | null;
   onChange: (value: Key | null) => void;
+  popover?: FieldPopover;
 }) {
   const t = useTranslations("TripZones");
   return (
@@ -48,7 +59,7 @@ export function ZoneSelect({
         <Select.Value />
         <Select.Indicator />
       </Select.Trigger>
-      <Select.Popover>
+      <Select.Popover {...popover}>
         <ListBox>
           {TRIP_ZONES.map((zone) => (
             <ListBox.Item key={zone} id={zone} textValue={t(zone)}>
@@ -67,10 +78,12 @@ export function TripDates({
   label,
   value,
   onChange,
+  popover,
 }: {
   label: string;
   value: DateRange | null;
   onChange: (value: DateRange | null) => void;
+  popover?: FieldPopover;
 }) {
   const locale = useLocale();
   return (
@@ -98,7 +111,7 @@ export function TripDates({
             </DateRangePicker.Trigger>
           </DateField.Suffix>
         </DateField.Group>
-        <DateRangePicker.Popover>
+        <DateRangePicker.Popover {...popover}>
           <RangeCalendar aria-label={label}>
             <RangeCalendar.Header>
               <RangeCalendar.Heading />

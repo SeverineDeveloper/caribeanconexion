@@ -99,7 +99,7 @@ export function TwoFactorSetup({ enabled }: { enabled: boolean }) {
 
       <Step n={2} title="Guarda tus códigos de respaldo">
         <p>Cada uno sirve una sola vez si pierdes el teléfono.</p>
-        <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 rounded-card bg-sand-100 p-5 font-mono text-ink-900 text-sm">
+        <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 rounded-card bg-teal-50 p-5 font-mono text-ink-900 text-sm">
           {enrollment.backupCodes.map((backupCode) => (
             <li key={backupCode}>{backupCode}</li>
           ))}

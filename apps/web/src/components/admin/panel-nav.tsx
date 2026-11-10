@@ -33,7 +33,7 @@ export function PanelNav() {
               <item.icon className="size-5 shrink-0" strokeWidth={1.75} aria-hidden="true" />
               <span className="flex-1">{item.label}</span>
               {!item.ready && (
-                <span className="hidden rounded-full bg-sand-100 px-2 py-0.5 font-medium text-[0.6875rem] text-ink-500 lg:inline">
+                <span className="hidden rounded-full bg-ink-900/5 px-2 py-0.5 font-medium text-[0.6875rem] text-ink-500 lg:inline">
                   Pronto
                 </span>
               )}
@@ -50,7 +50,7 @@ export function PanelNav() {
                   className={`${base} transition-colors ${
                     active
                       ? "bg-teal-50 text-teal-700"
-                      : "text-ink-700 hover:bg-sand-100 hover:text-ink-900"
+                      : "text-ink-700 hover:bg-ink-900/5 hover:text-ink-900"
                   }`}
                 >
                   {content}

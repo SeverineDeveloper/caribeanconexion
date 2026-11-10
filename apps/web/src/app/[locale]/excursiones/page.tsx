@@ -74,7 +74,7 @@ export default async function ExcursionsPage({ params }: PageProps<"/[locale]/ex
         </div>
       </section>
 
-      <section className="section-y bg-sand-100">
+      <section className="section-y bg-lagoon">
         <div className="container-page">
           <Reveal>
             <Faq title={t("Common.faqTitle")} items={t.raw("ExcursionsPage.faq") as FaqItem[]} />

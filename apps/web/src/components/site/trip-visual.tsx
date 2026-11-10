@@ -42,7 +42,7 @@ export function TripVisual({
         <ol className="mt-4 flex flex-col gap-3">
           {days.map((day) => (
             <li key={day.label} className="flex items-start gap-3">
-              <span className="mt-0.5 shrink-0 rounded-full bg-sand-100 px-2.5 py-1 font-semibold text-ink-700 text-xs">
+              <span className="mt-0.5 shrink-0 rounded-full bg-teal-50 px-2.5 py-1 font-semibold text-ink-700 text-xs">
                 {day.label}
               </span>
               <span className="text-sm leading-snug">
