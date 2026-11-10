@@ -19,65 +19,271 @@
         "tagline": "Mer turquoise, palmiers et une escapade inoubliable.",
         "detail": "Excursion partagée, itinéraire selon disponibilité."
       },
+      "yacht": {
+        "title": "Yacht de luxe",
+        "tagline": "Open bar premium, snorkeling et piscine naturelle pour votre groupe.",
+        "detail": "De 1 à 22 personnes. Punta Cana, île Saona ou île Catalina."
+      },
+      "buggies": {
+        "title": "Aventure en buggy",
+        "tagline": "Pistes de terre, un cénote et la plage de Macao en une seule sortie.",
+        "detail": "4 heures, transport et guide inclus."
+      },
+      "snorkeling": {
+        "title": "Snorkeling",
+        "tagline": "Nagez parmi les poissons colorés dans une eau cristalline.",
+        "detail": "Transport, guide, équipement et collation inclus."
+      },
+      "parasailing": {
+        "title": "Parachute ascensionnel",
+        "tagline": "Envolez-vous au-dessus de la mer turquoise et voyez la côte d'en haut.",
+        "detail": "Tous les jours, au départ de tous les hôtels."
+      },
       "saonaVip": {
         "title": "Île Saona VIP · 4 plages",
         "tagline": "Des Caraïbes plus exclusives, à votre rythme.",
         "detail": "Options premium et circuits sur plusieurs plages."
+      },
+      "speedboat": {
+        "title": "Bateau rapide",
+        "tagline": "Snorkeling, piscine naturelle et toute la côte de Bávaro et Punta Cana.",
+        "detail": "3 h 30 min, avec aussi un départ au coucher du soleil."
       },
       "catalina": {
         "title": "Île Catalina",
         "tagline": "Une invitation à découvrir la mer et ses récifs.",
         "detail": "Option snorkeling et visite de plage."
       },
-      "buggies": {
-        "title": "Aventure en buggy",
-        "tagline": "Des parcours palpitants au cœur des paysages tropicaux.",
-        "detail": "Activité guidée, selon l'âge et les règles de sécurité."
+      "diving": {
+        "title": "Plongée sous-marine",
+        "tagline": "Récifs, éponges et vie marine des Caraïbes, avec un guide.",
+        "detail": "Transport, équipement, collation et déjeuner inclus."
+      },
+      "horseback": {
+        "title": "Balade à cheval",
+        "tagline": "De la campagne et des plantations de cacao à la plage de Macao.",
+        "detail": "2 heures, transport aller-retour inclus."
+      },
+      "zipline": {
+        "title": "Tyrolienne",
+        "tagline": "Dix tyroliennes au milieu de la végétation tropicale.",
+        "detail": "Transport aller-retour inclus."
+      },
+      "fishing": {
+        "title": "Pêche de loisir et sportive",
+        "tagline": "Partez pêcher avec capitaine, guide et tout l'équipement à bord.",
+        "detail": "Tous les jours, le matin ou l'après-midi."
       },
       "partyBoat": {
         "title": "Party boat",
         "tagline": "Musique, ambiance caribéenne et fête en mer.",
         "detail": "Expérience en groupe pour adultes et familles, selon la formule."
       },
-      "santoDomingo": {
-        "title": "Saint-Domingue culturel",
-        "tagline": "Histoire, architecture et traditions dominicaines.",
-        "detail": "Visite de la Zone coloniale et de ses lieux culturels."
-      },
       "samana": {
         "title": "Samaná et nature",
         "tagline": "Forêts, cascades et paysages spectaculaires.",
         "detail": "Excursions vers les cascades et les plages."
       },
-      "zipline": {
-        "title": "Tyrolienne et aventure",
-        "tagline": "Adrénaline et nature en une seule expérience.",
-        "detail": "Balades à cheval, parachute ascensionnel et Scape Park sur demande."
+      "santoDomingo": {
+        "title": "Saint-Domingue culturel",
+        "tagline": "Histoire, architecture et traditions dominicaines.",
+        "detail": "Visite de la Zone coloniale et de ses lieux culturels."
       }
+    }
+  },
+  "ExcursionDetail": {
+    "priceFrom": "À partir de {price}",
+    "perPerson": "par personne",
+    "onRequest": "Prix sur devis",
+    "duration": "Durée",
+    "schedules": "Horaires",
+    "daily": "Tous les jours",
+    "scheduleLabels": {
+      "sunset": "coucher du soleil",
+      "exclusive": "créneau exclusif"
+    },
+    "about": "L'expérience",
+    "includes": "Ce qui est inclus",
+    "goodToKnow": "Bon à savoir",
+    "photos": "Photos : {name}",
+    "openPhoto": "Agrandir la photo {n} sur {total}",
+    "viewAll": "Voir les {count} photos",
+    "close": "Fermer",
+    "previous": "Photo précédente",
+    "next": "Photo suivante",
+    "photoOf": "{n} sur {total}",
+    "video": "En vidéo",
+    "cta": "Réserver sur WhatsApp",
+    "waMessage": "Bonjour Conexión Caribe. L'excursion {name} m'intéresse. Est-elle disponible ?",
+    "planTrip": "Organisez votre voyage",
+    "more": "Autres expériences",
+    "seeDetails": "Voir l'expérience"
+  },
+  "ExcursionPages": {
+    "yacht": {
+      "metaDescription": "Yacht de luxe à Punta Cana pour des groupes de 1 à 22 personnes : open bar premium, snorkeling, piscine naturelle et transfert VIP. Saona ou Catalina sur devis.",
+      "description": "Une journée en yacht pour votre groupe, de 1 à 22 personnes, avec open bar premium. Choisissez Punta Cana, l'île Saona ou l'île Catalina, faites du snorkeling, baignez-vous dans une piscine naturelle et longez les plages de Bávaro et Punta Cana. Le transfert est VIP, avec une boisson offerte.",
+      "includes": [
+        "Transfert VIP avec boisson",
+        "Open bar premium",
+        "Snorkeling",
+        "Piscine naturelle",
+        "Balade le long des plages de Bávaro et Punta Cana"
+      ],
+      "notes": [
+        "Capacité de 1 à 22 personnes.",
+        "Destinations : Punta Cana, île Saona ou île Catalina.",
+        "Le déjeuner est en option, sur devis."
+      ],
+      "gallery": [
+        "Yacht ancré dans une eau turquoise face à une plage bordée de palmiers",
+        "Yacht blanc près du rivage dans une eau cristalline",
+        "Couple trinquant dans l'eau devant le yacht",
+        "Amis discutant sur le pont du yacht",
+        "Couple nageant avec gilets dans une eau turquoise",
+        "Couple se reposant à la proue du yacht",
+        "Capitaine à la barre du yacht",
+        "Banquettes du pont avec vue sur la mer",
+        "Yacht avec flybridge naviguant en eau claire",
+        "Salon intérieur avec canapés et vue sur la mer",
+        "Salon intérieur aux finitions en bois",
+        "Cabine avec lit double",
+        "Intérieur de cabine avec table"
+      ]
+    },
+    "buggies": {
+      "metaDescription": "Excursion en buggy de 4 heures : plantations de café et de cacao, cénote et plage de Macao, transport et guide inclus.",
+      "description": "Une sortie guidée en buggy dans la campagne dominicaine. Vous découvrirez les plantations de café et de cacao et leur chocolat, vous vous baignerez dans un cénote aux eaux bleues et finirez face à la mer sur la plage de Macao, l'une des plus célèbres des Caraïbes.",
+      "includes": [
+        "Transport aller-retour",
+        "Guide",
+        "Plantations de café, de cacao et chocolat",
+        "Baignade dans un cénote aux eaux bleues",
+        "Arrêt à la plage de Macao"
+      ],
+      "notes": [],
+      "gallery": [
+        "Véhicule tout-terrain orange projetant de la boue sur un chemin de campagne",
+        "Buggies traversant une flaque au milieu de la végétation",
+        "Famille dans un buggy jaune sur un sentier tropical",
+        "Conducteur dans un buggy bleu, pouce levé",
+        "Couple sur un quad saluant l'objectif",
+        "Deux amies sur un quad sur un chemin de terre",
+        "Véhicule tout-terrain éclaboussant sur un chemin mouillé",
+        "Véhicules tout-terrain rouges sur un chemin boueux",
+        "File de buggies sur une route bordée de palmiers"
+      ]
+    },
+    "snorkeling": {
+      "metaDescription": "Snorkeling à Punta Cana avec transport aller-retour, guide, équipement et collation. Six départs par jour.",
+      "description": "Enfilez votre masque et nagez parmi les poissons colorés dans une eau cristalline. Le transport aller-retour, le guide, l'équipement de snorkeling et une collation sont inclus, avec plusieurs départs dans la journée.",
+      "includes": ["Transport aller-retour", "Guide", "Équipement de snorkeling", "Collation"],
+      "notes": [],
+      "gallery": [
+        "Nageuse avec masque tenant un coquillage sous l'eau",
+        "Personne avec masque assise sur le fond sableux",
+        "Nageur passant sous une arche rocheuse sous-marine"
+      ]
+    },
+    "parasailing": {
+      "metaDescription": "Parachute ascensionnel à Punta Cana tous les jours, au départ de tous les hôtels. Survolez la mer turquoise et voyez la côte d'en haut.",
+      "description": "Décollez depuis le bateau et élevez-vous au-dessus de la mer turquoise pour voir la côte de Punta Cana depuis le ciel. Départs tous les jours, depuis tous les hôtels.",
+      "includes": [],
+      "notes": ["Départs depuis tous les hôtels."],
+      "gallery": [
+        "Trois personnes en gilet prêtes à décoller depuis le bateau",
+        "Deux personnes en parachute ascensionnel au-dessus de la plage, vues d'un drone",
+        "Bateau tractant un parachute coloré",
+        "Deux personnes volant sous le parachute",
+        "Personne volant sous un parachute jaune",
+        "Vue de la mer turquoise depuis le parachute"
+      ]
+    },
+    "speedboat": {
+      "metaDescription": "Sortie en bateau rapide de 3 h 30 min le long de la côte de Bávaro et Punta Cana, avec snorkeling et piscine naturelle. Départ au coucher du soleil possible.",
+      "description": "Filez à toute vitesse le long de la côte de Bávaro et Punta Cana, arrêtez-vous pour faire du snorkeling et baignez-vous dans une piscine naturelle. Le départ de l'après-midi se termine au coucher du soleil.",
+      "includes": [
+        "Transport",
+        "Guide",
+        "Snorkeling",
+        "Piscine naturelle",
+        "Balade le long de la côte de Bávaro et Punta Cana"
+      ],
+      "notes": [],
+      "gallery": [
+        "Groupe en gilets saluant depuis le bateau rapide",
+        "Homme à la barre du bateau rapide",
+        "Personne sautant du bateau dans l'eau turquoise",
+        "Couple avec un ara dans la piscine naturelle",
+        "Groupe souriant à bord du bateau"
+      ]
+    },
+    "diving": {
+      "metaDescription": "Plongée à Punta Cana avec guide, équipement, transport, collation et déjeuner. Journée complète ou créneau exclusif le matin.",
+      "description": "Plongées guidées sur les récifs des Caraïbes dominicaines, parmi les gorgones, les éponges et les poissons. L'équipement, le transport, une collation et le déjeuner sont inclus.",
+      "includes": ["Transport", "Guide", "Équipement de plongée", "Collation", "Déjeuner"],
+      "notes": [],
+      "gallery": [
+        "Deux plongeurs au-dessus d'un fond de sable blanc",
+        "Plongeurs faisant le signe OK sous l'eau",
+        "Plongeur à côté d'une raie",
+        "Plongeur au-dessus d'une gorgone",
+        "Plongeur au-dessus des coraux et des éponges",
+        "Plongeur près d'éponges tubulaires vertes",
+        "Plongeur nageant au-dessus des gorgones",
+        "Plongeurs dans l'eau près de la proue du bateau"
+      ]
+    },
+    "horseback": {
+      "metaDescription": "Balade à cheval de 2 heures dans la campagne, les plantations de café et de cacao et la plage de Macao, avec transport aller-retour.",
+      "description": "Une balade à cheval sur les sentiers de campagne, entre plantations de café et de cacao, qui se termine sur le sable de la plage de Macao.",
+      "includes": [
+        "Transport aller-retour",
+        "Sentier dans la campagne",
+        "Plantations de café, de cacao et chocolat",
+        "Balade sur la plage de Macao"
+      ],
+      "notes": [],
+      "gallery": [
+        "Cavaliers au bord de la mer",
+        "Femme à cheval sur la plage",
+        "Deux cavaliers saluant sur une plage bordée de palmiers",
+        "Famille à cheval au ranch",
+        "Femme à cheval sur un sentier tropical",
+        "Groupe casqué chevauchant dans la végétation",
+        "Deux cavaliers dans une prairie avec des palmiers"
+      ]
+    },
+    "zipline": {
+      "metaDescription": "Tyrolienne à Punta Cana avec 10 lignes et transport aller-retour. Départs le matin et à midi.",
+      "description": "Dix tyroliennes pour glisser au-dessus de la végétation tropicale, avec transport aller-retour inclus.",
+      "includes": ["Transport aller-retour", "10 tyroliennes"],
+      "notes": [],
+      "gallery": ["Homme casqué sur la tyrolienne au-dessus de la forêt"]
+    },
+    "fishing": {
+      "metaDescription": "Pêche de loisir ou sportive à Punta Cana, avec capitaine, guide, équipement et transport. Départs tous les jours, le matin ou l'après-midi.",
+      "description": "Partez pêcher dans les eaux de Punta Cana, en loisir ou en version sportive. Le bateau sort avec un capitaine et un guide, avec cannes, équipement et collation à bord.",
+      "includes": ["Transport", "Cannes à pêche et équipement", "Capitaine et guide", "Collation"],
+      "notes": ["Pêche de loisir ou sportive."],
+      "gallery": [
+        "Couple avec un marlin à bord, avec la mer turquoise et la plage derrière",
+        "Groupe avec un grand marlin sur le pont du bateau",
+        "Deux hommes tenant des dorades coryphènes à la poupe",
+        "Homme montrant deux poissons fraîchement pêchés",
+        "Homme tenant une dorade coryphène à bord",
+        "Bateau de pêche ancré en pleine mer",
+        "Bateau de pêche sous un ciel bleu",
+        "Bateau de pêche sportive en eau calme",
+        "Bateau de pêche amarré à la marina"
+      ]
     }
   },
   "MoreExperiences": {
     "title": "Et bien plus encore, sur mesure",
-    "sea": {
-      "title": "Mer et aventure",
-      "items": [
-        "Parachute ascensionnel",
-        "Bateau rapide",
-        "Pêche sportive",
-        "Plongée",
-        "Snorkeling",
-        "Sorties en bateau privé"
-      ]
-    },
     "land": {
       "title": "Terre et nature",
-      "items": [
-        "Scape Park",
-        "Balades à cheval",
-        "Tyrolienne",
-        "Safari et nature",
-        "Expériences privées sur mesure"
-      ]
+      "items": ["Scape Park", "Safari et nature", "Expériences privées sur mesure"]
     },
     "occasions": {
       "title": "Occasions spéciales",

@@ -1,6 +1,10 @@
 node_modules/
 .pnpm-store/
 
+# Originales del catálogo que envía el cliente (pesados y con fotos sin derechos confirmados).
+# Se procesan con tools/media/procesar_catalogo.py; al repo solo van las versiones para la web.
+docs/catalog/
+
 # Builds
 .next/
 dist/

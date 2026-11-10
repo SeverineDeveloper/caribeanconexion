@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import { Reveal } from "@/components/motion/reveal";
 import { Link } from "@/i18n/navigation";
 import { jsonLd } from "@/lib/json-ld";
@@ -19,6 +19,8 @@ export async function PageHero({
   title,
   lead,
   image,
+  trail = [],
+  crumb = eyebrow,
   children,
 }: {
   locale: string;
@@ -28,16 +30,27 @@ export async function PageHero({
   title: string;
   lead?: string;
   image?: StaticImageData;
+  /** Niveles intermedios de la miga de pan, entre Inicio y la página actual. */
+  trail?: { label: string; href: "/excursiones" }[];
+  /** Nombre de la página actual en la miga de pan (por defecto, el antetítulo). */
+  crumb?: string;
   children?: ReactNode;
 }) {
   const t = await getTranslations("Common");
+  const crumbs = [
+    { label: t("home"), path: "" },
+    ...trail.map((item) => ({ label: item.label, path: item.href })),
+    { label: crumb, path },
+  ];
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: t("home"), item: `${siteUrl}/${locale}` },
-      { "@type": "ListItem", position: 2, name: eyebrow, item: `${siteUrl}/${locale}${path}` },
-    ],
+    itemListElement: crumbs.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.label,
+      item: `${siteUrl}/${locale}${item.path}`,
+    })),
   };
 
   return (
@@ -78,17 +91,29 @@ export async function PageHero({
       <div className="container-page flex min-h-[22rem] flex-col justify-end pt-16 pb-14 lg:min-h-[30rem] lg:pb-20">
         <Reveal>
           <nav aria-label={t("breadcrumb")} className="mb-6 text-sm text-white/70">
-            <ol className="flex items-center gap-1.5">
+            <ol className="flex flex-wrap items-center gap-1.5">
               <li>
                 <Link href="/" className="hover:text-white">
                   {t("home")}
                 </Link>
               </li>
+              {trail.map((item) => (
+                <Fragment key={item.href}>
+                  <li aria-hidden="true">
+                    <ChevronRight className="size-4" />
+                  </li>
+                  <li>
+                    <Link href={item.href} className="hover:text-white">
+                      {item.label}
+                    </Link>
+                  </li>
+                </Fragment>
+              ))}
               <li aria-hidden="true">
                 <ChevronRight className="size-4" />
               </li>
               <li aria-current="page" className="text-white">
-                {eyebrow}
+                {crumb}
               </li>
             </ol>
           </nav>

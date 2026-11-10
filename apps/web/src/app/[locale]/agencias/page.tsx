@@ -1,7 +1,7 @@
 import { BadgeCheck, Handshake, Luggage, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import saonaVip from "@/assets/images/excursiones/saona-vip.jpg";
+import saonaVip from "@/assets/images/excursiones/saona-vip/portada.jpg";
 import { B2BPage } from "@/components/site/b2b-page";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
