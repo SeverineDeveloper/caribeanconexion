@@ -93,7 +93,7 @@ export default async function TransfersPage({ params }: PageProps<"/[locale]/tra
       </section>
 
       {/* Rutas */}
-      <section className="section-y bg-sand-100">
+      <section className="section-y bg-lagoon">
         <div className="container-page">
           <Reveal>
             <SectionHeader
@@ -156,7 +156,7 @@ export default async function TransfersPage({ params }: PageProps<"/[locale]/tra
                     key={vehicle}
                     className="flex h-full flex-col rounded-card border border-line bg-white p-6 shadow-card sm:p-8"
                   >
-                    <span className="flex size-16 items-center justify-center rounded-2xl bg-sand-100 text-ink-900">
+                    <span className="flex size-16 items-center justify-center rounded-2xl bg-teal-50 text-teal-700">
                       <Icon className="size-8" strokeWidth={1.5} aria-hidden="true" />
                     </span>
                     <h3 className="mt-6 font-display font-semibold text-2xl text-ink-900">
@@ -176,7 +176,7 @@ export default async function TransfersPage({ params }: PageProps<"/[locale]/tra
         </div>
       </section>
 
-      <section className="section-y bg-sand-100">
+      <section className="section-y bg-lagoon">
         <div className="container-page">
           <Reveal>
             <Faq title={t("Common.faqTitle")} items={t.raw("TransfersPage.faq") as FaqItem[]} />

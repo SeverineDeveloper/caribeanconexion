@@ -46,7 +46,7 @@ export default async function DashboardPage() {
               <span className="flex size-11 items-center justify-center rounded-full bg-teal-50 text-teal-600">
                 <item.icon className="size-5" strokeWidth={1.75} aria-hidden="true" />
               </span>
-              <span className="rounded-full bg-sand-100 px-2.5 py-1 font-semibold text-ink-700 text-xs">
+              <span className="rounded-full bg-teal-50 px-2.5 py-1 font-semibold text-ink-700 text-xs">
                 {item.milestone} · Pronto
               </span>
             </div>

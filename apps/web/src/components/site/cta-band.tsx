@@ -13,7 +13,7 @@ export async function CtaBand({ originCode }: { originCode: string }) {
       <div className="container-page">
         <Reveal>
           {/* pb-44 en móvil: el sol y las olas quedan debajo de los botones, no sobre el texto */}
-          <div className="relative overflow-hidden rounded-panel bg-ink-900 px-6 pt-12 pb-44 sm:px-12 sm:py-14 lg:px-16 lg:py-20">
+          <div className="relative overflow-hidden rounded-panel bg-deep-sea px-6 pt-12 pb-44 sm:px-12 sm:py-14 lg:px-16 lg:py-20">
             <svg
               aria-hidden="true"
               viewBox="0 0 600 300"

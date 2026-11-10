@@ -11,17 +11,17 @@
 
 /* ── Paleta de marca ───────────────────────────────────────────────────────── */
 @theme {
-  --color-canvas: #fcfaf6;
-  --color-sand-100: #f5ecdd;
-  --color-sand-200: #f3e7d3;
-  --color-sand-300: #e6d5b8;
-  --color-line: #e8e0d2;
+  --color-canvas: #f7fbfb; /* blanco agua: fondo de página */
+  --color-line: #d8e7e8;
 
   --color-ink-900: #01274b; /* navy del logo */
   --color-ink-700: #34506b;
   --color-ink-500: #52677d;
 
   --color-teal-50: #e6f7f6;
+  --color-teal-100: #d2f0ef;
+  --color-teal-200: #a6e2e0;
+  --color-teal-300: #3ccbcb; /* laguna: solo con texto navy */
   --color-teal-400: #01aeb5; /* turquesa del logo */
   --color-teal-600: #087571;
   --color-teal-700: #065e5b;
@@ -48,12 +48,12 @@
   --foreground: var(--color-ink-900);
   --surface: #ffffff;
   --surface-foreground: var(--color-ink-900);
-  --surface-secondary: #faf5ec;
-  --surface-tertiary: var(--color-sand-100);
+  --surface-secondary: #effafa;
+  --surface-tertiary: var(--color-teal-50);
   --overlay: #ffffff;
   --muted: var(--color-ink-500);
 
-  --default: var(--color-sand-100);
+  --default: var(--color-teal-50);
   --default-foreground: var(--color-ink-900);
   --accent: var(--color-teal-600);
   --accent-foreground: #ffffff;
@@ -64,7 +64,7 @@
   --danger-foreground: #ffffff;
 
   --border: var(--color-line);
-  --separator: #efe8db;
+  --separator: #e1eeef;
   --focus: var(--color-teal-400);
   --link: var(--color-teal-600);
 
@@ -163,6 +163,128 @@
   }
 }
 
+/* ── Barra de búsqueda del hero (QuickPlanner) ─────────────────────────────── */
+/* Barra blanca con segmentos separados por líneas finas (píldora de una fila desde lg).
+   Los campos van sin borde: el segmento hace de campo y muestra el foco. Va en la capa
+   utilities para ganar a los estados de foco de HeroUI (capa components, con selectores
+   más específicos) sin !important. */
+@layer utilities {
+  .trip-bar__segment {
+    @apply relative flex min-w-0 items-center gap-3 rounded-card px-4 py-3 transition-[background-color,box-shadow] duration-150 ease-out lg:rounded-full lg:px-5 lg:py-2;
+  }
+  /* Línea divisoria: horizontal en móvil, vertical desde md */
+  .trip-bar__segment + .trip-bar__segment::before {
+    content: "";
+    position: absolute;
+    inset-inline: 1rem;
+    top: 0;
+    height: 1px;
+    background-color: rgb(1 39 75 / 0.12);
+    transition: opacity 150ms ease-out;
+  }
+  @media (min-width: 48rem) {
+    .trip-bar__segment + .trip-bar__segment::before {
+      inset-inline: 0 auto;
+      top: 0.875rem;
+      bottom: 0.875rem;
+      width: 1px;
+      height: auto;
+    }
+  }
+  @media (hover: hover) {
+    .trip-bar__segment:hover {
+      background-color: var(--color-teal-50);
+    }
+  }
+  .trip-bar__segment:is(:focus-within, :has([aria-expanded="true"])) {
+    background-color: var(--color-teal-50);
+    box-shadow: inset 0 0 0 2px var(--color-teal-600);
+  }
+  /* La línea se oculta a los dos lados del segmento resaltado */
+  .trip-bar__segment:is(:hover, :focus-within, :has([aria-expanded="true"]))::before,
+  .trip-bar__segment:is(:hover, :focus-within, :has([aria-expanded="true"]))
+    + .trip-bar__segment::before {
+    opacity: 0;
+  }
+
+  /* Campos de HeroUI sin borde, con label en turquesa y valor a 16 px */
+  .trip-bar :is(.select, .number-field, .date-range-picker) {
+    gap: 0.125rem;
+  }
+  /* HeroUI lo deja inline-flex: el interlineado lo bajaba 3 px respecto a los otros labels */
+  .trip-bar .date-range-picker {
+    display: flex;
+  }
+  .trip-bar .label {
+    @apply text-eyebrow text-teal-700;
+  }
+  .trip-bar :is(.select__trigger, .date-input-group, .number-field__group) {
+    min-height: 2rem;
+    height: auto;
+    border-width: 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .trip-bar .select__trigger {
+    @apply items-center py-0 ps-0;
+  }
+  .trip-bar .select__indicator {
+    @apply end-0 text-teal-600;
+  }
+  .trip-bar .date-input-group__input {
+    @apply p-0;
+  }
+  .trip-bar .date-input-group__suffix {
+    @apply me-0;
+  }
+  .trip-bar .date-range-picker__trigger {
+    @apply text-teal-600;
+  }
+  /* Viajeros: − y + en círculos, el número en medio */
+  .trip-bar .number-field__group {
+    grid-template-columns: 2rem 2.5rem 2rem;
+    justify-content: start;
+    gap: 0.25rem;
+    overflow: visible;
+  }
+  .trip-bar :is(.number-field__increment-button, .number-field__decrement-button) {
+    @apply size-8 rounded-full border border-field-border bg-white text-ink-900 transition-colors duration-150;
+  }
+  @media (hover: hover) {
+    .trip-bar :is(.number-field__increment-button, .number-field__decrement-button):hover {
+      @apply border-teal-600 bg-teal-50 text-teal-700;
+    }
+  }
+  .trip-bar .number-field__input {
+    @apply p-0 text-center font-semibold;
+  }
+  /* 16 px desde sm (HeroUI los baja a 14 px). En teléfonos manda la regla de fechas de arriba. */
+  @media (min-width: 40rem) {
+    .trip-bar :is(.select__value, .date-input-group__input, .number-field__input) {
+      font-size: 1rem;
+    }
+  }
+
+  /* Enviar: turquesa de laguna con texto navy (5.6:1 y 7.7:1 en los extremos) */
+  .trip-bar__submit {
+    @apply min-h-13 px-6 text-base text-ink-900;
+    background-image: linear-gradient(100deg, var(--color-teal-400), var(--color-teal-300));
+    box-shadow: 0 10px 24px -10px rgb(1 174 181 / 0.75);
+  }
+  @media (hover: hover) {
+    .trip-bar__submit:hover {
+      filter: brightness(1.06) saturate(1.1);
+    }
+  }
+  .trip-bar__submit:is(:focus-visible, [data-focus-visible="true"]) {
+    outline: none;
+    box-shadow:
+      0 0 0 2px #ffffff,
+      0 0 0 4px var(--color-ink-900);
+  }
+}
+
 /* ── Base tipográfica ──────────────────────────────────────────────────────── */
 @layer base {
   html {
@@ -242,6 +364,70 @@
   line-height: 1.02;
   letter-spacing: -0.025em;
   font-weight: 600;
+}
+
+/* ── Fondos de agua (docs/DESIGN.md §1) ────────────────────────────────────── */
+/* Laguna: secciones alternas claras. Dos reflejos turquesa sobre un degradado agua. */
+@utility bg-lagoon {
+  background-color: var(--color-teal-50);
+  background-image:
+    radial-gradient(56rem 30rem at 6% 0%, rgb(60 203 203 / 0.16), transparent 70%),
+    radial-gradient(48rem 28rem at 96% 100%, rgb(1 174 181 / 0.1), transparent 70%),
+    linear-gradient(180deg, #effafa 0%, #e1f4f4 100%);
+}
+/* Bajío: bloques y tarjetas destacadas sobre fondo claro (agua poco profunda). */
+@utility bg-shallows {
+  background-color: var(--color-teal-100);
+  background-image:
+    radial-gradient(28rem 18rem at 100% 0%, rgb(255 255 255 / 0.7), transparent 70%),
+    linear-gradient(135deg, #c8eeed 0%, #ddf4f3 50%, #f1fbfb 100%);
+}
+/* Mar profundo: franjas oscuras, footer y paneles navy. El reflejo va abajo a la
+   derecha para que los textos turquesa de arriba sigan sobre navy (5.5:1). */
+@utility bg-deep-sea {
+  background-color: var(--color-ink-900);
+  background-image:
+    radial-gradient(52rem 34rem at 100% 100%, rgb(1 174 181 / 0.24), transparent 65%),
+    linear-gradient(165deg, #01274b 0%, #012d52 55%, #033f5d 100%);
+}
+
+/* Borde de ola de las franjas de mar profundo. La máscara recorta la franja con la
+   forma de la ola (una sola capa: sin línea de costura). Alto igual al de WaveFoam. */
+@utility mask-wave-y {
+  --wave-h: 2rem;
+  mask-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72' preserveAspectRatio='none'%3E%3Cpath d='M0 34C90 18 190 32 320 42C520 58 660 36 860 22C1060 8 1240 56 1440 28V72H0Z'/%3E%3C/svg%3E"),
+    linear-gradient(#000 0 0),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72' preserveAspectRatio='none'%3E%3Cpath transform='rotate(180 720 36)' d='M0 34C90 18 190 32 320 42C520 58 660 36 860 22C1060 8 1240 56 1440 28V72H0Z'/%3E%3C/svg%3E");
+  mask-size:
+    100% var(--wave-h),
+    100% calc(100% - 2 * var(--wave-h) + 2px),
+    100% var(--wave-h);
+  mask-position: top, center, bottom;
+  mask-repeat: no-repeat;
+  @media (width >= 40rem) {
+    --wave-h: 3rem;
+  }
+  @media (width >= 64rem) {
+    --wave-h: 4.5rem;
+  }
+}
+@utility mask-wave-top {
+  --wave-h: 2rem;
+  mask-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72' preserveAspectRatio='none'%3E%3Cpath d='M0 34C90 18 190 32 320 42C520 58 660 36 860 22C1060 8 1240 56 1440 28V72H0Z'/%3E%3C/svg%3E"),
+    linear-gradient(#000 0 0);
+  mask-size:
+    100% var(--wave-h),
+    100% calc(100% - var(--wave-h) + 1px);
+  mask-position: top, bottom;
+  mask-repeat: no-repeat;
+  @media (width >= 40rem) {
+    --wave-h: 3rem;
+  }
+  @media (width >= 64rem) {
+    --wave-h: 4.5rem;
+  }
 }
 
 /* Superficie translúcida sobre foto o video */

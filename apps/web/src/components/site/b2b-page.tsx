@@ -68,7 +68,7 @@ export async function B2BPage({
           </RevealGroup>
 
           <Reveal className="mt-12 lg:mt-16">
-            <div className="flex flex-col items-start gap-6 rounded-panel bg-ink-900 p-6 text-white sm:p-10 lg:flex-row lg:items-center lg:justify-between lg:p-12">
+            <div className="flex flex-col items-start gap-6 rounded-panel bg-deep-sea p-6 text-white sm:p-10 lg:flex-row lg:items-center lg:justify-between lg:p-12">
               <h2 className="max-w-xl text-display-md">{t("title")}</h2>
               <WhatsAppButton
                 onDark

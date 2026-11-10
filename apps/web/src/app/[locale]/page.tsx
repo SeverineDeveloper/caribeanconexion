@@ -28,6 +28,7 @@ import { PackageSlide } from "@/components/site/package-card";
 import { QuickPlanner } from "@/components/site/quick-planner";
 import { SectionHeader } from "@/components/site/section-header";
 import { TripVisual } from "@/components/site/trip-visual";
+import { WaveFoam } from "@/components/site/wave-foam";
 import { whatsappHref } from "@/components/site/whatsapp-button";
 import { Carousel } from "@/components/ui/carousel";
 import { PACKAGES, packageOriginCode } from "@/content/packages";
@@ -131,7 +132,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── Cómo funciona ────────────────────────────────────── */}
-      <section className="section-y bg-sand-100">
+      <section className="section-y bg-lagoon">
         <div className="container-page grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <div>
             <Reveal>
@@ -214,7 +215,7 @@ export default async function HomePage() {
               title={t("Bento.services")}
               text={t("Bento.servicesText")}
               more={t("Bento.more")}
-              tone="sand"
+              tone="shallows"
             />
             <BentoTile
               href="/paquetes"
@@ -228,8 +229,10 @@ export default async function HomePage() {
       </section>
 
       {/* ── Paquetes (carrusel oscuro) ───────────────────────── */}
-      <section className="section-y overflow-hidden bg-ink-900 text-white">
-        <div className="container-page">
+      <section className="section-y mask-wave-y relative overflow-hidden bg-deep-sea text-white">
+        <WaveFoam position="top" />
+        <WaveFoam position="bottom" />
+        <div className="container-page relative">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <Reveal className="max-w-2xl">
               <p className="text-eyebrow text-teal-400">{t("PackagesTeaser.eyebrow")}</p>
@@ -305,7 +308,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── Preguntas frecuentes ─────────────────────────────── */}
-      <section className="section-y bg-sand-100">
+      <section className="section-y bg-lagoon">
         <div className="container-page">
           <Reveal>
             <Faq title={t("Common.faqTitle")} items={t.raw("HomeFaq.items") as FaqItem[]} />
@@ -335,7 +338,7 @@ function BentoTile({
   image?: StaticImageData;
   className?: string;
   large?: boolean;
-  tone?: "white" | "sand";
+  tone?: "white" | "shallows";
 }) {
   const onPhoto = Boolean(image);
   return (
@@ -345,7 +348,7 @@ function BentoTile({
         className={`group relative flex h-full flex-col justify-end overflow-hidden rounded-card p-6 sm:p-8 ${
           onPhoto
             ? "text-white"
-            : `border border-line text-ink-900 shadow-card ${tone === "sand" ? "bg-sand-200" : "bg-white"}`
+            : `border border-line text-ink-900 shadow-card ${tone === "shallows" ? "bg-shallows" : "bg-white"}`
         }`}
       >
         {image && (
