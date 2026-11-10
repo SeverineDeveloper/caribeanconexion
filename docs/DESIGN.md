@@ -41,9 +41,9 @@ Estas son las reglas de UI para la web pública y el panel. Todo valor visual sa
 | `bg-lagoon` | Degradado vertical `#EFFAFA` → `#E1F4F4` con dos reflejos turquesa (arriba a la izquierda y abajo a la derecha) | Secciones alternas claras |
 | `bg-shallows` | Degradado diagonal de `#C8EEED` a `#F1FBFB`, con un brillo blanco arriba a la derecha | Bloques y tarjetas destacadas sobre `canvas` (p. ej. "¿Ninguno encaja?", la tarjeta de servicios del bento) |
 | `bg-deep-sea` | Degradado navy `#01274B` → `#033F5D` con un reflejo turquesa abajo a la derecha | Franjas oscuras, footer, CTA band y paneles navy. El reflejo va abajo para que el texto `teal-400` de arriba siga sobre navy |
-| `mask-wave-y` / `mask-wave-top` | Recorta la franja con forma de ola arriba y abajo (o solo arriba) | Franjas `bg-deep-sea` de ancho completo, siempre con `WaveFoam` |
+| `mask-wave-y` / `mask-wave-top` / `mask-wave-bottom` | Recorta la franja con forma de ola arriba y abajo, solo arriba o solo abajo | Franjas `bg-deep-sea` de ancho completo (paquetes del inicio, footer) y cabeceras `PageHero` sin foto, siempre con `WaveFoam` |
 
-`WaveFoam` (`components/site/wave-foam.tsx`) dibuja la espuma: una franja turquesa al 22 % justo bajo el borde de la ola, del mismo alto que la máscara (32 / 48 / 72 px en móvil / `sm` / `lg`). La máscara es la que da la forma, así no hay dos capas superpuestas ni línea de costura. Los medios a pantalla completa (visor de fotos, video) siguen en `ink-900` liso.
+`WaveFoam` (`components/site/wave-foam.tsx`) dibuja la espuma: una franja turquesa al 22 % justo bajo el borde de la ola, del mismo alto que la máscara: la variable `--wave-h` (32 / 48 / 72 px en móvil / `sm` / `lg`), definida una sola vez en `:root`. La máscara es la que da la forma, así no hay dos capas superpuestas ni línea de costura. Las cabeceras de página sin foto (traslados, servicios, contacto y legales) usan `bg-deep-sea` y terminan en ola; su sol y su ola decorativos se ocultan en móvil para no tapar el texto. Las cabeceras con foto y los medios a pantalla completa (visor de fotos, video) siguen en `ink-900` liso.
 - El texto siempre en `ink-900`, `ink-700` o `ink-500`. No se usa gris neutro de Tailwind ni negro puro.
 - Contrastes verificados (AA):
 
@@ -155,7 +155,7 @@ Los originales del cliente están en `docs/brand/originales/`: JPEG con fondo y 
 | `<LogoStacked>` | `logo-stacked-dark.png` (con lema) | Paneles de marca grandes sobre `ink-900`, como el acceso al panel |
 | `<LogoMark>` | `logo-mark*.png` | Espacios pequeños donde no cabe el nombre |
 | Ícono | `app/icon.png`, `apple-icon.png`, `favicon.ico` | Generados del badge circular |
-| Al compartir | `app/opengraph-image.jpg` (1200×630) | Vista previa en WhatsApp y redes |
+| Al compartir | `assets/brand/opengraph.jpg` (1200×630), vía `shareImage()` de `lib/metadata.ts` | Vista previa en WhatsApp y redes. Las fichas de excursión usan su portada |
 
 - No se recolorea, deforma ni pone sombra al logo. Se deja un margen libre de al menos la altura de la "C" alrededor.
 - Lema oficial: **"Tu viaje, nuestra conexión."** (con coma, como en el logo).

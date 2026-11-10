@@ -392,42 +392,47 @@
 }
 
 /* Borde de ola de las franjas de mar profundo. La máscara recorta la franja con la
-   forma de la ola (una sola capa: sin línea de costura). Alto igual al de WaveFoam. */
-@utility mask-wave-y {
+   forma de la ola (una sola capa: sin línea de costura). WaveFoam usa el mismo alto
+   (--wave-h) para dibujar la espuma justo debajo del borde. */
+:root {
   --wave-h: 2rem;
-  mask-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72' preserveAspectRatio='none'%3E%3Cpath d='M0 34C90 18 190 32 320 42C520 58 660 36 860 22C1060 8 1240 56 1440 28V72H0Z'/%3E%3C/svg%3E"),
-    linear-gradient(#000 0 0),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72' preserveAspectRatio='none'%3E%3Cpath transform='rotate(180 720 36)' d='M0 34C90 18 190 32 320 42C520 58 660 36 860 22C1060 8 1240 56 1440 28V72H0Z'/%3E%3C/svg%3E");
+  --wave-mask-top: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72' preserveAspectRatio='none'%3E%3Cpath d='M0 34C90 18 190 32 320 42C520 58 660 36 860 22C1060 8 1240 56 1440 28V72H0Z'/%3E%3C/svg%3E");
+  --wave-mask-bottom: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72' preserveAspectRatio='none'%3E%3Cpath transform='rotate(180 720 36)' d='M0 34C90 18 190 32 320 42C520 58 660 36 860 22C1060 8 1240 56 1440 28V72H0Z'/%3E%3C/svg%3E");
+}
+@media (width >= 40rem) {
+  :root {
+    --wave-h: 3rem;
+  }
+}
+@media (width >= 64rem) {
+  :root {
+    --wave-h: 4.5rem;
+  }
+}
+@utility mask-wave-y {
+  mask-image: var(--wave-mask-top), linear-gradient(#000 0 0), var(--wave-mask-bottom);
   mask-size:
     100% var(--wave-h),
     100% calc(100% - 2 * var(--wave-h) + 2px),
     100% var(--wave-h);
   mask-position: top, center, bottom;
   mask-repeat: no-repeat;
-  @media (width >= 40rem) {
-    --wave-h: 3rem;
-  }
-  @media (width >= 64rem) {
-    --wave-h: 4.5rem;
-  }
 }
 @utility mask-wave-top {
-  --wave-h: 2rem;
-  mask-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72' preserveAspectRatio='none'%3E%3Cpath d='M0 34C90 18 190 32 320 42C520 58 660 36 860 22C1060 8 1240 56 1440 28V72H0Z'/%3E%3C/svg%3E"),
-    linear-gradient(#000 0 0);
+  mask-image: var(--wave-mask-top), linear-gradient(#000 0 0);
   mask-size:
     100% var(--wave-h),
     100% calc(100% - var(--wave-h) + 1px);
   mask-position: top, bottom;
   mask-repeat: no-repeat;
-  @media (width >= 40rem) {
-    --wave-h: 3rem;
-  }
-  @media (width >= 64rem) {
-    --wave-h: 4.5rem;
-  }
+}
+@utility mask-wave-bottom {
+  mask-image: linear-gradient(#000 0 0), var(--wave-mask-bottom);
+  mask-size:
+    100% calc(100% - var(--wave-h) + 1px),
+    100% var(--wave-h);
+  mask-position: top, bottom;
+  mask-repeat: no-repeat;
 }
 
 /* Superficie translúcida sobre foto o video */

@@ -24,7 +24,7 @@ import type { Locale } from "@/i18n/routing";
 import { excursionCards, excursionPrice } from "@/lib/excursion-cards";
 import { jsonLd } from "@/lib/json-ld";
 import { pageMetadata } from "@/lib/metadata";
-import { siteUrl } from "@/lib/site";
+import { absoluteUrl, siteUrl } from "@/lib/site";
 
 // Solo existen las páginas de las excursiones con galería; el resto da 404.
 export const dynamicParams = false;
@@ -94,7 +94,7 @@ export default async function ExcursionPage({ params }: PageProps<"/[locale]/exc
     name: title,
     description,
     url: `${siteUrl}/${locale}${excursionPath(slug)}`,
-    image: excursion.gallery.slice(0, 4).map((image) => `${siteUrl}${image.src}`),
+    image: excursion.gallery.slice(0, 4).map((image) => absoluteUrl(image.src)),
     ...(excursion.priceFromUsd !== undefined && {
       offers: {
         "@type": "Offer",
