@@ -7,10 +7,12 @@ import { Reveal } from "@/components/motion/reveal";
 import { Link } from "@/i18n/navigation";
 import { jsonLd } from "@/lib/json-ld";
 import { siteUrl } from "@/lib/site";
+import { WaveFoam } from "./wave-foam";
 
 /**
  * Cabecera de las páginas interiores: foto (o fondo de marca), migas de pan con datos
- * estructurados, título y acciones.
+ * estructurados, título y acciones. Sin foto, el fondo es mar profundo y la cabecera
+ * termina en una ola.
  */
 export async function PageHero({
   locale,
@@ -54,7 +56,11 @@ export async function PageHero({
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-ink-900 text-white">
+    <section
+      className={`relative isolate overflow-hidden text-white ${
+        image ? "bg-ink-900" : "mask-wave-bottom bg-deep-sea"
+      }`}
+    >
       {image ? (
         <>
           <Image
@@ -70,25 +76,35 @@ export async function PageHero({
           <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-ink-900/50 to-transparent" />
         </>
       ) : (
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 600 260"
-          className="absolute right-0 bottom-0 -z-10 w-[42rem] max-w-none opacity-80"
-        >
-          {/* En móvil el sol quedaría sobre el título: solo se muestra desde sm */}
-          <circle cx="480" cy="80" r="46" fill="#CB9E55" className="hidden sm:inline" />
-          <path
-            d="M60 220c60-34 120-34 180 0s120 34 180 0 100-30 180-14"
-            fill="none"
-            stroke="#01AEB5"
-            strokeOpacity="0.5"
-            strokeWidth="10"
-            strokeLinecap="round"
-          />
-        </svg>
+        <>
+          <WaveFoam position="bottom" />
+          {/* Sol y ola decorativos, por encima del borde de ola. En móvil quedarían sobre
+              el texto y la ola del borde ya basta: solo se muestran desde sm. */}
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 600 260"
+            className="absolute right-0 bottom-(--wave-h) -z-10 hidden w-[42rem] max-w-none opacity-80 sm:block"
+          >
+            <circle cx="480" cy="80" r="46" fill="#CB9E55" />
+            <path
+              d="M60 220c60-34 120-34 180 0s120 34 180 0 100-30 180-14"
+              fill="none"
+              stroke="#01AEB5"
+              strokeOpacity="0.5"
+              strokeWidth="10"
+              strokeLinecap="round"
+            />
+          </svg>
+        </>
       )}
 
-      <div className="container-page flex min-h-[22rem] flex-col justify-end pt-16 pb-14 lg:min-h-[30rem] lg:pb-20">
+      <div
+        className={`container-page relative flex min-h-[22rem] flex-col justify-end pt-16 lg:min-h-[30rem] ${
+          image
+            ? "pb-14 lg:pb-20"
+            : "pb-[calc(3.5rem+var(--wave-h))] lg:pb-[calc(5rem+var(--wave-h))]"
+        }`}
+      >
         <Reveal>
           <nav aria-label={t("breadcrumb")} className="mb-6 text-sm text-white/70">
             <ol className="flex flex-wrap items-center gap-1.5">

@@ -7,6 +7,7 @@ import { SiteHeader } from "@/components/site/site-header";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
 import { routing } from "@/i18n/routing";
 import { fontVariables } from "@/lib/fonts";
+import { shareImage } from "@/lib/metadata";
 import { siteUrl } from "@/lib/site";
 import "../globals.css";
 
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
       canonical: `/${locale}`,
       languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
     },
+    openGraph: { images: [shareImage()] },
   };
 }
 

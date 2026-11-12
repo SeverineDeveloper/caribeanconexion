@@ -42,9 +42,11 @@ export default async function PlannerPage({ params }: PageProps<"/[locale]/arma-
       <section className="pb-20 lg:pb-28">
         <div className="container-page relative -mt-12 max-w-4xl lg:-mt-20">
           <Reveal>
-            <Suspense fallback={<Planner whatsappNumber={whatsappNumber} initial={{}} />}>
-              <PlannerFromQuery whatsappNumber={whatsappNumber} />
-            </Suspense>
+            <div data-wa-float-avoid="">
+              <Suspense fallback={<Planner whatsappNumber={whatsappNumber} initial={{}} />}>
+                <PlannerFromQuery whatsappNumber={whatsappNumber} />
+              </Suspense>
+            </div>
           </Reveal>
         </div>
       </section>

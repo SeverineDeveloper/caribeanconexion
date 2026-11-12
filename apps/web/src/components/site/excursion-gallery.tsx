@@ -91,7 +91,7 @@ export function ExcursionGallery({
               type="button"
               onClick={() => open(i)}
               aria-label={fill(labels.openPhoto, { n: i + 1, total })}
-              className="group block size-full focus-visible:outline-3 focus-visible:outline-teal-400 focus-visible:-outline-offset-3"
+              className="group relative block size-full focus-visible:outline-3 focus-visible:outline-teal-400 focus-visible:-outline-offset-3"
             >
               <Image
                 src={image}

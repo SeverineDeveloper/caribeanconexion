@@ -29,8 +29,13 @@ export function ExcursionsExplorer({
     <div>
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <Tabs selectedKey={filter} onSelectionChange={(key) => setFilter(String(key))}>
-          <Tabs.ListContainer className="overflow-x-auto">
-            <Tabs.List aria-label={filterLabel}>
+          {/* En móvil las 5 categorías no caben: la píldora se desliza de borde a borde de la
+              pantalla (sin la flecha de 16 px de HeroUI) y el desvanecido indica que hay más. */}
+          <Tabs.ListContainer className="overflow-x-auto max-sm:-mx-5 max-sm:rounded-none max-sm:bg-transparent max-sm:[&>[data-slot=scroll-shadow]]:px-5 max-sm:[&>button]:hidden">
+            <Tabs.List
+              aria-label={filterLabel}
+              className="max-sm:rounded-[calc(var(--radius)*2.5)] max-sm:bg-default"
+            >
               {[{ id: "all", label: allLabel }, ...categories].map((tab) => (
                 <Tabs.Tab key={tab.id} id={tab.id}>
                   {tab.label}

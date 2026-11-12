@@ -1,7 +1,9 @@
+import { buildWhatsAppUrl, formatPhoneDisplay } from "@cc/core";
 import { buttonVariants } from "@heroui/styles";
 import { getTranslations } from "next-intl/server";
 import { Logo } from "@/components/brand/logo";
 import { Link } from "@/i18n/navigation";
+import { whatsappNumber } from "@/lib/site";
 import { HeaderShell } from "./header-shell";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
@@ -10,7 +12,13 @@ import { NavLinks } from "./nav-links";
 
 export async function SiteHeader() {
   const t = await getTranslations("Nav");
+  const tWa = await getTranslations("WhatsApp");
   const items = MAIN_NAV.map((item) => ({ href: item.href, label: t(item.key) }));
+  const whatsapp = {
+    href: buildWhatsAppUrl(whatsappNumber, tWa("defaultMessage"), "CC-MENU"),
+    phone: formatPhoneDisplay(whatsappNumber),
+    label: "WhatsApp",
+  };
 
   return (
     <HeaderShell>
@@ -39,7 +47,12 @@ export async function SiteHeader() {
           >
             {t("planTrip")}
           </Link>
-          <MobileNav items={items} menuLabel={t("menu")} ctaLabel={t("planTrip")} />
+          <MobileNav
+            items={items}
+            menuLabel={t("menu")}
+            ctaLabel={t("planTrip")}
+            whatsapp={whatsapp}
+          />
         </div>
       </div>
     </HeaderShell>

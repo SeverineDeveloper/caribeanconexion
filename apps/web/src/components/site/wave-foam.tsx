@@ -1,6 +1,7 @@
 /**
  * Espuma de ola para las franjas de mar profundo (`bg-deep-sea`) de ancho completo.
- * El borde ondulado lo recorta la propia franja con `mask-wave-y` o `mask-wave-top`
+ * El borde ondulado lo recorta la propia franja con `mask-wave-y`, `mask-wave-top` o
+ * `mask-wave-bottom`
  * (globals.css): así no hay dos capas superpuestas ni línea de costura. Esta franja
  * turquesa translúcida va justo debajo del borde, con la misma altura que la máscara.
  * La franja que la contiene debe ser `relative`.
@@ -12,7 +13,7 @@ export function WaveFoam({ position }: { position: "top" | "bottom" }) {
       focusable="false"
       viewBox="0 0 1440 72"
       preserveAspectRatio="none"
-      className={`pointer-events-none absolute inset-x-0 h-8 w-full sm:h-12 lg:h-[4.5rem] ${
+      className={`pointer-events-none absolute inset-x-0 h-(--wave-h) w-full ${
         position === "top" ? "top-0" : "bottom-0 rotate-180"
       }`}
     >

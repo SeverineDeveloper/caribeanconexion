@@ -41,9 +41,9 @@ Estas son las reglas de UI para la web pública y el panel. Todo valor visual sa
 | `bg-lagoon` | Degradado vertical `#EFFAFA` → `#E1F4F4` con dos reflejos turquesa (arriba a la izquierda y abajo a la derecha) | Secciones alternas claras |
 | `bg-shallows` | Degradado diagonal de `#C8EEED` a `#F1FBFB`, con un brillo blanco arriba a la derecha | Bloques y tarjetas destacadas sobre `canvas` (p. ej. "¿Ninguno encaja?", la tarjeta de servicios del bento) |
 | `bg-deep-sea` | Degradado navy `#01274B` → `#033F5D` con un reflejo turquesa abajo a la derecha | Franjas oscuras, footer, CTA band y paneles navy. El reflejo va abajo para que el texto `teal-400` de arriba siga sobre navy |
-| `mask-wave-y` / `mask-wave-top` | Recorta la franja con forma de ola arriba y abajo (o solo arriba) | Franjas `bg-deep-sea` de ancho completo, siempre con `WaveFoam` |
+| `mask-wave-y` / `mask-wave-top` / `mask-wave-bottom` | Recorta la franja con forma de ola arriba y abajo, solo arriba o solo abajo | Franjas `bg-deep-sea` de ancho completo (paquetes del inicio, footer) y cabeceras `PageHero` sin foto, siempre con `WaveFoam` |
 
-`WaveFoam` (`components/site/wave-foam.tsx`) dibuja la espuma: una franja turquesa al 22 % justo bajo el borde de la ola, del mismo alto que la máscara (32 / 48 / 72 px en móvil / `sm` / `lg`). La máscara es la que da la forma, así no hay dos capas superpuestas ni línea de costura. Los medios a pantalla completa (visor de fotos, video) siguen en `ink-900` liso.
+`WaveFoam` (`components/site/wave-foam.tsx`) dibuja la espuma: una franja turquesa al 22 % justo bajo el borde de la ola, del mismo alto que la máscara: la variable `--wave-h` (32 / 48 / 72 px en móvil / `sm` / `lg`), definida una sola vez en `:root`. La máscara es la que da la forma, así no hay dos capas superpuestas ni línea de costura. Las cabeceras de página sin foto (traslados, servicios, contacto y legales) usan `bg-deep-sea` y terminan en ola; su sol y su ola decorativos se ocultan en móvil para no tapar el texto. Las cabeceras con foto y los medios a pantalla completa (visor de fotos, video) siguen en `ink-900` liso.
 - El texto siempre en `ink-900`, `ink-700` o `ink-500`. No se usa gris neutro de Tailwind ni negro puro.
 - Contrastes verificados (AA):
 
@@ -143,6 +143,10 @@ Es la excepción a los campos con borde. Sigue el patrón de los buscadores de v
 
 Tamaños: `sm` 36 px (solo en el panel), `md` 44 px (por defecto) y `lg` 52 px (hero y CTA). Los íconos van a 20 px y a 8 px del texto.
 
+En móvil (por debajo de `sm`) los botones de una acción principal ocupan todo el ancho: franja CTA, pasos del planificador y formularios. Los enlaces de texto pequeños ("Consultar por WhatsApp", "Pedir este paquete") llevan `tap-area`, que amplía el área táctil a 44 px de alto sin mover el diseño.
+
+**Botón flotante de WhatsApp** (`WhatsAppFloat`): círculo de 56 px en móvil y píldora con texto desde `sm`. Por debajo de `lg` se esconde mientras un elemento con `data-wa-float-avoid` pasa por el 15 % inferior de la pantalla, para no tapar formularios ni botones a todo el ancho. Llevan esa marca el planificador del hero, el de Arma tu viaje, el formulario de contacto, la ficha de reserva de las excursiones y los botones de la franja CTA.
+
 ## 7. Logo, iconografía e imagen
 
 ### Logo
@@ -155,7 +159,7 @@ Los originales del cliente están en `docs/brand/originales/`: JPEG con fondo y 
 | `<LogoStacked>` | `logo-stacked-dark.png` (con lema) | Paneles de marca grandes sobre `ink-900`, como el acceso al panel |
 | `<LogoMark>` | `logo-mark*.png` | Espacios pequeños donde no cabe el nombre |
 | Ícono | `app/icon.png`, `apple-icon.png`, `favicon.ico` | Generados del badge circular |
-| Al compartir | `app/opengraph-image.jpg` (1200×630) | Vista previa en WhatsApp y redes |
+| Al compartir | `assets/brand/opengraph.jpg` (1200×630), vía `shareImage()` de `lib/metadata.ts` | Vista previa en WhatsApp y redes. Las fichas de excursión usan su portada |
 
 - No se recolorea, deforma ni pone sombra al logo. Se deja un margen libre de al menos la altura de la "C" alrededor.
 - Lema oficial: **"Tu viaje, nuestra conexión."** (con coma, como en el logo).
@@ -174,11 +178,11 @@ Hover a 150 ms, entradas a 250 ms, curva `ease-out` (`[0.22, 1, 0.36, 1]`). Se r
 
 | Patrón | Componente | Regla |
 |---|---|---|
-| Aparición al hacer scroll | `Reveal`, `RevealGroup` y `RevealItem` (`components/motion/reveal.tsx`) | Opacidad más 28 px hacia arriba, 0,7 s, una sola vez. En grupos, escalonado de 0,09 s. |
-| Carrusel | `Carousel` (`components/ui/carousel.tsx`, Embla) | Arrastre, flechas y puntos accesibles. Autoplay solo en franjas de inspiración (paquetes): se detiene al interactuar y nunca con movimiento reducido. |
+| Aparición al hacer scroll | `Reveal`, `RevealGroup` y `RevealItem` (`components/motion/reveal.tsx`) | Opacidad más 28 px hacia arriba, 0,7 s, una sola vez. En grupos, escalonado de 0,09 s. Se dispara cuando el borde superior entra en el 85 % inferior de la pantalla, nunca con un porcentaje del elemento: un bloque más alto que la pantalla (la lista de excursiones en móvil mide ~7.700 px) no llegaría al umbral y quedaría invisible. |
+| Carrusel | `Carousel` (`components/ui/carousel.tsx`, Embla) | Arrastre, flechas y puntos accesibles (punto de 8 px en un área táctil de 24 px). Con más de 8 posiciones, barra de progreso y contador "1 / 15" en lugar de puntos, que en móvil ocupaban dos filas. Autoplay solo en franjas de inspiración (paquetes): se detiene al interactuar y nunca con movimiento reducido. |
 | Video del hero | `HeroVideo` | Primero la foto (LCP). El video se carga solo en pantallas de 768 px o más, sin ahorro de datos y sin movimiento reducido. Siempre tiene botón de pausa (WCAG 2.2.2). |
 | Franja de destinos | `Marquee` | Desplazamiento continuo que se pausa al pasar el mouse y queda quieto con movimiento reducido. |
-| Filtros | `ExcursionsExplorer` | Reordenamiento con `layout` y entrada o salida a escala 0,96. |
+| Filtros | `ExcursionsExplorer` | Reordenamiento con `layout` y entrada o salida a escala 0,96. En móvil la píldora de categorías se desliza de borde a borde de la pantalla, sin la flecha de HeroUI. |
 | Galería de excursión | `ExcursionGallery` | Mosaico de hasta 5 fotos (1 grande y 4 pequeñas desde `sm`). El visor es un `<dialog>` modal a pantalla completa sobre `ink-900`, con flechas, teclado, contador y pie de foto; Escape cierra. |
 | Clip de excursión | `ExcursionVideo` | Póster con botón de reproducir; el video (sin audio, en bucle) solo se descarga al pulsarlo y siempre se puede pausar. |
 | Pasos de formulario | `Planner` | Deslizamiento horizontal de 40 px según la dirección. |

@@ -430,16 +430,22 @@ export function Planner({
           </motion.div>
         </AnimatePresence>
 
+        {/* En móvil los botones ocupan todo el ancho, al alcance del pulgar. */}
         <div className="mt-10 flex flex-col-reverse gap-3 border-line border-t pt-8 sm:flex-row sm:justify-between">
           {step > 0 ? (
-            <Button variant="ghost" size="lg" onPress={() => go(step - 1)}>
+            <Button
+              variant="ghost"
+              size="lg"
+              className="w-full sm:w-auto"
+              onPress={() => go(step - 1)}
+            >
               <ArrowLeft className="size-5" strokeWidth={2} aria-hidden="true" />
               {t("back")}
             </Button>
           ) : (
-            <span />
+            <span className="hidden sm:block" />
           )}
-          <Button type="submit" size="lg">
+          <Button type="submit" size="lg" className="w-full sm:w-auto">
             {step === STEPS.length - 1 ? (
               <>
                 <WhatsAppIcon className="size-5" />

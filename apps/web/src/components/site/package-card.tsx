@@ -124,7 +124,7 @@ export function PackageCard({
           href={whatsappUrl}
           target="_blank"
           rel="noopener"
-          className="mt-8 inline-flex items-center gap-2 font-semibold text-sm text-teal-600 hover:text-teal-700"
+          className="tap-area mt-8 inline-flex items-center gap-2 font-semibold text-sm text-teal-600 hover:text-teal-700"
         >
           <WhatsAppIcon className="size-4" />
           {ctaLabel}

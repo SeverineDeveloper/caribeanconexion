@@ -6,6 +6,11 @@ import type { ReactNode } from "react";
 // Curva y duraciones de docs/DESIGN.md §8. Con movimiento reducido no se anima nada.
 const EASE = [0.22, 1, 0.36, 1] as const;
 
+// Se dispara cuando el borde superior entra en el 85 % inferior de la pantalla. Con un
+// porcentaje del elemento («amount: 0.2») un bloque más alto que 5 pantallas (la lista de
+// excursiones en móvil) nunca llega al umbral y se queda invisible.
+const VIEWPORT = { once: true, amount: "some", margin: "0px 0px -15% 0px" } as const;
+
 /** Aparece suavemente (fade + subida) al entrar en pantalla, una sola vez. */
 export function Reveal({
   children,
@@ -25,7 +30,7 @@ export function Reveal({
       className={className}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={VIEWPORT}
       transition={{ duration: 0.7, ease: EASE, delay }}
     >
       {children}
@@ -64,7 +69,7 @@ export function RevealGroup({
       variants={group}
       initial="hidden"
       whileInView="shown"
-      viewport={{ once: true, amount: 0.15 }}
+      viewport={VIEWPORT}
     >
       {children}
     </MotionTag>

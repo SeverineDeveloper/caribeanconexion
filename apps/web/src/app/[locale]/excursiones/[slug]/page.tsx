@@ -24,7 +24,7 @@ import type { Locale } from "@/i18n/routing";
 import { excursionCards, excursionPrice } from "@/lib/excursion-cards";
 import { jsonLd } from "@/lib/json-ld";
 import { pageMetadata } from "@/lib/metadata";
-import { siteUrl } from "@/lib/site";
+import { absoluteUrl, siteUrl } from "@/lib/site";
 
 // Solo existen las páginas de las excursiones con galería; el resto da 404.
 export const dynamicParams = false;
@@ -94,7 +94,7 @@ export default async function ExcursionPage({ params }: PageProps<"/[locale]/exc
     name: title,
     description,
     url: `${siteUrl}/${locale}${excursionPath(slug)}`,
-    image: excursion.gallery.slice(0, 4).map((image) => `${siteUrl}${image.src}`),
+    image: excursion.gallery.slice(0, 4).map((image) => absoluteUrl(image.src)),
     ...(excursion.priceFromUsd !== undefined && {
       offers: {
         "@type": "Offer",
@@ -143,7 +143,7 @@ export default async function ExcursionPage({ params }: PageProps<"/[locale]/exc
           </Reveal>
 
           {/* En móvil la ficha va justo después de las fotos; en escritorio, fija a la derecha. */}
-          <aside className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          <aside data-wa-float-avoid="" className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
             <Reveal className="rounded-card border border-line bg-white p-6 shadow-card sm:p-8 lg:sticky lg:top-28">
               <p className="text-display-md text-ink-900">{price}</p>
               {priceUnit && <p className="mt-1 text-ink-500 text-sm">{priceUnit}</p>}
