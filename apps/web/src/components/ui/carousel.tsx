@@ -7,6 +7,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Children, type ReactNode, useCallback, useEffect, useState } from "react";
 
+/** A partir de aquí, barra de progreso con contador en lugar de puntos. */
+const MAX_DOTS = 8;
+
 /**
  * Carrusel accesible (Embla): arrastre táctil, flechas, puntos y autoplay opcional que se
  * detiene al interactuar y no se activa con movimiento reducido.
@@ -88,22 +91,47 @@ export function Carousel({
 
       {snaps.length > 1 && (
         <div className="mt-8 flex items-center justify-between gap-6">
-          <div className="flex flex-wrap gap-2">
-            {snaps.map((snap, i) => (
-              <button
-                key={snap}
-                type="button"
-                aria-label={t("goToSlide", { n: i + 1 })}
-                aria-current={i === selected ? "true" : undefined}
-                onClick={() => api?.scrollTo(i)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  i === selected
-                    ? `w-8 ${dark ? "bg-teal-400" : "bg-teal-600"}`
-                    : `w-2 ${dark ? "bg-white/30" : "bg-ink-900/20"}`
-                }`}
-              />
-            ))}
-          </div>
+          {snaps.length > MAX_DOTS ? (
+            // Con muchas posiciones los puntos ocupaban dos filas en móvil: barra de progreso
+            // y contador. Cada diapositiva ya anuncia «n de total» a los lectores de pantalla.
+            <div aria-hidden="true" className="flex items-center gap-3">
+              <span
+                className={`relative h-1 w-20 overflow-hidden rounded-full ${dark ? "bg-white/20" : "bg-ink-900/10"}`}
+              >
+                <span
+                  className={`absolute inset-y-0 left-0 rounded-full transition-[width] duration-300 ${dark ? "bg-teal-400" : "bg-teal-600"}`}
+                  style={{ width: `${((selected + 1) / snaps.length) * 100}%` }}
+                />
+              </span>
+              <span
+                className={`font-semibold text-sm tabular-nums ${dark ? "text-white/80" : "text-ink-700"}`}
+              >
+                {selected + 1} / {snaps.length}
+              </span>
+            </div>
+          ) : (
+            // Punto visible de 8 px dentro de un área táctil de 24 px.
+            <div className="-mx-2 flex flex-wrap">
+              {snaps.map((snap, i) => (
+                <button
+                  key={snap}
+                  type="button"
+                  aria-label={t("goToSlide", { n: i + 1 })}
+                  aria-current={i === selected ? "true" : undefined}
+                  onClick={() => api?.scrollTo(i)}
+                  className="flex h-6 min-w-6 items-center justify-center px-1"
+                >
+                  <span
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      i === selected
+                        ? `w-8 ${dark ? "bg-teal-400" : "bg-teal-600"}`
+                        : `w-2 ${dark ? "bg-white/30" : "bg-ink-900/20"}`
+                    }`}
+                  />
+                </button>
+              ))}
+            </div>
+          )}
           <div className="flex gap-2">
             <Button
               isIconOnly

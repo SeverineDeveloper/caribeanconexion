@@ -59,7 +59,7 @@ export default async function HomePage() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-ink-900/85 via-ink-900/45 to-ink-900/5"
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-ink-900/85 via-ink-900/60 to-ink-900/35 lg:via-ink-900/45 lg:to-ink-900/5"
         />
         <div
           aria-hidden="true"
@@ -73,13 +73,15 @@ export default async function HomePage() {
             </p>
             <h1 className="mt-6 max-w-4xl text-display-hero">
               {t.rich("Hero.title", {
-                em: (chunks) => <em className="text-teal-400">{chunks}</em>,
+                em: (chunks) => <em className="text-teal-300 lg:text-teal-400">{chunks}</em>,
               })}
             </h1>
             <p className="mt-6 max-w-2xl text-lead text-white/85">{t("Hero.subtitle")}</p>
           </Reveal>
           <Reveal delay={0.15} className="mt-10">
-            <QuickPlanner />
+            <div data-wa-float-avoid="">
+              <QuickPlanner />
+            </div>
           </Reveal>
           <ul className="mt-6 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6">
             {[t("Hero.trust1"), t("Hero.trust2"), t("Hero.trust3")].map((item) => (
@@ -187,7 +189,9 @@ export default async function HomePage() {
               lead={t("Bento.lead")}
             />
           </Reveal>
-          <RevealGroup className="mt-10 grid auto-rows-[13rem] gap-4 sm:auto-rows-[15rem] sm:gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-6">
+          {/* En móvil cada tile mide lo que su contenido; las de foto, 18rem para que la
+              imagen se vea arriba y el texto quede sobre la parte oscura del degradado. */}
+          <RevealGroup className="mt-10 grid gap-4 sm:auto-rows-[15rem] sm:gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-6">
             <BentoTile
               href="/alojamiento"
               title={t("Bento.stays")}
@@ -347,7 +351,7 @@ function BentoTile({
         href={href}
         className={`group relative flex h-full flex-col justify-end overflow-hidden rounded-card p-6 sm:p-8 ${
           onPhoto
-            ? "text-white"
+            ? "min-h-72 text-white sm:min-h-0"
             : `border border-line text-ink-900 shadow-card ${tone === "shallows" ? "bg-shallows" : "bg-white"}`
         }`}
       >
@@ -361,7 +365,7 @@ function BentoTile({
               sizes={large ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 25vw, 50vw"}
               className="object-cover transition duration-500 group-hover:scale-105"
             />
-            <span className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/30 to-transparent" />
+            <span className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/45 to-transparent" />
           </>
         )}
         <span className="relative">
@@ -375,7 +379,7 @@ function BentoTile({
           </span>
           <span
             className={`mt-4 inline-flex items-center gap-1.5 font-semibold text-sm ${
-              onPhoto ? "text-teal-400" : "text-teal-600"
+              onPhoto ? "text-teal-300" : "text-teal-600"
             }`}
           >
             {more}

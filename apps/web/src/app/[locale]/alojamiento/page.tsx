@@ -1,4 +1,4 @@
-import { Building, Check, Hotel, House, type LucideIcon, MapPin } from "lucide-react";
+import { BedDouble, Building, Check, House, type LucideIcon, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import heroPhoto from "@/assets/images/hero-playa.jpg";
@@ -16,7 +16,7 @@ const PATH = "/alojamiento";
 const TYPES: { key: "apartment" | "villa" | "hotel"; icon: LucideIcon }[] = [
   { key: "apartment", icon: Building },
   { key: "villa", icon: House },
-  { key: "hotel", icon: Hotel },
+  { key: "hotel", icon: BedDouble },
 ];
 
 export async function generateMetadata({

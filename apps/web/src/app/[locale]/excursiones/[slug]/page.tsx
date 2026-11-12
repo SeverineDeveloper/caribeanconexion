@@ -143,7 +143,7 @@ export default async function ExcursionPage({ params }: PageProps<"/[locale]/exc
           </Reveal>
 
           {/* En móvil la ficha va justo después de las fotos; en escritorio, fija a la derecha. */}
-          <aside className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          <aside data-wa-float-avoid="" className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
             <Reveal className="rounded-card border border-line bg-white p-6 shadow-card sm:p-8 lg:sticky lg:top-28">
               <p className="text-display-md text-ink-900">{price}</p>
               {priceUnit && <p className="mt-1 text-ink-500 text-sm">{priceUnit}</p>}

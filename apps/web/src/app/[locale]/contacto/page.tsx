@@ -78,7 +78,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
           <Reveal delay={0.1}>
             <div className="rounded-panel border border-line bg-white p-6 shadow-card sm:p-10">
               <h2 className="text-display-md text-ink-900">{t("ContactPage.formTitle")}</h2>
-              <div className="mt-8">
+              <div data-wa-float-avoid="" className="mt-8">
                 <ContactForm whatsappNumber={whatsappNumber} />
               </div>
             </div>

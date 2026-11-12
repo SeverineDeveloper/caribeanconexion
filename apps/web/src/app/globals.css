@@ -442,6 +442,16 @@
   backdrop-filter: blur(14px) saturate(140%);
 }
 
+/* Enlace de texto pequeño con área táctil de al menos 44 px de alto, sin mover el diseño */
+@utility tap-area {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -0.75rem -0.5rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
     animation: none;

@@ -12,8 +12,9 @@ export async function CtaBand({ originCode }: { originCode: string }) {
     <section className="section-y">
       <div className="container-page">
         <Reveal>
-          {/* pb-44 en móvil: el sol y las olas quedan debajo de los botones, no sobre el texto */}
-          <div className="relative overflow-hidden rounded-panel bg-deep-sea px-6 pt-12 pb-44 sm:px-12 sm:py-14 lg:px-16 lg:py-20">
+          {/* pb-44 en móvil: el sol y las olas quedan debajo de los botones, no sobre el texto.
+              px-5 en móvil para que «Escríbenos por WhatsApp» quepa en una línea desde 360 px. */}
+          <div className="relative overflow-hidden rounded-panel bg-deep-sea px-5 pt-12 pb-44 sm:px-12 sm:py-14 lg:px-16 lg:py-20">
             <svg
               aria-hidden="true"
               viewBox="0 0 600 300"
@@ -40,17 +41,18 @@ export async function CtaBand({ originCode }: { originCode: string }) {
             <div className="relative max-w-2xl">
               <h2 className="text-display-lg text-white">{t("CtaBand.title")}</h2>
               <p className="mt-4 text-lead text-white/80">{t("CtaBand.text")}</p>
-              <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row">
+              <div data-wa-float-avoid="" className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row">
                 <WhatsAppButton
                   onDark
                   message={t("WhatsApp.defaultMessage")}
                   originCode={originCode}
+                  className="w-full sm:w-auto"
                 >
                   {t("CtaBand.primary")}
                 </WhatsAppButton>
                 <Link
                   href="/arma-tu-viaje"
-                  className={`${buttonVariants({ size: "lg", variant: "outline" })} border-white/30 text-white hover:bg-white/10`}
+                  className={`${buttonVariants({ size: "lg", variant: "outline" })} w-full border-white/30 text-white hover:bg-white/10 sm:w-auto`}
                 >
                   {t("CtaBand.secondary")}
                 </Link>

@@ -143,6 +143,10 @@ Es la excepción a los campos con borde. Sigue el patrón de los buscadores de v
 
 Tamaños: `sm` 36 px (solo en el panel), `md` 44 px (por defecto) y `lg` 52 px (hero y CTA). Los íconos van a 20 px y a 8 px del texto.
 
+En móvil (por debajo de `sm`) los botones de una acción principal ocupan todo el ancho: franja CTA, pasos del planificador y formularios. Los enlaces de texto pequeños ("Consultar por WhatsApp", "Pedir este paquete") llevan `tap-area`, que amplía el área táctil a 44 px de alto sin mover el diseño.
+
+**Botón flotante de WhatsApp** (`WhatsAppFloat`): círculo de 56 px en móvil y píldora con texto desde `sm`. Por debajo de `lg` se esconde mientras un elemento con `data-wa-float-avoid` pasa por el 15 % inferior de la pantalla, para no tapar formularios ni botones a todo el ancho. Llevan esa marca el planificador del hero, el de Arma tu viaje, el formulario de contacto, la ficha de reserva de las excursiones y los botones de la franja CTA.
+
 ## 7. Logo, iconografía e imagen
 
 ### Logo
@@ -174,11 +178,11 @@ Hover a 150 ms, entradas a 250 ms, curva `ease-out` (`[0.22, 1, 0.36, 1]`). Se r
 
 | Patrón | Componente | Regla |
 |---|---|---|
-| Aparición al hacer scroll | `Reveal`, `RevealGroup` y `RevealItem` (`components/motion/reveal.tsx`) | Opacidad más 28 px hacia arriba, 0,7 s, una sola vez. En grupos, escalonado de 0,09 s. |
-| Carrusel | `Carousel` (`components/ui/carousel.tsx`, Embla) | Arrastre, flechas y puntos accesibles. Autoplay solo en franjas de inspiración (paquetes): se detiene al interactuar y nunca con movimiento reducido. |
+| Aparición al hacer scroll | `Reveal`, `RevealGroup` y `RevealItem` (`components/motion/reveal.tsx`) | Opacidad más 28 px hacia arriba, 0,7 s, una sola vez. En grupos, escalonado de 0,09 s. Se dispara cuando el borde superior entra en el 85 % inferior de la pantalla, nunca con un porcentaje del elemento: un bloque más alto que la pantalla (la lista de excursiones en móvil mide ~7.700 px) no llegaría al umbral y quedaría invisible. |
+| Carrusel | `Carousel` (`components/ui/carousel.tsx`, Embla) | Arrastre, flechas y puntos accesibles (punto de 8 px en un área táctil de 24 px). Con más de 8 posiciones, barra de progreso y contador "1 / 15" en lugar de puntos, que en móvil ocupaban dos filas. Autoplay solo en franjas de inspiración (paquetes): se detiene al interactuar y nunca con movimiento reducido. |
 | Video del hero | `HeroVideo` | Primero la foto (LCP). El video se carga solo en pantallas de 768 px o más, sin ahorro de datos y sin movimiento reducido. Siempre tiene botón de pausa (WCAG 2.2.2). |
 | Franja de destinos | `Marquee` | Desplazamiento continuo que se pausa al pasar el mouse y queda quieto con movimiento reducido. |
-| Filtros | `ExcursionsExplorer` | Reordenamiento con `layout` y entrada o salida a escala 0,96. |
+| Filtros | `ExcursionsExplorer` | Reordenamiento con `layout` y entrada o salida a escala 0,96. En móvil la píldora de categorías se desliza de borde a borde de la pantalla, sin la flecha de HeroUI. |
 | Galería de excursión | `ExcursionGallery` | Mosaico de hasta 5 fotos (1 grande y 4 pequeñas desde `sm`). El visor es un `<dialog>` modal a pantalla completa sobre `ink-900`, con flechas, teclado, contador y pie de foto; Escape cierra. |
 | Clip de excursión | `ExcursionVideo` | Póster con botón de reproducir; el video (sin audio, en bucle) solo se descarga al pulsarlo y siempre se puede pausar. |
 | Pasos de formulario | `Planner` | Deslizamiento horizontal de 40 px según la dirección. |
