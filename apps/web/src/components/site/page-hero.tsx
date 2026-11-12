@@ -6,7 +6,7 @@ import { Fragment, type ReactNode } from "react";
 import { Reveal } from "@/components/motion/reveal";
 import { Link } from "@/i18n/navigation";
 import { jsonLd } from "@/lib/json-ld";
-import { siteUrl } from "@/lib/site";
+import { pageUrl } from "@/lib/site";
 import { WaveFoam } from "./wave-foam";
 
 /**
@@ -33,7 +33,7 @@ export async function PageHero({
   lead?: string;
   image?: StaticImageData;
   /** Niveles intermedios de la miga de pan, entre Inicio y la página actual. */
-  trail?: { label: string; href: "/excursiones" }[];
+  trail?: { label: string; href: "/excursiones" | "/guias" }[];
   /** Nombre de la página actual en la miga de pan (por defecto, el antetítulo). */
   crumb?: string;
   children?: ReactNode;
@@ -51,7 +51,7 @@ export async function PageHero({
       "@type": "ListItem",
       position: i + 1,
       name: item.label,
-      item: `${siteUrl}/${locale}${item.path}`,
+      item: pageUrl(locale, item.path),
     })),
   };
 

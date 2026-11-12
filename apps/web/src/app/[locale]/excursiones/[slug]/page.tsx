@@ -1,4 +1,4 @@
-import { formatDuration, formatTime } from "@cc/core";
+import { formatDuration, tidyPunctuation } from "@cc/core";
 import { buttonVariants } from "@heroui/styles";
 import { CalendarDays, Check, Clock, Info } from "lucide-react";
 import type { Metadata } from "next";
@@ -9,11 +9,12 @@ import { CtaBand } from "@/components/site/cta-band";
 import { ExcursionCard } from "@/components/site/excursion-card";
 import { ExcursionGallery } from "@/components/site/excursion-gallery";
 import { ExcursionVideo } from "@/components/site/excursion-video";
+import { Faq } from "@/components/site/faq";
+import { KeyFacts } from "@/components/site/key-facts";
 import { PageHero } from "@/components/site/page-hero";
 import { WhatsAppButton } from "@/components/site/whatsapp-button";
 import { Carousel } from "@/components/ui/carousel";
 import {
-  type ExcursionSchedule,
   type ExcursionWithPage,
   excursionOriginCode,
   excursionPath,
@@ -22,9 +23,11 @@ import {
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { excursionCards, excursionPrice } from "@/lib/excursion-cards";
+import { excursionFactValues, excursionFaq, scheduleText } from "@/lib/excursion-faq";
 import { jsonLd } from "@/lib/json-ld";
 import { pageMetadata } from "@/lib/metadata";
-import { absoluteUrl, siteUrl } from "@/lib/site";
+import { absoluteUrl, pageUrl } from "@/lib/site";
+import { organizationRef } from "@/lib/structured-data";
 
 // Solo existen las páginas de las excursiones con galería; el resto da 404.
 export const dynamicParams = false;
@@ -49,15 +52,10 @@ export async function generateMetadata({
   return pageMetadata({
     locale,
     path: excursionPath(slug),
-    title: t(`Excursions.items.${excursion.key}.title`),
+    title: t(`ExcursionPages.${excursion.key}.metaTitle`),
     description: t(`ExcursionPages.${excursion.key}.metaDescription`),
     image: excursion.cover,
   });
-}
-
-function scheduleText(schedule: ExcursionSchedule, locale: Locale) {
-  const from = formatTime(schedule.from, locale);
-  return schedule.to ? `${from} – ${formatTime(schedule.to, locale)}` : from;
 }
 
 export default async function ExcursionPage({ params }: PageProps<"/[locale]/excursiones/[slug]">) {
@@ -87,23 +85,30 @@ export default async function ExcursionPage({ params }: PageProps<"/[locale]/exc
   const waMessage = t("ExcursionDetail.waMessage", { name: title });
   const originCode = excursionOriginCode(slug);
   const hasFacts = excursion.durationMinutes !== undefined || excursion.schedules !== undefined;
+  const summary = tidyPunctuation(
+    t(`ExcursionPages.${key}.summary`, excursionFactValues(excursion, locale)),
+  );
+  const faq = await excursionFaq(excursion, locale);
 
+  const url = pageUrl(locale, excursionPath(slug));
   const tripLd = {
     "@context": "https://schema.org",
     "@type": "TouristTrip",
+    "@id": `${url}#trip`,
     name: title,
-    description,
-    url: `${siteUrl}/${locale}${excursionPath(slug)}`,
+    description: `${summary} ${description}`,
+    url,
     image: excursion.gallery.slice(0, 4).map((image) => absoluteUrl(image.src)),
     ...(excursion.priceFromUsd !== undefined && {
       offers: {
         "@type": "Offer",
         price: excursion.priceFromUsd,
         priceCurrency: "USD",
-        url: `${siteUrl}/${locale}${excursionPath(slug)}`,
+        url,
+        offeredBy: organizationRef,
       },
     }),
-    provider: { "@type": "TravelAgency", name: "Conexión Caribe", url: siteUrl },
+    provider: organizationRef,
   };
 
   return (
@@ -216,6 +221,10 @@ export default async function ExcursionPage({ params }: PageProps<"/[locale]/exc
 
           <div className="flex min-w-0 flex-col gap-12">
             <Reveal>
+              <KeyFacts label={t("Common.inBrief")} text={summary} />
+            </Reveal>
+
+            <Reveal>
               <h2 className="text-display-md text-ink-900">{t("ExcursionDetail.about")}</h2>
               <p className="mt-4 max-w-[62ch] text-pretty text-ink-700 text-lead">{description}</p>
             </Reveal>
@@ -269,6 +278,14 @@ export default async function ExcursionPage({ params }: PageProps<"/[locale]/exc
               </Reveal>
             )}
           </div>
+        </div>
+      </section>
+
+      <section className="section-y border-line border-t">
+        <div className="container-page">
+          <Reveal>
+            <Faq title={t("Common.faqTitle")} items={faq} />
+          </Reveal>
         </div>
       </section>
 

@@ -93,3 +93,5 @@ Resultados en PLAN.md, sección 1.
 - [ ] Reglas de los alojamientos con reserva inmediata: estancia mínima, limpieza, depósito, check-in y check-out.
 - [ ] Cómo se notifica hoy a los proveedores (WhatsApp, llamada o correo).
 - [ ] Consentimiento de cada propietario para publicar su propiedad.
+- [ ] Perfiles públicos para SEO y visibilidad en IAs: Google Business Profile, TripAdvisor, Instagram y Facebook, y un correo comercial público. Checklist completa en `docs/SEO.md` §4.
+- [ ] Datos propios para "Sobre nosotros" (año de inicio, equipo, fotos) y revisión de las guías de destino y de los consejos "¿Qué llevo?" de cada excursión (`docs/SEO.md` §5).

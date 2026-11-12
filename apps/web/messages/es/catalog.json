@@ -119,8 +119,22 @@
     "more": "Otras experiencias",
     "seeDetails": "Ver la experiencia"
   },
+  "ExcursionFaq": {
+    "priceQ": "¿Cuánto cuesta {name}?",
+    "priceA": "Desde {price} por persona. Es un precio referencial: el precio final depende de la fecha, la temporada, la disponibilidad y la cantidad de personas, y te lo confirmamos antes de pagar.",
+    "priceOnRequestA": "Se cotiza según la fecha, la opción que elijas y el tamaño del grupo. Escríbenos por WhatsApp y te confirmamos el precio antes de pagar.",
+    "durationQ": "¿Cuánto dura {name}?",
+    "durationA": "Unas {duration}. Al reservar te confirmamos la hora de recogida.",
+    "schedulesQ": "¿Qué horarios tiene {name}?",
+    "schedulesA": "{daily, select, yes {Todos los días: {hours}} other {Hay salidas en estos horarios: {hours}}}.",
+    "includesQ": "¿Qué incluye {name}?",
+    "includesA": "Incluye {includes}.",
+    "bookQ": "¿Cómo reservo {name}?",
+    "bookA": "Escríbenos por WhatsApp con la fecha y la cantidad de personas. Te confirmamos la disponibilidad y el precio final, y reservas cuando estés de acuerdo."
+  },
   "ExcursionPages": {
     "yacht": {
+      "metaTitle": "Yate de lujo en Punta Cana: Saona y Catalina",
       "metaDescription": "Yate de lujo en Punta Cana para grupos de 1 a 22 personas: barra libre premium, snorkeling, piscina natural y traslado VIP. Isla Saona o Catalina, a cotizar.",
       "description": "Un día en yate para tu grupo, de 1 a 22 personas, con barra libre premium. Elige el destino entre Punta Cana, Isla Saona e Isla Catalina, haz snorkeling, báñate en una piscina natural y recorre las playas de Bávaro y Punta Cana. El traslado es VIP y con bebida incluida.",
       "includes": [
@@ -134,6 +148,22 @@
         "Capacidad de 1 a 22 personas.",
         "Destinos: Punta Cana, Isla Saona o Isla Catalina.",
         "El almuerzo es opcional y se cotiza aparte."
+      ],
+      "summary": "El yate de lujo de Conexión Caribe es un día en el mar para tu grupo, de 1 a 22 personas, con barra libre premium, snorkeling, piscina natural y traslado VIP. Puedes recorrer la costa de Punta Cana o ir a Isla Saona o Isla Catalina; el precio se cotiza según el destino, la fecha y el tamaño del grupo.",
+      "faqName": "el yate de lujo",
+      "faqExtra": [
+        {
+          "q": "¿Cuántas personas caben en el yate?",
+          "a": "De 1 a 22 personas. El yate es solo para tu grupo."
+        },
+        {
+          "q": "¿A qué destinos va el yate?",
+          "a": "Puedes elegir entre la costa de Bávaro y Punta Cana, Isla Saona e Isla Catalina."
+        },
+        {
+          "q": "¿El almuerzo está incluido?",
+          "a": "No: el almuerzo es opcional y se cotiza aparte. La barra libre premium sí está incluida."
+        }
       ],
       "gallery": [
         "Yate fondeado en agua turquesa frente a una playa de palmeras",
@@ -152,6 +182,7 @@
       ]
     },
     "buggies": {
+      "metaTitle": "Excursión en buggy en Punta Cana y Playa Macao",
       "metaDescription": "Excursión en buggy de 4 horas por plantaciones de café y cacao, un cenote y Playa Macao, con transporte y guía incluidos.",
       "description": "Una ruta guiada en buggy por el campo dominicano. Conocerás las plantaciones de café y cacao y su chocolate, te darás un baño en un cenote de aguas azules y terminarás frente al mar en Playa Macao, una de las playas más famosas del Caribe.",
       "includes": [
@@ -162,6 +193,14 @@
         "Parada en Playa Macao"
       ],
       "notes": [],
+      "summary": "La excursión en buggy por Punta Cana dura {duration} y cuesta desde {price} por persona, con salidas a las {times}. Recorre plantaciones de café y cacao, para a bañarse en un cenote y termina en Playa Macao; el transporte ida y vuelta y el guía están incluidos.",
+      "faqName": "la excursión en buggy",
+      "faqExtra": [
+        {
+          "q": "¿Qué ropa llevo a los buggies?",
+          "a": "Ropa y calzado que se puedan ensuciar, porque los caminos tienen barro y polvo. Suma traje de baño y toalla para el cenote, protector solar y algo de efectivo para extras."
+        }
+      ],
       "gallery": [
         "Vehículo todoterreno naranja salpicando barro en un camino rural",
         "Buggies cruzando un charco entre la vegetación",
@@ -175,10 +214,19 @@
       ]
     },
     "snorkeling": {
+      "metaTitle": "Snorkeling en Punta Cana: horarios y precio",
       "metaDescription": "Snorkeling en Punta Cana con transporte ida y vuelta, guía, equipo y refrigerio. Seis salidas al día.",
       "description": "Ponte la máscara y nada entre peces de colores en aguas cristalinas. El transporte ida y vuelta, el guía, el equipo de snorkeling y un refrigerio van incluidos, y hay varias salidas a lo largo del día.",
       "includes": ["Transporte ida y vuelta", "Guía", "Equipo de snorkeling", "Refrigerio"],
       "notes": [],
+      "summary": "El snorkeling en Punta Cana cuesta desde {price} por persona y tiene salidas a las {times}. Incluye transporte ida y vuelta, guía, equipo de snorkeling y un refrigerio.",
+      "faqName": "el snorkeling",
+      "faqExtra": [
+        {
+          "q": "¿Qué llevo al snorkeling?",
+          "a": "Traje de baño, toalla, protector solar biodegradable y algo de efectivo para extras. El equipo de snorkeling está incluido."
+        }
+      ],
       "gallery": [
         "Buceadora con máscara sosteniendo una caracola bajo el agua",
         "Persona con máscara sentada en el fondo arenoso",
@@ -186,10 +234,23 @@
       ]
     },
     "parasailing": {
+      "metaTitle": "Parasailing en Punta Cana: precio y horarios",
       "metaDescription": "Parasailing en Punta Cana todos los días, con salida desde todos los hoteles. Vuela sobre el mar turquesa y mira la costa desde el aire.",
       "description": "Despega desde la lancha y elévate sobre el mar turquesa para ver la costa de Punta Cana desde el aire. Hay salidas todos los días, desde todos los hoteles.",
       "includes": [],
       "notes": ["Salidas desde todos los hoteles."],
+      "summary": "El parasailing en Punta Cana cuesta desde {price} por persona y sale todos los días ({hours}). Despegas desde la lancha y ves la costa desde el aire; hay salidas desde todos los hoteles.",
+      "faqName": "el parasailing",
+      "faqExtra": [
+        {
+          "q": "¿Desde dónde sale el parasailing?",
+          "a": "Hay salidas desde todos los hoteles. Al reservar te confirmamos el punto y la hora de encuentro."
+        },
+        {
+          "q": "¿Qué llevo al parasailing?",
+          "a": "Traje de baño o ropa cómoda que se pueda mojar, protector solar y gafas de sol bien sujetas."
+        }
+      ],
       "gallery": [
         "Tres personas con chaleco listas para despegar desde la lancha",
         "Dos personas en parasailing sobre la playa vistas desde un dron",
@@ -200,6 +261,7 @@
       ]
     },
     "speedboat": {
+      "metaTitle": "Lancha rápida en Punta Cana con snorkeling",
       "metaDescription": "Excursión en lancha rápida de 3 h 30 min por la costa de Bávaro y Punta Cana, con snorkeling y piscina natural. Salida al atardecer disponible.",
       "description": "Recorre a toda velocidad la costa de Bávaro y Punta Cana, para a hacer snorkeling y báñate en una piscina natural. La salida de la tarde termina con la puesta de sol.",
       "includes": [
@@ -210,6 +272,18 @@
         "Recorrido por la costa de Bávaro y Punta Cana"
       ],
       "notes": [],
+      "summary": "El paseo en lancha rápida por Punta Cana dura unas {duration} y cuesta desde {price} por persona, con salidas a las {times}. Recorre la costa de Bávaro y Punta Cana, para a hacer snorkeling y a bañarse en una piscina natural; incluye transporte y guía.",
+      "faqName": "el paseo en lancha rápida",
+      "faqExtra": [
+        {
+          "q": "¿Hay salida al atardecer?",
+          "a": "Sí. La salida de la tarde termina con la puesta de sol sobre el mar."
+        },
+        {
+          "q": "¿Qué llevo a la lancha rápida?",
+          "a": "Traje de baño, toalla, protector solar y una muda de ropa seca. El equipo de snorkeling va a bordo."
+        }
+      ],
       "gallery": [
         "Grupo con chalecos saludando desde la lancha",
         "Hombre al timón de la lancha rápida",
@@ -219,10 +293,23 @@
       ]
     },
     "diving": {
+      "metaTitle": "Buceo en Punta Cana con guía profesional",
       "metaDescription": "Buceo en Punta Cana con guía, equipo, transporte, refrigerio y almuerzo. Jornada completa u horario exclusivo de mañana.",
       "description": "Inmersiones con guía en los arrecifes del Caribe dominicano, entre abanicos de mar, esponjas y peces. El equipo, el transporte, un refrigerio y el almuerzo van incluidos.",
       "includes": ["Transporte", "Guía", "Equipo de buceo", "Refrigerio", "Almuerzo"],
       "notes": [],
+      "summary": "El buceo profesional en Punta Cana se hace con guía en los arrecifes del Caribe dominicano, con salida a las {times}. Incluye transporte, equipo de buceo, refrigerio y almuerzo, y el precio se cotiza según la fecha, la opción y el tamaño del grupo.",
+      "faqName": "el buceo",
+      "faqExtra": [
+        {
+          "q": "¿Hay opción de medio día?",
+          "a": "Sí. Además del día completo hay un horario exclusivo de mañana."
+        },
+        {
+          "q": "¿Qué llevo al buceo?",
+          "a": "Traje de baño, toalla y protector solar biodegradable. El equipo de buceo está incluido."
+        }
+      ],
       "gallery": [
         "Dos buzos sobre un fondo de arena blanca",
         "Buzos haciendo la señal de todo bien bajo el agua",
@@ -235,6 +322,7 @@
       ]
     },
     "horseback": {
+      "metaTitle": "Paseo a caballo en Punta Cana a Playa Macao",
       "metaDescription": "Paseo a caballo de 2 horas por el campo, plantaciones de café y cacao y Playa Macao, con transporte ida y vuelta.",
       "description": "Un paseo a caballo por senderos de campo, entre plantaciones de café y cacao, que termina en la arena de Playa Macao.",
       "includes": [
@@ -244,6 +332,14 @@
         "Paseo por Playa Macao"
       ],
       "notes": [],
+      "summary": "El paseo a caballo en Punta Cana dura {duration} y cuesta desde {price} por persona. Recorre senderos de campo y plantaciones de café y cacao hasta la arena de Playa Macao, con transporte ida y vuelta incluido.",
+      "faqName": "el paseo a caballo",
+      "faqExtra": [
+        {
+          "q": "¿Qué ropa llevo al paseo a caballo?",
+          "a": "Pantalón largo y calzado cerrado, que son más cómodos para montar, además de protector solar y gorra."
+        }
+      ],
       "gallery": [
         "Jinetes a caballo en la orilla del mar",
         "Mujer a caballo en la playa",
@@ -255,17 +351,39 @@
       ]
     },
     "zipline": {
+      "metaTitle": "Tirolesa en Punta Cana: 10 líneas de zip line",
       "metaDescription": "Tirolesa en Punta Cana con 10 líneas de zip line y transporte ida y vuelta. Salidas en la mañana y al mediodía.",
       "description": "Diez líneas de zip line para cruzar la vegetación tropical colgado del cable, con transporte ida y vuelta incluido.",
       "includes": ["Transporte ida y vuelta", "10 líneas de zip line"],
       "notes": [],
+      "summary": "La tirolesa en Punta Cana tiene 10 líneas de zip line sobre la vegetación tropical y cuesta desde {price} por persona, con salidas a las {times}. El transporte ida y vuelta está incluido.",
+      "faqName": "la tirolesa",
+      "faqExtra": [
+        {
+          "q": "¿Qué ropa llevo a la tirolesa?",
+          "a": "Ropa cómoda y calzado cerrado que quede bien ajustado."
+        }
+      ],
       "gallery": ["Hombre con casco deslizándose por la tirolesa sobre el bosque"]
     },
     "fishing": {
+      "metaTitle": "Pesca en Punta Cana con capitán y equipo",
       "metaDescription": "Pesca recreativa o profesional en Punta Cana, con capitán, guía, equipo y transporte. Salidas todos los días en la mañana o en la tarde.",
       "description": "Sal a pescar en las aguas de Punta Cana, en plan recreativo o profesional. El barco sale con capitán y guía, y lleva las cañas, el equipo y un refrigerio a bordo.",
       "includes": ["Transporte", "Cañas de pescar y equipo", "Capitán y guía", "Refrigerio"],
       "notes": ["Modalidad recreativa o profesional."],
+      "summary": "La pesca en Punta Cana, recreativa o profesional, cuesta desde {price} por persona y sale todos los días a las {times}. El barco lleva capitán, guía, cañas, equipo y un refrigerio, y el transporte está incluido.",
+      "faqName": "la excursión de pesca",
+      "faqExtra": [
+        {
+          "q": "¿Es pesca recreativa o profesional?",
+          "a": "Las dos. Cuéntanos tu experiencia al reservar y te recomendamos la modalidad que mejor te va."
+        },
+        {
+          "q": "¿Qué llevo a la pesca?",
+          "a": "Protector solar, gorra, gafas de sol y ropa ligera. Las cañas y el equipo van a bordo."
+        }
+      ],
       "gallery": [
         "Pareja con un marlín a bordo, con el mar turquesa y la playa detrás",
         "Grupo con un gran marlín en la cubierta del barco",
