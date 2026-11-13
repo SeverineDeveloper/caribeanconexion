@@ -32,6 +32,8 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
           NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
           NEXT_PUBLIC_WHATSAPP_NUMBER: ${{ vars.WHATSAPP_NUMBER }}
+          # URL temporal: fuera de buscadores e IAs hasta tener el dominio (docs/SEO.md).
+          SITE_NOINDEX: "1"
       - uses: actions/upload-pages-artifact@v4
         with:
           path: apps/web/out

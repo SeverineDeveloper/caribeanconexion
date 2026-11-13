@@ -15,6 +15,8 @@ import { getTranslations } from "next-intl/server";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { CtaBand } from "@/components/site/cta-band";
 import { Faq, type FaqItem } from "@/components/site/faq";
+import { GuideLinks } from "@/components/site/guide-links";
+import { KeyFacts } from "@/components/site/key-facts";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeader } from "@/components/site/section-header";
 import { WhatsAppButton } from "@/components/site/whatsapp-button";
@@ -65,10 +67,13 @@ export default async function TransfersPage({ params }: PageProps<"/[locale]/tra
         </WhatsAppButton>
       </PageHero>
 
-      {/* Ventajas */}
+      {/* En breve y ventajas */}
       <section className="section-y">
         <div className="container-page">
-          <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <Reveal>
+            <KeyFacts label={t("Common.inBrief")} text={t("TransfersPage.summary")} />
+          </Reveal>
+          <RevealGroup className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-6">
             {features.map((feature, i) => {
               const Icon = FEATURE_ICONS[i] ?? ShieldCheck;
               return (
@@ -180,6 +185,9 @@ export default async function TransfersPage({ params }: PageProps<"/[locale]/tra
         <div className="container-page">
           <Reveal>
             <Faq title={t("Common.faqTitle")} items={t.raw("TransfersPage.faq") as FaqItem[]} />
+          </Reveal>
+          <Reveal className="mt-12 lg:mt-16">
+            <GuideLinks locale={locale} slugs={["traslado-aeropuerto-punta-cana"]} />
           </Reveal>
         </div>
       </section>

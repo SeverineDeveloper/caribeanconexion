@@ -8,7 +8,14 @@ export const MAIN_NAV = [
   { href: "/contacto", key: "contact" },
 ] as const;
 
+/** Columna "Explora" del footer: la navegación principal (sin contacto) más las guías. */
+export const EXPLORE_NAV = [
+  ...MAIN_NAV.filter((item) => item.key !== "contact"),
+  { href: "/guias", key: "guides" },
+] as const;
+
 export const COMPANY_NAV = [
+  { href: "/sobre-nosotros", key: "about" },
   { href: "/grupos", key: "groups" },
   { href: "/agencias", key: "agencies" },
   { href: "/propietarios", key: "owners" },

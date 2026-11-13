@@ -81,6 +81,7 @@
     "eyebrow": "Transfers",
     "title": "From the airport to your stay, no waiting, no surprises",
     "lead": "Private round-trip transfers from Punta Cana airport (PUJ), in the vehicle that best fits your group.",
+    "summary": "From Punta Cana International Airport (PUJ) it is about a 15-minute drive to Cap Cana, 25 to 30 minutes to Bávaro and Los Corales, 45 minutes to Uvero Alto, 1 h 15 min to Bayahíbe and La Romana and 2 h 30 min to Santo Domingo. Our transfers are private, round trip and available at any time, by sedan, SUV, van, minibus or coach depending on your group, with the price confirmed before you pay.",
     "features": [
       { "title": "Private", "text": "Just you and your group, no stops at other hotels." },
       { "title": "Round trip", "text": "We coordinate arrival and departure in one booking." },
@@ -228,6 +229,59 @@
     ],
     "cta": "I want to list my property",
     "waMessage": "Hi Conexión Caribe. I own a property in Punta Cana and would like to list it."
+  },
+  "GuidesPage": {
+    "metaTitle": "Punta Cana travel guides",
+    "metaDescription": "Practical guides for your Punta Cana trip: things to do, how to get to Saona Island and how to get there from the airport, with tips from a local team.",
+    "eyebrow": "Guides",
+    "title": "Guides to plan your Punta Cana trip",
+    "lead": "Clear answers to the questions we get asked most, with destination facts and tips from our local team.",
+    "readGuide": "Read the guide",
+    "guide": "Guide",
+    "updated": "Updated {date}",
+    "author": "By the Conexión Caribe team",
+    "related": "Related experiences",
+    "relatedGuides": "Related guides",
+    "table": {
+      "activity": "Activity",
+      "duration": "Duration",
+      "price": "Price from",
+      "route": "From PUJ airport to",
+      "time": "Approximate time",
+      "vehicle": "Vehicle",
+      "capacity": "Capacity",
+      "idealFor": "Best for",
+      "onRequest": "On request",
+      "variable": "To be confirmed"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "About us: local travel concierge in Punta Cana",
+    "metaDescription": "Conexión Caribe is a local travel concierge in Punta Cana, Dominican Republic. We arrange stays, airport transfers, excursions and services in English, Spanish and French.",
+    "eyebrow": "About us",
+    "title": "A local team that organizes your Punta Cana trip",
+    "lead": "Conexión Caribe is a travel concierge based in the Dominican Republic. We coordinate your stay, transfers, excursions and services so that when you arrive, all you have to do is enjoy it.",
+    "summary": "Conexión Caribe is a company registered in the Dominican Republic that organizes trips in Punta Cana, Bávaro, Cap Cana, Bayahíbe and La Romana. We work with local providers we know, answer on WhatsApp in English, Spanish and French, and confirm availability and price before you pay.",
+    "whoTitle": "Who we are",
+    "who": [
+      "We are a local team in Punta Cana. We know the beaches, the routes and the providers in the area, and we use that knowledge to plan trips without surprises: your transfer is waiting at the airport, your stay is ready and every excursion has a confirmed time.",
+      "We don't sell fixed packages. We ask when you arrive, who is traveling and what you enjoy, and we propose a tailor-made itinerary with a single contact for the whole trip, before and during your stay."
+    ],
+    "whatTitle": "What we organize",
+    "whatLead": "Everything you need at your destination, coordinated by the same team.",
+    "what": {
+      "accommodation": "Apartments, villas and hotels in Bávaro, Cap Cana, Los Corales and Bayahíbe.",
+      "transfers": "Private transfers from Punta Cana Airport (PUJ), at any time.",
+      "excursions": "Saona Island, yacht, buggies, snorkeling, diving, parasailing and more.",
+      "packages": "Tailor-made trips for couples, families, friends and celebrations.",
+      "services": "Private driver, car rental, private chef, massages, photography and groceries.",
+      "groups": "Incentive trips, events and logistics for groups and companies."
+    },
+    "whereTitle": "Where we work",
+    "whereText": "Mainly in Punta Cana, Bávaro, Cap Cana, Bayahíbe and La Romana. We also organize excursions to Samaná, Santo Domingo and other parts of the country.",
+    "languagesTitle": "In your language",
+    "languagesText": "We assist you in English, Spanish and French, on WhatsApp, before and during your trip.",
+    "waMessage": "Hi Conexión Caribe. I'd like to plan my trip to Punta Cana."
   },
   "LegalPage": {
     "privacy": "Privacy policy",

@@ -35,3 +35,24 @@ export function formatDuration(minutes: number): string {
   if (h === 0) return `${m} min`;
   return m === 0 ? `${h} h` : `${h} h ${m} min`;
 }
+
+/** Enumeración natural: "a, b y c" (es), "a, b, and c" (en), "a, b et c" (fr). */
+export function formatList(items: string[], locale: string): string {
+  return new Intl.ListFormat(locale, { style: "long", type: "conjunction" }).format(items);
+}
+
+/** Fecha ISO "AAAA-MM-DD" en formato largo: "12 de noviembre de 2026", "November 12, 2026". */
+export function formatDateLong(iso: string, locale: string): string {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!match) throw new Error(`Fecha inválida: ${iso}`);
+  const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
+  return new Intl.DateTimeFormat(locale, { dateStyle: "long", timeZone: "UTC" }).format(date);
+}
+
+/**
+ * Quita el punto doble que queda cuando una frase termina en una abreviatura con punto,
+ * como las horas en español ("2:00 p. m.") seguidas del punto final de la plantilla.
+ */
+export function tidyPunctuation(text: string): string {
+  return text.replace(/(?<!\.)\.\.(?=\s|$)/g, ".");
+}

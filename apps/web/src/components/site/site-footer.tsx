@@ -4,7 +4,7 @@ import { Logo } from "@/components/brand/logo";
 import { WhatsAppIcon } from "@/components/brand/whatsapp-icon";
 import { Link } from "@/i18n/navigation";
 import { whatsappNumber } from "@/lib/site";
-import { COMPANY_NAV, MAIN_NAV } from "./nav-items";
+import { COMPANY_NAV, EXPLORE_NAV } from "./nav-items";
 import { WaveFoam } from "./wave-foam";
 
 const LEGAL = [
@@ -33,7 +33,7 @@ export async function SiteFooter() {
         </div>
 
         <FooterColumn title={t("explore")}>
-          {MAIN_NAV.filter((i) => i.key !== "contact").map((item) => (
+          {EXPLORE_NAV.map((item) => (
             <li key={item.href}>
               <Link href={item.href} className={navLinkClass}>
                 {tNav(item.key)}

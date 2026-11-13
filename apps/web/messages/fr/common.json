@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "title": "Conexión Caribe · Votre voyage à Punta Cana organisé de A à Z",
+    "title": "Conexión Caribe · Excursions, transferts et hébergement à Punta Cana",
     "description": "Conciergerie locale à Punta Cana, Bávaro et Bayahíbe : hébergements, transferts aéroport, excursions et services. Vous réservez le vol, nous organisons tout le reste."
   },
   "Nav": {
@@ -14,6 +14,8 @@
     "groups": "Groupes et entreprises",
     "agencies": "Agences",
     "owners": "Propriétaires",
+    "guides": "Guides",
+    "about": "À propos",
     "planTrip": "Organiser mon voyage",
     "menu": "Menu",
     "home": "Accueil Conexión Caribe"
@@ -34,7 +36,8 @@
     "viewAll": "Tout voir",
     "askWhatsapp": "Demander sur WhatsApp",
     "faqTitle": "Questions fréquentes",
-    "referencePrices": "Prix indicatifs : nous confirmons le prix final selon les dates, la disponibilité et le nombre de personnes."
+    "referencePrices": "Prix indicatifs : nous confirmons le prix final selon les dates, la disponibilité et le nombre de personnes.",
+    "inBrief": "En bref"
   },
   "WhatsApp": {
     "float": "Parlez-nous",

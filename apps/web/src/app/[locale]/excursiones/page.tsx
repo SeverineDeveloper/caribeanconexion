@@ -4,13 +4,16 @@ import { Reveal } from "@/components/motion/reveal";
 import { CtaBand } from "@/components/site/cta-band";
 import { ExcursionsExplorer } from "@/components/site/excursions-explorer";
 import { Faq, type FaqItem } from "@/components/site/faq";
+import { GuideLinks } from "@/components/site/guide-links";
+import { JsonLdScript } from "@/components/site/json-ld-script";
 import { MoreExperiences } from "@/components/site/more-experiences";
 import { PageHero } from "@/components/site/page-hero";
 import { WhatsAppButton } from "@/components/site/whatsapp-button";
-import { EXCURSION_CATEGORIES, EXCURSIONS } from "@/content/excursions";
+import { EXCURSION_CATEGORIES, EXCURSIONS, excursionPath } from "@/content/excursions";
 import type { Locale } from "@/i18n/routing";
 import { excursionCards } from "@/lib/excursion-cards";
 import { pageMetadata } from "@/lib/metadata";
+import { pageUrl } from "@/lib/site";
 
 const PATH = "/excursiones";
 
@@ -38,6 +41,21 @@ export default async function ExcursionsPage({ params }: PageProps<"/[locale]/ex
       t("ExcursionsPage.count", { count: n }),
     ]),
   );
+
+  // Lista de excursiones para buscadores: las que tienen ficha enlazan a ella.
+  const listLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: t("ExcursionsPage.metaTitle"),
+    url: pageUrl(locale, PATH),
+    numberOfItems: EXCURSIONS.length,
+    itemListElement: EXCURSIONS.map((excursion, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: t(`Excursions.items.${excursion.key}.title`),
+      ...(excursion.hasPage && { url: pageUrl(locale, excursionPath(excursion.slug)) }),
+    })),
+  };
 
   return (
     <>
@@ -79,10 +97,17 @@ export default async function ExcursionsPage({ params }: PageProps<"/[locale]/ex
           <Reveal>
             <Faq title={t("Common.faqTitle")} items={t.raw("ExcursionsPage.faq") as FaqItem[]} />
           </Reveal>
+          <Reveal className="mt-12 lg:mt-16">
+            <GuideLinks
+              locale={locale}
+              slugs={["que-hacer-en-punta-cana", "isla-saona-desde-punta-cana"]}
+            />
+          </Reveal>
         </div>
       </section>
 
       <CtaBand originCode="CC-EXC-CTA" />
+      <JsonLdScript data={listLd} />
     </>
   );
 }

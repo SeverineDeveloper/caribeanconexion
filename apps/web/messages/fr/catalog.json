@@ -119,8 +119,22 @@
     "more": "Autres expériences",
     "seeDetails": "Voir l'expérience"
   },
+  "ExcursionFaq": {
+    "priceQ": "Combien coûte {name} ?",
+    "priceA": "À partir de {price} par personne. C'est un prix indicatif : le prix final dépend de la date, de la saison, de la disponibilité et du nombre de personnes, et nous le confirmons avant le paiement.",
+    "priceOnRequestA": "Le prix est établi sur devis selon la date, la formule choisie et la taille du groupe. Écrivez-nous sur WhatsApp et nous vous confirmons le prix avant le paiement.",
+    "durationQ": "Combien de temps dure {name} ?",
+    "durationA": "Environ {duration}. Nous vous confirmons l'heure de prise en charge à la réservation.",
+    "schedulesQ": "Quels sont les horaires pour {name} ?",
+    "schedulesA": "{daily, select, yes {Tous les jours : {hours}} other {Départs à ces horaires : {hours}}}.",
+    "includesQ": "Que comprend {name} ?",
+    "includesA": "Sont inclus : {includes}.",
+    "bookQ": "Comment réserver {name} ?",
+    "bookA": "Écrivez-nous sur WhatsApp avec la date et le nombre de personnes. Nous vous confirmons la disponibilité et le prix final, et vous réservez une fois d'accord."
+  },
   "ExcursionPages": {
     "yacht": {
+      "metaTitle": "Yacht de luxe à Punta Cana : Saona et Catalina",
       "metaDescription": "Yacht de luxe à Punta Cana pour des groupes de 1 à 22 personnes : open bar premium, snorkeling, piscine naturelle et transfert VIP. Saona ou Catalina sur devis.",
       "description": "Une journée en yacht pour votre groupe, de 1 à 22 personnes, avec open bar premium. Choisissez Punta Cana, l'île Saona ou l'île Catalina, faites du snorkeling, baignez-vous dans une piscine naturelle et longez les plages de Bávaro et Punta Cana. Le transfert est VIP, avec une boisson offerte.",
       "includes": [
@@ -134,6 +148,22 @@
         "Capacité de 1 à 22 personnes.",
         "Destinations : Punta Cana, île Saona ou île Catalina.",
         "Le déjeuner est en option, sur devis."
+      ],
+      "summary": "Le yacht de luxe de Conexión Caribe, c'est une journée en mer pour votre groupe de 1 à 22 personnes, avec open bar premium, snorkeling, piscine naturelle et transfert VIP. Longez la côte de Punta Cana ou partez vers l'île Saona ou l'île Catalina ; le prix est établi sur devis selon la destination, la date et la taille du groupe.",
+      "faqName": "le yacht de luxe",
+      "faqExtra": [
+        {
+          "q": "Combien de personnes peuvent monter à bord ?",
+          "a": "De 1 à 22 personnes. Le yacht est réservé à votre groupe."
+        },
+        {
+          "q": "Quelles sont les destinations du yacht ?",
+          "a": "Vous pouvez choisir la côte de Bávaro et Punta Cana, l'île Saona ou l'île Catalina."
+        },
+        {
+          "q": "Le déjeuner est-il inclus ?",
+          "a": "Non : le déjeuner est en option, sur devis. L'open bar premium, lui, est inclus."
+        }
       ],
       "gallery": [
         "Yacht ancré dans une eau turquoise face à une plage bordée de palmiers",
@@ -152,6 +182,7 @@
       ]
     },
     "buggies": {
+      "metaTitle": "Excursion en buggy à Punta Cana et Macao",
       "metaDescription": "Excursion en buggy de 4 heures : plantations de café et de cacao, cénote et plage de Macao, transport et guide inclus.",
       "description": "Une sortie guidée en buggy dans la campagne dominicaine. Vous découvrirez les plantations de café et de cacao et leur chocolat, vous vous baignerez dans un cénote aux eaux bleues et finirez face à la mer sur la plage de Macao, l'une des plus célèbres des Caraïbes.",
       "includes": [
@@ -162,6 +193,14 @@
         "Arrêt à la plage de Macao"
       ],
       "notes": [],
+      "summary": "L'excursion en buggy à Punta Cana dure {duration} et coûte à partir de {price} par personne, avec des départs à {times}. Elle traverse des plantations de café et de cacao, fait une pause baignade dans un cénote et se termine sur la plage de Macao ; le transport aller-retour et le guide sont inclus.",
+      "faqName": "l'excursion en buggy",
+      "faqExtra": [
+        {
+          "q": "Comment s'habiller pour le buggy ?",
+          "a": "Avec des vêtements et des chaussures qui peuvent se salir, car les chemins sont boueux et poussiéreux. Prévoyez un maillot et une serviette pour le cénote, de la crème solaire et un peu d'argent liquide pour les extras."
+        }
+      ],
       "gallery": [
         "Véhicule tout-terrain orange projetant de la boue sur un chemin de campagne",
         "Buggies traversant une flaque au milieu de la végétation",
@@ -175,10 +214,19 @@
       ]
     },
     "snorkeling": {
+      "metaTitle": "Snorkeling à Punta Cana : horaires et prix",
       "metaDescription": "Snorkeling à Punta Cana avec transport aller-retour, guide, équipement et collation. Six départs par jour.",
       "description": "Enfilez votre masque et nagez parmi les poissons colorés dans une eau cristalline. Le transport aller-retour, le guide, l'équipement de snorkeling et une collation sont inclus, avec plusieurs départs dans la journée.",
       "includes": ["Transport aller-retour", "Guide", "Équipement de snorkeling", "Collation"],
       "notes": [],
+      "summary": "Le snorkeling à Punta Cana coûte à partir de {price} par personne, avec des départs à {times}. Le transport aller-retour, le guide, l'équipement de snorkeling et une collation sont inclus.",
+      "faqName": "la sortie snorkeling",
+      "faqExtra": [
+        {
+          "q": "Que faut-il apporter pour le snorkeling ?",
+          "a": "Un maillot de bain, une serviette, une crème solaire respectueuse des récifs et un peu d'argent liquide pour les extras. L'équipement de snorkeling est inclus."
+        }
+      ],
       "gallery": [
         "Nageuse avec masque tenant un coquillage sous l'eau",
         "Personne avec masque assise sur le fond sableux",
@@ -186,10 +234,23 @@
       ]
     },
     "parasailing": {
+      "metaTitle": "Parachute ascensionnel à Punta Cana",
       "metaDescription": "Parachute ascensionnel à Punta Cana tous les jours, au départ de tous les hôtels. Survolez la mer turquoise et voyez la côte d'en haut.",
       "description": "Décollez depuis le bateau et élevez-vous au-dessus de la mer turquoise pour voir la côte de Punta Cana depuis le ciel. Départs tous les jours, depuis tous les hôtels.",
       "includes": [],
       "notes": ["Départs depuis tous les hôtels."],
+      "summary": "Le parachute ascensionnel à Punta Cana coûte à partir de {price} par personne et fonctionne tous les jours ({hours}). Vous décollez depuis le bateau et voyez la côte depuis le ciel ; il y a des départs depuis tous les hôtels.",
+      "faqName": "le parachute ascensionnel",
+      "faqExtra": [
+        {
+          "q": "D'où part le parachute ascensionnel ?",
+          "a": "Il y a des départs depuis tous les hôtels. À la réservation, nous vous confirmons le point et l'heure de rendez-vous."
+        },
+        {
+          "q": "Que faut-il apporter pour le parachute ascensionnel ?",
+          "a": "Un maillot de bain ou des vêtements confortables qui peuvent être mouillés, de la crème solaire et des lunettes de soleil bien attachées."
+        }
+      ],
       "gallery": [
         "Trois personnes en gilet prêtes à décoller depuis le bateau",
         "Deux personnes en parachute ascensionnel au-dessus de la plage, vues d'un drone",
@@ -200,6 +261,7 @@
       ]
     },
     "speedboat": {
+      "metaTitle": "Bateau rapide à Punta Cana avec snorkeling",
       "metaDescription": "Sortie en bateau rapide de 3 h 30 min le long de la côte de Bávaro et Punta Cana, avec snorkeling et piscine naturelle. Départ au coucher du soleil possible.",
       "description": "Filez à toute vitesse le long de la côte de Bávaro et Punta Cana, arrêtez-vous pour faire du snorkeling et baignez-vous dans une piscine naturelle. Le départ de l'après-midi se termine au coucher du soleil.",
       "includes": [
@@ -210,6 +272,18 @@
         "Balade le long de la côte de Bávaro et Punta Cana"
       ],
       "notes": [],
+      "summary": "La sortie en bateau rapide à Punta Cana dure environ {duration} et coûte à partir de {price} par personne, avec des départs à {times}. Elle longe la côte de Bávaro et Punta Cana et s'arrête pour du snorkeling et une baignade dans une piscine naturelle ; le transport et le guide sont inclus.",
+      "faqName": "la sortie en bateau rapide",
+      "faqExtra": [
+        {
+          "q": "Y a-t-il un départ au coucher du soleil ?",
+          "a": "Oui. Le départ de l'après-midi se termine au coucher du soleil sur la mer."
+        },
+        {
+          "q": "Que faut-il apporter en bateau rapide ?",
+          "a": "Un maillot de bain, une serviette, de la crème solaire et des vêtements secs de rechange. L'équipement de snorkeling est à bord."
+        }
+      ],
       "gallery": [
         "Groupe en gilets saluant depuis le bateau rapide",
         "Homme à la barre du bateau rapide",
@@ -219,10 +293,23 @@
       ]
     },
     "diving": {
+      "metaTitle": "Plongée à Punta Cana avec guide",
       "metaDescription": "Plongée à Punta Cana avec guide, équipement, transport, collation et déjeuner. Journée complète ou créneau exclusif le matin.",
       "description": "Plongées guidées sur les récifs des Caraïbes dominicaines, parmi les gorgones, les éponges et les poissons. L'équipement, le transport, une collation et le déjeuner sont inclus.",
       "includes": ["Transport", "Guide", "Équipement de plongée", "Collation", "Déjeuner"],
       "notes": [],
+      "summary": "La plongée à Punta Cana se fait avec un guide sur les récifs des Caraïbes dominicaines, avec un départ à {times}. Le transport, l'équipement de plongée, une collation et le déjeuner sont inclus, et le prix est établi sur devis selon la date, la formule et la taille du groupe.",
+      "faqName": "la plongée",
+      "faqExtra": [
+        {
+          "q": "Existe-t-il une formule d'une demi-journée ?",
+          "a": "Oui. En plus de la journée complète, il y a un créneau exclusif le matin."
+        },
+        {
+          "q": "Que faut-il apporter pour la plongée ?",
+          "a": "Un maillot de bain, une serviette et une crème solaire respectueuse des récifs. L'équipement de plongée est inclus."
+        }
+      ],
       "gallery": [
         "Deux plongeurs au-dessus d'un fond de sable blanc",
         "Plongeurs faisant le signe OK sous l'eau",
@@ -235,6 +322,7 @@
       ]
     },
     "horseback": {
+      "metaTitle": "Balade à cheval à Punta Cana jusqu'à Macao",
       "metaDescription": "Balade à cheval de 2 heures dans la campagne, les plantations de café et de cacao et la plage de Macao, avec transport aller-retour.",
       "description": "Une balade à cheval sur les sentiers de campagne, entre plantations de café et de cacao, qui se termine sur le sable de la plage de Macao.",
       "includes": [
@@ -244,6 +332,14 @@
         "Balade sur la plage de Macao"
       ],
       "notes": [],
+      "summary": "La balade à cheval à Punta Cana dure {duration} et coûte à partir de {price} par personne. Elle suit des sentiers de campagne entre plantations de café et de cacao jusqu'au sable de la plage de Macao, transport aller-retour inclus.",
+      "faqName": "la balade à cheval",
+      "faqExtra": [
+        {
+          "q": "Comment s'habiller pour la balade à cheval ?",
+          "a": "Un pantalon long et des chaussures fermées sont plus confortables pour monter. Prévoyez aussi de la crème solaire et une casquette."
+        }
+      ],
       "gallery": [
         "Cavaliers au bord de la mer",
         "Femme à cheval sur la plage",
@@ -255,17 +351,39 @@
       ]
     },
     "zipline": {
+      "metaTitle": "Tyrolienne à Punta Cana : 10 lignes",
       "metaDescription": "Tyrolienne à Punta Cana avec 10 lignes et transport aller-retour. Départs le matin et à midi.",
       "description": "Dix tyroliennes pour glisser au-dessus de la végétation tropicale, avec transport aller-retour inclus.",
       "includes": ["Transport aller-retour", "10 tyroliennes"],
       "notes": [],
+      "summary": "La tyrolienne à Punta Cana compte 10 lignes au-dessus de la végétation tropicale et coûte à partir de {price} par personne, avec des départs à {times}. Le transport aller-retour est inclus.",
+      "faqName": "la tyrolienne",
+      "faqExtra": [
+        {
+          "q": "Comment s'habiller pour la tyrolienne ?",
+          "a": "Des vêtements confortables et des chaussures fermées bien ajustées."
+        }
+      ],
       "gallery": ["Homme casqué sur la tyrolienne au-dessus de la forêt"]
     },
     "fishing": {
+      "metaTitle": "Pêche à Punta Cana avec capitaine et équipement",
       "metaDescription": "Pêche de loisir ou sportive à Punta Cana, avec capitaine, guide, équipement et transport. Départs tous les jours, le matin ou l'après-midi.",
       "description": "Partez pêcher dans les eaux de Punta Cana, en loisir ou en version sportive. Le bateau sort avec un capitaine et un guide, avec cannes, équipement et collation à bord.",
       "includes": ["Transport", "Cannes à pêche et équipement", "Capitaine et guide", "Collation"],
       "notes": ["Pêche de loisir ou sportive."],
+      "summary": "La pêche à Punta Cana, de loisir ou sportive, coûte à partir de {price} par personne et part tous les jours à {times}. Le bateau embarque un capitaine, un guide, des cannes, l'équipement et une collation, et le transport est inclus.",
+      "faqName": "la sortie de pêche",
+      "faqExtra": [
+        {
+          "q": "Pêche de loisir ou sportive ?",
+          "a": "Les deux. Parlez-nous de votre expérience à la réservation et nous vous conseillerons la formule la plus adaptée."
+        },
+        {
+          "q": "Que faut-il apporter pour la pêche ?",
+          "a": "De la crème solaire, une casquette, des lunettes de soleil et des vêtements légers. Les cannes et l'équipement sont à bord."
+        }
+      ],
       "gallery": [
         "Couple avec un marlin à bord, avec la mer turquoise et la plage derrière",
         "Groupe avec un grand marlin sur le pont du bateau",
