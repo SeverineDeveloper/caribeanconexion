@@ -1,0 +1,46 @@
+# Conexión Caribe
+
+> Conexión Caribe is a local travel concierge in Punta Cana, Dominican Republic. It organizes excursions, private airport transfers from Punta Cana International Airport (PUJ), vacation rentals, travel packages and concierge services in Punta Cana, Bávaro, Cap Cana, Bayahíbe, and La Romana. Travelers book through WhatsApp (+1 829-269-4285) in Spanish, English or French. Prices on the site are reference "from" prices in US dollars; the final price depends on date, season, availability and group size, and is always confirmed before payment.
+
+The site is available in Spanish (default), English, and French, with the same paths in every language: https://severinedeveloper.github.io/caribeanconexion/es/, https://severinedeveloper.github.io/caribeanconexion/en/, https://severinedeveloper.github.io/caribeanconexion/fr/.
+
+## Excursions in Punta Cana
+
+- [Excursions in Punta Cana](https://severinedeveloper.github.io/caribeanconexion/en/excursiones/): Luxury yacht, Saona Island, buggies, snorkeling, parasailing, scuba diving, fishing and more. Punta Cana excursions with confirmed availability and price.
+- [Luxury yacht](https://severinedeveloper.github.io/caribeanconexion/en/excursiones/yate-de-lujo/): Luxury yacht in Punta Cana for groups of 1 to 22: premium open bar, snorkeling, natural pool and VIP transfer. Saona or Catalina on request. Price on request. Includes VIP transfer with a drink, premium open bar, snorkeling, natural pool, and cruise along the Bávaro and Punta Cana beaches.
+- [Buggy adventure](https://severinedeveloper.github.io/caribeanconexion/en/excursiones/buggies/): 4-hour buggy tour through coffee and cocoa plantations, a cenote and Macao Beach, with transport and guide included. From US$37 per person. Duration: 4 h. Schedule: 8:00 AM – 12:00 PM, 11:00 AM – 3:00 PM, and 2:00 PM – 6:00 PM. Includes round-trip transport, guide, coffee, cocoa and chocolate plantations, swim in a blue-water cenote, and stop at Macao Beach.
+- [Snorkeling](https://severinedeveloper.github.io/caribeanconexion/en/excursiones/snorkeling/): Snorkeling in Punta Cana with round-trip transport, guide, gear and snack. Six departures a day. From US$34 per person. Schedule: 8:30 AM, 9:30 AM, 11:00 AM, 1:00 PM, 2:00 PM, and 3:00 PM. Includes round-trip transport, guide, snorkeling gear, and snack.
+- [Parasailing](https://severinedeveloper.github.io/caribeanconexion/en/excursiones/parasailing/): Parasailing in Punta Cana every day, with departures from all hotels. Fly over the turquoise sea and see the coast from above. From US$55 per person. Schedule (every day): 10:00 AM – 4:30 PM.
+- [Speedboat tour](https://severinedeveloper.github.io/caribeanconexion/en/excursiones/lancha-rapida/): 3 h 30 min speedboat tour along the Bávaro and Punta Cana coast, with snorkeling and a natural pool. Sunset departure available. From US$73 per person. Duration: 3 h 30 min. Schedule: 8:00 AM – 12:00 PM, 11:00 AM – 2:00 PM, and 3:00 PM – 6:00 PM. Includes transport, guide, snorkeling, natural pool, and tour of the Bávaro and Punta Cana coast.
+- [Scuba diving](https://severinedeveloper.github.io/caribeanconexion/en/excursiones/buceo/): Scuba diving in Punta Cana with guide, gear, transport, snack and lunch. Full day or exclusive morning schedule. Price on request. Schedule: 7:00 AM – 6:00 PM and 7:00 AM – 12:00 PM. Includes transport, guide, diving gear, snack, and lunch.
+- [Horseback riding](https://severinedeveloper.github.io/caribeanconexion/en/excursiones/cabalgata/): 2-hour horseback ride through the countryside, coffee and cocoa plantations and Macao Beach, with round-trip transport. From US$35 per person. Duration: 2 h. Includes round-trip transport, countryside trail, coffee, cocoa and chocolate plantations, and ride along Macao Beach.
+- [Zip line](https://severinedeveloper.github.io/caribeanconexion/en/excursiones/tirolesa/): Zip line in Punta Cana with 10 lines and round-trip transport. Morning and midday departures. From US$60 per person. Schedule: 8:00 AM – 12:00 PM and 12:00 PM – 4:00 PM. Includes round-trip transport and 10 zip lines.
+- [Recreational and pro fishing](https://severinedeveloper.github.io/caribeanconexion/en/excursiones/pesca/): Recreational or pro fishing in Punta Cana, with captain, guide, gear and transport. Departures every day, morning or afternoon. From US$96 per person. Schedule (every day): 7:00 AM – 12:00 PM and 12:00 PM – 6:00 PM. Includes transport, fishing rods and gear, captain and guide, and snack.
+- Also available on request: Classic Saona Island (Turquoise water, palm trees and an unforgettable getaway.); Saona Island VIP · 4 beaches (A more exclusive Caribbean, at your own pace.); Catalina Island (An invitation to discover the sea and its reefs.); Party boat (Music, Caribbean vibes and fun on the water.); Samaná & nature (Forests, waterfalls and spectacular scenery.); Cultural Santo Domingo (Dominican history, architecture and tradition.).
+
+## Airport transfers and travel services
+
+- [Punta Cana airport (PUJ) transfers](https://severinedeveloper.github.io/caribeanconexion/en/traslados/): Private transfers from Punta Cana airport to Bávaro, Cap Cana, Bayahíbe, La Romana and Santo Domingo. Sedan, SUV, van and minibus. Approximate drive times from PUJ: Cap Cana approx. 15 min; Punta Cana / Cabeza de Toro approx. 20 min; Bávaro / Los Corales approx. 25–30 min; Uvero Alto approx. 45 min; Bayahíbe / La Romana approx. 1 h 15 min; Santo Domingo approx. 2 h 30 min. Vehicles: Sedan (up to 3 people), SUV (up to 4 people), Van (up to 7 people), Minibus (up to 15 people), Coach (large groups).
+- [Stays in Punta Cana: apartments, villas and hotels](https://severinedeveloper.github.io/caribeanconexion/en/alojamiento/): Airbnb-style apartments, villas and hotels in Bávaro, Cap Cana, Los Corales and Bayahíbe, with coordinated transfers and services.
+- [Punta Cana travel packages](https://severinedeveloper.github.io/caribeanconexion/en/paquetes/): Packages for couples, families, friends, birthdays and premium trips in Punta Cana, tailored to your dates and budget.
+- [Concierge services in Punta Cana](https://severinedeveloper.github.io/caribeanconexion/en/servicios/): Transfers, car rental, driver, groceries, private chef, massages, photography and celebrations in Punta Cana.
+- [Group and corporate travel in the Dominican Republic](https://severinedeveloper.github.io/caribeanconexion/en/grupos/): Incentive trips, team building, events and group logistics in Punta Cana and the Dominican Republic.
+- [Plan your trip](https://severinedeveloper.github.io/caribeanconexion/en/arma-tu-viaje/): Tell us your dates, who's traveling and what you'd like to do. We'll send you a tailor-made proposal on WhatsApp.
+
+## Travel guides
+
+- [Things to do in Punta Cana: excursions and activities for your trip](https://severinedeveloper.github.io/caribeanconexion/en/guias/que-hacer-en-punta-cana/): Punta Cana tours by travel style: Saona Island, yacht, buggies, snorkeling, diving, parasailing and more, with durations, starting prices and local tips.
+- [Saona Island from Punta Cana: how to get there, how long it takes and what to see](https://severinedeveloper.github.io/caribeanconexion/en/guias/isla-saona-desde-punta-cana/): How to get to Saona Island from Punta Cana, how long the trip takes, what to see (natural pool and Mano Juan) and how Saona Classic and VIP differ.
+- [Punta Cana airport (PUJ) transfer to your hotel: times and tips](https://severinedeveloper.github.io/caribeanconexion/en/guias/traslado-aeropuerto-punta-cana/): Drive times from Punta Cana airport to Bávaro, Cap Cana, Uvero Alto, Bayahíbe or Santo Domingo, the right transfer and what to share so your driver is waiting.
+
+## Company
+
+- [About us: local travel concierge in Punta Cana](https://severinedeveloper.github.io/caribeanconexion/en/sobre-nosotros/): Conexión Caribe is a local travel concierge in Punta Cana, Dominican Republic. We arrange stays, airport transfers, excursions and services in English, Spanish and French.
+- [Contact](https://severinedeveloper.github.io/caribeanconexion/en/contacto/): Message us on WhatsApp and plan your Punta Cana trip with a local team. Support in English, Spanish and French.
+- [Partner travel agencies](https://severinedeveloper.github.io/caribeanconexion/en/agencias/): Work with Conexión Caribe as your local operator in Punta Cana: stays, transfers and excursions for your clients.
+- [List your property](https://severinedeveloper.github.io/caribeanconexion/en/propietarios/): Own an apartment or villa in Punta Cana? List it with Conexión Caribe and welcome guests with coordinated services.
+- WhatsApp: https://wa.me/18292694285
+
+## Optional
+
+- [Sitemap](https://severinedeveloper.github.io/caribeanconexion/sitemap.xml): every page in Spanish, English and French.

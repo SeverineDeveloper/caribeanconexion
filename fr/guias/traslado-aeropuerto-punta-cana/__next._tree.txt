@@ -1,0 +1,9 @@
+:HL["/caribeanconexion/_next/static/chunks/2csw6r-ve3fi_.css","style"]
+:HL["/caribeanconexion/_next/static/chunks/3zs_dxevlupxw.css","style"]
+:HL["/caribeanconexion/_next/static/media/03bda585a99c6450-s.p.32sris142tqlb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/caribeanconexion/_next/static/media/5c285b27cdda1fe8-s.p.2_mbdogr7ni8i.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+4:[["children",{"s":"__PAGE__","h":160}]]
+3:[["children",{"s":{"n":"slug","t":"d","k":"traslado-aeropuerto-punta-cana","s":[]},"h":65632,"c":"$Q4"}]]
+2:[["children",{"s":"guias","h":131136,"c":"$Q3"}]]
+1:[["children",{"s":{"n":"locale","t":"d","k":"fr","s":["llms.txt"]},"h":196656,"c":"$Q2"}]]
+0:{"b":"RkoFWQHYfwY5-WLyec57a","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
